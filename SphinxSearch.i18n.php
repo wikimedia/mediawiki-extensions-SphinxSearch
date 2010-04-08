@@ -4,12 +4,12 @@ $messages = array();
 
 /* *** English *** */
 $messages['en'] = array( 
-	'sphinxsearch'             => 'Search Wiki Using Sphinx',
+	'sphinxsearch'             => 'Search wiki using Sphinx',
 	'sphinxsearch-desc'        => 'Replace MediaWiki search engine with [http://www.sphinxsearch.com/ Sphinx].',
 	'sphinxSearchInNamespaces' => 'Search in namespaces',
 	'sphinxSearchInCategories' => 'Search in categories',
 	'sphinxExcludeCategories'  => 'Categories to exclude',
-	'sphinxResultPage'         => 'Result Page',
+	'sphinxResultPage'         => 'Result page',
 	'sphinxPreviousPage'       => 'Previous',
 	'sphinxNextPage'           => 'Next',
 	'sphinxSearchPreamble'     => "Displaying %d-%d of %d matches for query '''<nowiki>%s</nowiki>''' retrieved in %0.3f sec with these stats",

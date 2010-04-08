@@ -11,9 +11,10 @@ EOT;
 }
 
 $wgExtensionCredits['specialpage'][] = array(
+	'path'           => __FILE__,
 	'version'        => '0.7.0',
 	'name'           => 'SphinxSearch',
-	'author'         => 'Svemir Brkic, Paul Grinberg',
+	'author'         => array( 'Svemir Brkic', 'Paul Grinberg' ),
 	'email'          => 'svemir at thirdblessing dot net, gri6507 at yahoo dot com',
 	'url'            => 'http://www.mediawiki.org/wiki/Extension:SphinxSearch',
 	'descriptionmsg' => 'sphinxsearch-desc'
