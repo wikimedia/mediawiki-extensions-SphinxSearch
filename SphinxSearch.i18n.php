@@ -28,6 +28,63 @@ $messages['en'] = array(
 	'sphinxSearchWarning'      => 'Warning:'
 );
 
+/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+ * @author EugeneZelenko
+ * @author Jim-by
+ */
+$messages['be-tarask'] = array(
+	'sphinxsearch' => 'Пошук у вікі з выкарыстаньнем Sphinx',
+	'sphinxsearch-desc' => 'Замяняе пошукавы рухавік MediaWiki на [http://www.sphinxsearch.com/ Sphinx].',
+	'sphinxSearchInNamespaces' => 'Шукаць у прасторах назваў:',
+	'sphinxSearchInCategories' => 'Шукаць у катэгорыях:',
+	'sphinxExcludeCategories' => 'За выключэньнем катэгорыяў',
+	'sphinxResultPage' => 'Старонка вынікаў',
+	'sphinxPreviousPage' => 'Папярэдняя',
+	'sphinxNextPage' => 'Наступная',
+	'sphinxSearchPreamble' => "Паказ супадзеньні %d—%d з %d для запыту '''<nowiki>%s</nowiki>''', пошук склаў %0.3f с улічваючы гэтую статыстыку",
+	'sphinxSearchStats' => "'''%s''' знойдзена %d разоў у %d дакумэнтах",
+	'sphinxSearchStatsInfo' => 'Прыведзеныя лічбы могуць утрымліваць дакумэнты, не паказаныя з-за установак пошуку',
+	'sphinxSearchButton' => 'Шукаць',
+	'sphinxSearchEpilogue' => 'Дадатковы час базы зьвестак склаў %0.3f с.',
+	'sphinxSearchDidYouMean' => 'Вы мелі на ўвазе',
+	'sphinxMatchAny' => 'супадзеньне з любым словам',
+	'sphinxMatchAll' => 'супадзеньне па ўсім словам',
+	'sphinxMatchTitles' => 'супадзеньне толькі загалоўкаў',
+	'sphinxLoading' => 'Загрузка…',
+	'sphinxPowered' => 'Працуе на %s',
+	'sphinxClientFailed' => 'Немагчыма стварыць экзэмпляр SphinxClient',
+	'sphinxSearchFailed' => 'Памылка запыту:',
+	'sphinxSearchWarning' => 'Папярэджаньне:',
+);
+
+/** Bulgarian (Български) */
+$messages['bg'] = array(
+	'sphinxPreviousPage' => 'Предишна',
+	'sphinxNextPage' => 'Предишна',
+);
+
+/** Breton (Brezhoneg)
+ * @author Y-M D
+ */
+$messages['br'] = array(
+	'sphinxsearch' => 'Klask er wiki en ur implijout Sphinx',
+	'sphinxsearch-desc' => "Erlec'hiañ lusker enklask MediaWiki gant [http://www.sphinxsearch.com/ Sphinx].",
+	'sphinxSearchInNamespaces' => 'Klask en esaouennoù anv :',
+	'sphinxSearchInCategories' => 'Klask er rummadoù',
+	'sphinxResultPage' => "Pajenn an disoc'hoù",
+	'sphinxPreviousPage' => 'Kent',
+	'sphinxNextPage' => "War-lerc'h",
+	'sphinxSearchStats' => "'''%s''' bet kavet %d gwech e %d teul",
+	'sphinxSearchButton' => 'Klask',
+	'sphinxSearchDidYouMean' => "N'hoc'h eus ket soñjet kentoc'h e",
+	'sphinxMatchAny' => 'kavout forzh peseurt ger',
+	'sphinxMatchAll' => 'kavout an holl gerioù',
+	'sphinxMatchTitles' => 'klask en titloù hepken',
+	'sphinxLoading' => 'O kargañ...',
+	'sphinxPowered' => 'Savet diwar %s',
+	'sphinxSearchWarning' => 'Diwallit :',
+);
+
 /** Spanish (Español)
  * @author Pertile
  */
@@ -112,6 +169,69 @@ $messages['gl'] = array(
 	'sphinxSearchWarning' => 'AVISO',
 );
 
+/** Interlingua (Interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'sphinxsearch' => 'Cercar in le wiki usante Sphinx',
+	'sphinxsearch-desc' => 'Reimplaciar le motor de recerca de MediaWiki per [http://www.sphinxsearch.com/ Sphinx].',
+	'sphinxSearchInNamespaces' => 'Cercar in spatios de nomines',
+);
+
+/** Macedonian (Македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'sphinxsearch' => 'Пребоарување по вики со Sphinx',
+	'sphinxsearch-desc' => 'Замена на МедијаВики пребарувачот со [http://www.sphinxsearch.com/ Sphinx].',
+	'sphinxSearchInNamespaces' => 'Барај во именски простори',
+	'sphinxSearchInCategories' => 'Барај во категории',
+	'sphinxExcludeCategories' => 'Категории за изоставање',
+	'sphinxResultPage' => 'Страница за резулати',
+	'sphinxPreviousPage' => 'Претходна',
+	'sphinxNextPage' => 'Следна',
+	'sphinxSearchPreamble' => "Приказ на %d-%d од вкупно %d совпаѓања за барањето '''<nowiki>%s</nowiki>''' извршено за %0.3f сек. со следниве статистики",
+	'sphinxSearchStats' => "'''%s''' е пронајдено %d пати во %d документи",
+	'sphinxSearchStatsInfo' => 'Горенаведените бројки може да содржат документи кои не се наведени поради нагодувањата на пребарувањето',
+	'sphinxSearchButton' => 'Пребарај',
+	'sphinxSearchEpilogue' => 'Дополнителното време за базата на податоци изнесуваше %0.3f сек.',
+	'sphinxSearchDidYouMean' => 'Дали мислевте на',
+	'sphinxMatchAny' => 'барај било кој збор',
+	'sphinxMatchAll' => 'барај само зборови',
+	'sphinxMatchTitles' => 'барај само наслови',
+	'sphinxLoading' => 'Вчитувам...',
+	'sphinxPowered' => 'Овозможено од %s',
+	'sphinxClientFailed' => 'Не можев да го повикам SphinxClient',
+	'sphinxSearchFailed' => 'Барањето не успеа',
+	'sphinxSearchWarning' => 'ПРЕДУПРЕДУВАЊЕ',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'sphinxsearch' => 'Wiki doorzoeken met Sphinx',
+	'sphinxsearch-desc' => 'Vervangt de MediaWiki-zoekmachine door [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxSearchInNamespaces' => 'Zoeken in naamruimten:',
+	'sphinxSearchInCategories' => 'Zoeken in categorieën:',
+	'sphinxExcludeCategories' => 'Uit te sluiten categorieën',
+	'sphinxResultPage' => 'Resultatenpagina',
+	'sphinxPreviousPage' => 'Vorige',
+	'sphinxNextPage' => 'Volgende',
+	'sphinxSearchPreamble' => "Resultaten %1\$d tot %2\$d van %3\$d worden weergegeven voor zoekopdracht '''<nowiki>%s</nowiki>'''. Zoektijd: %0.3f seconden",
+	'sphinxSearchButton' => 'Zoeken',
+	'sphinxSearchEpilogue' => 'Aanvullende databasetijd was %0.3f seconden.',
+	'sphinxSearchDidYouMean' => 'Bedoelde u',
+	'sphinxMatchAny' => 'ieder woord',
+	'sphinxMatchAll' => 'alle woorden',
+	'sphinxMatchTitles' => 'alleen paginanamen',
+	'sphinxLoading' => 'Bezig met laden...',
+	'sphinxPowered' => 'Powered by %s',
+	'sphinxClientFailed' => 'Het was niet mogelijk SphinxClient te initialiseren',
+	'sphinxSearchFailed' => 'Zoekopdracht mislukt',
+	'sphinxSearchWarning' => 'Waarschuwing',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
  */
@@ -138,6 +258,54 @@ $messages['no'] = array(
 	'sphinxClientFailed' => 'Kunne ikke instansiere SphinxClient',
 	'sphinxSearchFailed' => 'Søk feilet',
 	'sphinxSearchWarning' => 'ADVARSEL',
+);
+
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'sphinxsearch' => 'Serca wiki an dovrand Sphinx',
+	'sphinxsearch-desc' => "A rimpiassa ël motor d'arserca MediaWiki con [http://www.sphinxsearch.com/ Sphinx]",
+	'sphinxSearchInNamespaces' => 'Sërché ant jë spassi nominaj:',
+	'sphinxSearchInCategories' => 'Sërché ant le categorìe:',
+	'sphinxExcludeCategories' => 'Categorìe da esclude',
+	'sphinxResultPage' => "Pàgina d'arzultà",
+	'sphinxPreviousPage' => 'Prima',
+	'sphinxNextPage' => 'Apress',
+	'sphinxSearchPreamble' => "Visualisé %d-%d ëd %d arzultà për query '''<nowiki>%s</nowiki>''' trovà an %0.3f sec con coste statìstiche",
+	'sphinxSearchStats' => "'''%s''' trovà %d vire an %d document",
+	'sphinxSearchStatsInfo' => "Ij nùmer sota a peulo anclude document pa listà a motiv dj'opsion d'arserca",
+	'sphinxSearchButton' => 'Sërca',
+	'sphinxSearchEpilogue' => "Temp adissional ëd database a l'é stàit %0.3f sec.",
+	'sphinxSearchDidYouMean' => 'Vorìi-lo pa dì',
+);
+
+/** Portuguese (Português)
+ * @author Hamilton Abreu
+ */
+$messages['pt'] = array(
+	'sphinxsearch' => 'Pesquisar a wiki usando o Sphinx',
+	'sphinxsearch-desc' => 'Substituir o motor de pesquisa do MediaWiki pelo [http://www.sphinxsearch.com/ Sphinx].',
+	'sphinxSearchInNamespaces' => 'Pesquisar nos espaços nominais',
+	'sphinxSearchInCategories' => 'Pesquisar nas categorias',
+	'sphinxExcludeCategories' => 'Categorias a excluir',
+	'sphinxResultPage' => 'Página de resultados',
+	'sphinxPreviousPage' => 'Anterior',
+	'sphinxNextPage' => 'Seguinte',
+	'sphinxSearchPreamble' => "A mostrar %d-%d de %d resultados para a pesquisa'''<nowiki>%s</nowiki>''' obtidos em %0.3f seg., incluindo estas estatísticas",
+	'sphinxSearchStats' => "'''%s''' aparece %d vezes em %d documentos",
+	'sphinxSearchStatsInfo' => 'Os números acima podem incluir documentos que não são listados devido às opções de pesquisa',
+	'sphinxSearchButton' => 'Pesquisar',
+	'sphinxSearchEpilogue' => 'O tempo adicional da base de dados foi %0.3f seg.',
+	'sphinxSearchDidYouMean' => 'Talvez pretendesse',
+	'sphinxMatchAny' => 'localizar qualquer palavra',
+	'sphinxMatchAll' => 'localizar todas as palavras',
+	'sphinxMatchTitles' => 'localizar somente nos títulos',
+	'sphinxLoading' => 'A carregar...',
+	'sphinxPowered' => 'Powered by %s',
+	'sphinxClientFailed' => 'Não foi possível instanciar o cliente Sphinx',
+	'sphinxSearchFailed' => 'Pesquisa falhou',
+	'sphinxSearchWarning' => 'AVISO',
 );
 
 /** Russian (Русский)
