@@ -179,7 +179,7 @@ class SphinxSearch extends SpecialPage {
 		if ( $cl ) {
 			$res = $cl->Query( addcslashes($this->search_term, '/()[]"!'), $wgSphinxSearch_index_list );
 			if ( $res === false ) {
-				$wgOut->addWikiText( wfMsg('sphinxSearchFailed') . ': ' . $cl->GetLastError() . ".\n" );
+				$wgOut->addWikiText( wfMsg('sphinxSearchFailed') . wfMsg( 'word-separator' ) . $cl->GetLastError() . ".\n" );
 			} else {
 				$found = $this->wfSphinxDisplayResults( $term, $res, $cl );
 			}
@@ -367,7 +367,8 @@ class SphinxSearch extends SpecialPage {
 		global $wgOut, $wgSphinxSuggestMode, $wgSphinxSearch_matches, $wgSphinxSearch_index, $wgSphinxSearch_maxmatches;
 
 		if ($cl->GetLastWarning()) {
-			$wgOut->addWikiText(wfMsg('sphinxSearchWarning') . ': ' . $cl->GetLastWarning() . "\n\n");
+			// FIXME: should be one message with a parameter
+			$wgOut->addWikiText(wfMsg('sphinxSearchWarning') . wfMsg( 'word-separator' ) . $cl->GetLastWarning() . "\n\n");
 		}
 		$found = $res['total_found'];
 
@@ -389,7 +390,8 @@ class SphinxSearch extends SpecialPage {
 			$term,
 			$res['time']
 		);
-		$wgOut->addWikiText($preamble . ':');
+		// FIXME: should be one message with a parameter ending on a colon
+		$wgOut->addWikiText($preamble . wfMsg( 'colon-separator' ) );
 		if (is_array($res["words"])) {
 			$warn = false;
 			foreach ($res["words"] as $word => $info) {
@@ -553,7 +555,7 @@ class SphinxSearch extends SpecialPage {
 		$wgOut->addHTML(" &nbsp; <input type='checkbox' name='match_titles' value='1' " . ($wgRequest->getInt('match_titles') ? "checked='checked'" : ""). ">" . wfMsg('sphinxMatchTitles') . "</div>");
 		# get user settings for which namespaces to search
 		$wgOut->addHTML("<div style='width:30%; border:1px #eee solid; padding:4px; margin-right:1px; float:left;'>");
-		$wgOut->addHTML(wfMsg('sphinxSearchInNamespaces') . ':<br/>');
+		$wgOut->addHTML(wfMsg('sphinxSearchInNamespaces') . '<br />');
 		$all_namespaces = self::searchableNamespaces();
 		foreach( $all_namespaces as $ns => $name ) {
 			$checked = in_array($ns, $this->namespaces) ? ' checked="checked"' : '';
@@ -561,7 +563,7 @@ class SphinxSearch extends SpecialPage {
 			if('' == $name) {
 				$name = wfMsg('blanknamespace');
 			}
-			$wgOut->addHTML("<label><input type='checkbox' value='1' name='ns$ns'$checked />$name</label><br/>");
+			$wgOut->addHTML("<label><input type='checkbox' value='1' name='ns$ns'$checked />$name</label><br />");
 		}
 
 		$all_categories = self::searchableCategories();
@@ -575,11 +577,11 @@ class SphinxSearch extends SpecialPage {
 					"<script type='{$wgJsMimeType}' src='".($wgSphinxSearchJSPath ? $wgSphinxSearchJSPath : $wgSphinxSearchExtPath)."/SphinxSearch.js?2'></script>\n"
 					);
 			$wgOut->addHTML("</div><div style='width:30%; border:1px #eee solid; padding:4px; margin-right:1px; float:left;'>");
-			$wgOut->addHTML(wfMsg('sphinxSearchInCategories') . ':');
+			$wgOut->addHTML(wfMsg('sphinxSearchInCategories') );
 			if ($wgUseExcludes) {
 				$wgOut->addHTML("<div style='float:right; font-size:80%;'>exclude</div>");
 			}
-			$wgOut->addHTML('<br/>');
+			$wgOut->addHTML('<br />');
 			$wgOut->addHTML($this->getCategoryCheckboxes($all_categories, '', $cat_parents));
 		}
 		$wgOut->addHTML("</div></form><br clear='both'>");

@@ -6,8 +6,8 @@ $messages = array();
 $messages['en'] = array( 
 	'sphinxsearch'             => 'Search wiki using Sphinx',
 	'sphinxsearch-desc'        => 'Replaces MediaWiki search engine with [http://www.sphinxsearch.com/ Sphinx]',
-	'sphinxSearchInNamespaces' => 'Search in namespaces',
-	'sphinxSearchInCategories' => 'Search in categories',
+	'sphinxSearchInNamespaces' => 'Search in namespaces:',
+	'sphinxSearchInCategories' => 'Search in categories:',
 	'sphinxExcludeCategories'  => 'Categories to exclude',
 	'sphinxResultPage'         => 'Result page',
 	'sphinxPreviousPage'       => 'Previous',
@@ -24,8 +24,8 @@ $messages['en'] = array(
 	'sphinxLoading'            => 'Loading...',
 	'sphinxPowered'            => 'Powered by %s',
 	'sphinxClientFailed'       => 'Could not instantiate SphinxClient',
-	'sphinxSearchFailed'       => 'Query failed',
-	'sphinxSearchWarning'      => 'Warning'
+	'sphinxSearchFailed'       => 'Query failed:',
+	'sphinxSearchWarning'      => 'Warning:'
 );
 
 /** Spanish (Español)
