@@ -169,6 +169,34 @@ $messages['gl'] = array(
 	'sphinxSearchWarning' => 'AVISO',
 );
 
+/** Swiss German (Alemannisch)
+ * @author Als-Holder
+ */
+$messages['gsw'] = array(
+	'sphinxsearch' => 'Wiki dursueche mit Sphinx',
+	'sphinxsearch-desc' => 'Ersetzt d MediaWiki-Suechmahscin dur [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxSearchInNamespaces' => 'Suech in Namensryym:',
+	'sphinxSearchInCategories' => 'In Kategorie sueche:',
+	'sphinxExcludeCategories' => 'Kategorie, wu solle uusgschlosse syy',
+	'sphinxResultPage' => 'Ergebnissyte',
+	'sphinxPreviousPage' => 'Vorigi',
+	'sphinxNextPage' => 'Negschti',
+	'sphinxSearchPreamble' => "%d-%d vu %d Ergebnis fir d Abfrog '''<nowiki>%s</nowiki>'''. Suechzyt: %0.3f Sekunde",
+	'sphinxSearchStats' => "'''%s''' %d mol gfunde in %d Dokumänt",
+	'sphinxSearchStatsInfo' => 'In däre Zahl wäre villicht Dokumänt mitzellt, wu wäge bstimmte Suechyystellige nit ufglischtet wäre',
+	'sphinxSearchButton' => 'Sueche',
+	'sphinxSearchEpilogue' => 'Zuesätzligi Datebankzyt isch %0.3f Sekunde gsi.',
+	'sphinxSearchDidYouMean' => 'Hesch gmeint',
+	'sphinxMatchAny' => 'irged e Wort',
+	'sphinxMatchAll' => 'alli Werter',
+	'sphinxMatchTitles' => 'nume Sytename',
+	'sphinxLoading' => 'Am Lade …',
+	'sphinxPowered' => 'Betribe mit %s',
+	'sphinxClientFailed' => 'Het dr SphinxClient nit chenne inizialisiere',
+	'sphinxSearchFailed' => 'Abfrog fähl gschlaa:',
+	'sphinxSearchWarning' => 'Warnig:',
+);
+
 /** Interlingua (Interlingua)
  * @author McDutchie
  */
@@ -176,6 +204,61 @@ $messages['ia'] = array(
 	'sphinxsearch' => 'Cercar in le wiki usante Sphinx',
 	'sphinxsearch-desc' => 'Reimplaciar le motor de recerca de MediaWiki per [http://www.sphinxsearch.com/ Sphinx].',
 	'sphinxSearchInNamespaces' => 'Cercar in spatios de nomines',
+	'sphinxSearchInCategories' => 'Cercar in categorias:',
+	'sphinxExcludeCategories' => 'Categorias a excluder',
+	'sphinxResultPage' => 'Pagina de resultatos',
+	'sphinxPreviousPage' => 'Precedente',
+	'sphinxNextPage' => 'Sequente',
+	'sphinxSearchPreamble' => "Resultatos %d-%d de %d pro le recerca de '''<nowiki>%s</nowiki>''' recuperate in %0.3f secundas con iste statisticas",
+	'sphinxSearchStats' => "'''%s''' trovate %d vices in %d documentos",
+	'sphinxSearchStatsInfo' => 'Le numeros hic supra pote includer documentos non listate debite al optiones de recerca',
+	'sphinxSearchButton' => 'Cercar',
+	'sphinxSearchEpilogue' => 'Le tempore additional del base de datos esseva %0.3f secundas.',
+	'sphinxSearchDidYouMean' => 'Esque tu vole dicer',
+	'sphinxMatchAny' => 'trovar qualcunque parola',
+	'sphinxMatchAll' => 'trovar tote le parolas',
+	'sphinxMatchTitles' => 'cercar solmente in titulos',
+	'sphinxLoading' => 'Cargamento…',
+	'sphinxPowered' => 'Actionate per %s',
+	'sphinxClientFailed' => 'Non poteva instantiar SphinxClient',
+	'sphinxSearchFailed' => 'Consulta fallite:',
+	'sphinxSearchWarning' => 'Advertimento:',
+);
+
+/** Japanese (日本語)
+ * @author 青子守歌
+ */
+$messages['ja'] = array(
+	'sphinxSearchInNamespaces' => '名前空間で検索：',
+	'sphinxSearchInCategories' => 'カテゴリで検索：',
+	'sphinxResultPage' => '結果ページ',
+	'sphinxPreviousPage' => '前',
+	'sphinxNextPage' => '次',
+	'sphinxSearchStats' => "'''%s'''が、%dの文書で、\$dコ見つかりました",
+	'sphinxSearchButton' => '検索',
+	'sphinxSearchDidYouMean' => 'もしかして',
+	'sphinxPowered' => '%sの提供',
+	'sphinxSearchWarning' => '警告：',
+);
+
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'sphinxsearch' => 'Op der Wiki mat Sphinx sichen',
+	'sphinxSearchInNamespaces' => 'Sich an den Nummraim:',
+	'sphinxSearchInCategories' => 'Sichen an de Kategorien:',
+	'sphinxExcludeCategories' => 'Kategorien fir auszeschléissen',
+	'sphinxResultPage' => 'Säit mat de Resultater',
+	'sphinxPreviousPage' => 'Vireg',
+	'sphinxNextPage' => 'Nächst',
+	'sphinxSearchStats' => "'''%s''' gouf %d mol an %d Dokumenter fonnt",
+	'sphinxSearchButton' => 'Sichen',
+	'sphinxSearchDidYouMean' => 'Mengt Dir',
+	'sphinxMatchTitles' => 'nëmmen an den Titele sichen',
+	'sphinxLoading' => 'Lueden...',
+	'sphinxSearchFailed' => 'Ufro huet net fonctionnéiert:',
+	'sphinxSearchWarning' => 'Warnung:',
 );
 
 /** Macedonian (Македонски)
@@ -278,6 +361,14 @@ $messages['pms'] = array(
 	'sphinxSearchButton' => 'Sërca',
 	'sphinxSearchEpilogue' => "Temp adissional ëd database a l'é stàit %0.3f sec.",
 	'sphinxSearchDidYouMean' => 'Vorìi-lo pa dì',
+	'sphinxMatchAny' => 'confronta minca paròla',
+	'sphinxMatchAll' => 'confranta tute paròle',
+	'sphinxMatchTitles' => 'confronta mach ij tìtoj',
+	'sphinxLoading' => 'A caria ...',
+	'sphinxPowered' => 'Potensià da %s',
+	'sphinxClientFailed' => 'As peul pa istansié SphinxClient',
+	'sphinxSearchFailed' => 'Query falìa:',
+	'sphinxSearchWarning' => 'Avis:',
 );
 
 /** Portuguese (Português)
