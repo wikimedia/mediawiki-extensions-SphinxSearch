@@ -442,7 +442,7 @@ class SphinxSearch extends SpecialPage {
 		if ( is_array( $res["words"] ) ) {
 			$warn = false;
 			foreach ( $res["words"] as $word => $info ) {
-				$wgOut->addWikiText( '* ' .
+				$wgOut->addWikiText(
 					wfMsg( 'sphinxSearchStats', $word, $info['hits'], $info['docs'] )
 				);
 				if ( ( $info['docs'] < $wgSphinxSearch_maxmatches ) && ( $info['docs'] > $res['total'] ) ) {
@@ -450,7 +450,7 @@ class SphinxSearch extends SpecialPage {
 				}
 			}
 			if ( $warn ) {
-				$wgOut->addWikiText( "''" . wfMsg( 'sphinxSearchStatsInfo' ) . "''" );
+				$wgOut->addWikiText( wfMsg( 'sphinxSearchStatsInfo' ) );
 			} else {
 				$wgOut->addWikiText( "\n" );
 			}
