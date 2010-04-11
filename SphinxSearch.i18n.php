@@ -86,6 +86,17 @@ $messages['br'] = array(
 	'sphinxSearchWarning' => 'Diwallit : $1',
 );
 
+/** German (Deutsch) */
+$messages['de'] = array(
+	'sphinxSearchInNamespaces' => 'Suche in Namensräumen:',
+	'sphinxSearchInCategories' => 'Suche in Kategorien:',
+	'sphinxPreviousPage' => 'Vorherige',
+	'sphinxNextPage' => 'Nächste',
+	'sphinxSearchButton' => 'Suchen',
+	'sphinxSearchDidYouMean' => 'Meintest du',
+	'sphinxLoading' => 'Laden …',
+);
+
 /** Spanish (Español)
  * @author Pertile
  */
@@ -114,7 +125,22 @@ $messages['es'] = array(
 	'sphinxSearchWarning' => 'Advertencia $1',
 );
 
+/** Finnish (Suomi)
+ * @author Crt
+ */
+$messages['fi'] = array(
+	'sphinxSearchInNamespaces' => 'Hae nimiavaruuksista:',
+	'sphinxPreviousPage' => 'Edellinen',
+	'sphinxNextPage' => 'Seuraava',
+	'sphinxSearchButton' => 'Etsi',
+	'sphinxSearchDidYouMean' => 'Tarkoititko',
+	'sphinxLoading' => 'Ladataan…',
+	'sphinxPowered' => 'Palvelun mahdollistaa $1',
+	'sphinxSearchWarning' => 'Varoitus: $1',
+);
+
 /** French (Français)
+ * @author IAlex
  * @author Peter17
  */
 $messages['fr'] = array(
@@ -174,7 +200,6 @@ $messages['gl'] = array(
  * @author Als-Holder
  */
 $messages['gsw'] = array(
-
 	'sphinxsearch' => 'Wiki dursueche mit Sphinx',
 	'sphinxsearch-desc' => 'Ersetzt d MediaWiki-Suechmahscin dur [http://www.sphinxsearch.com/ Sphinx]',
 	'sphinxSearchInNamespaces' => 'Suech in Namensryym:',
@@ -228,18 +253,31 @@ $messages['ia'] = array(
 );
 
 /** Japanese (日本語)
+ * @author Aotake
  * @author 青子守歌
  */
 $messages['ja'] = array(
+	'sphinxsearch' => 'Sphinx をつかってウィキを検索',
+	'sphinxsearch-desc' => 'メディアウィキの検索エンジンを [http://www.sphinxsearch.com/ Sphinx] で置き換える',
 	'sphinxSearchInNamespaces' => '名前空間で検索：',
 	'sphinxSearchInCategories' => 'カテゴリで検索：',
+	'sphinxExcludeCategories' => '除外するカテゴリ',
 	'sphinxResultPage' => '結果ページ：',
 	'sphinxPreviousPage' => '前',
 	'sphinxNextPage' => '次',
+	'sphinxSearchPreamble' => '検索語 "<nowiki>$4</nowiki>" に対する$3件のヒットから $1—$2 件目の結果を表示中。検索にかかった時間 $5 :',
 	'sphinxSearchStats' => '"$1"が、$2の文書で、$3コ見つかりました',
+	'sphinxSearchStatsInfo' => '検索結果の件数には、検索の設定に基づき表示されていない文書も含まれている可能性があります。',
 	'sphinxSearchButton' => '検索',
+	'sphinxSearchEpilogue' => '追加データベースにかかった時間は $1 秒です。',
 	'sphinxSearchDidYouMean' => 'もしかして：',
+	'sphinxMatchAny' => 'いずれかの単語に一致',
+	'sphinxMatchAll' => 'すべての単語に一致',
+	'sphinxMatchTitles' => 'ページ名のみ一致',
+	'sphinxLoading' => '読み込み中…',
 	'sphinxPowered' => '$1の提供',
+	'sphinxClientFailed' => 'Sphinx クライアントを呼び出せませんでした。',
+	'sphinxSearchFailed' => '検索失敗: $1',
 	'sphinxSearchWarning' => '警告： $1',
 );
 
@@ -289,7 +327,7 @@ $messages['mk'] = array(
 	'sphinxClientFailed' => 'Не можев да повикам Sphinx клиент.',
 	'sphinxSearchFailed' => 'Барањето не успеа $1',
 	'sphinxSearchWarning' => 'Предупредување $1',
-	'sphinxPspellError' => 'Не можев да повикам pspell проширување.'
+	'sphinxPspellError' => 'Не можев да повикам pspell проширување.',
 );
 
 /** Dutch (Nederlands)
@@ -305,6 +343,8 @@ $messages['nl'] = array(
 	'sphinxPreviousPage' => 'Vorige',
 	'sphinxNextPage' => 'Volgende',
 	'sphinxSearchPreamble' => 'Resultaten $1 tot $2 van $3 worden weergegeven voor zoekopdracht "<nowiki>$4</nowiki>". Zoektijd: $5 seconden',
+	'sphinxSearchStats' => "'''%s''' is %d keer aangetroffen in %d documenten",
+	'sphinxSearchStatsInfo' => 'De bovenstaande aantallen kunnen documenten bevatten die niet worden weergegeven vanwege zoekinstellingen.',
 	'sphinxSearchButton' => 'Zoeken',
 	'sphinxSearchEpilogue' => 'Aanvullende databasetijd was $1 seconden.',
 	'sphinxSearchDidYouMean' => 'Bedoelde u:',
@@ -346,6 +386,15 @@ $messages['no'] = array(
 	'sphinxSearchWarning' => 'Advarsel $1',
 );
 
+/** Polish (Polski) */
+$messages['pl'] = array(
+	'sphinxPreviousPage' => 'Poprzednia',
+	'sphinxNextPage' => 'Następna',
+	'sphinxSearchButton' => 'Szukaj',
+	'sphinxSearchDidYouMean' => 'Czy chodziło Ci o',
+	'sphinxLoading' => 'Trwa ładowanie…',
+);
+
 /** Piedmontese (Piemontèis)
  * @author Dragonòt
  */
@@ -362,7 +411,7 @@ $messages['pms'] = array(
 	'sphinxSearchStats' => '"$1" trovà $2 vire an $3 document',
 	'sphinxSearchStatsInfo' => "Ij nùmer sota a peulo anclude document pa listà a motiv dj'opsion d'arserca",
 	'sphinxSearchButton' => 'Sërca',
-	'sphinxSearchEpilogue' => "Temp adissional ëd database a l'é stàit \$1 sec.",
+	'sphinxSearchEpilogue' => "Temp adissional ëd database a l'é stàit $1 sec.",
 	'sphinxSearchDidYouMean' => 'Vorìi-lo pa dì:',
 	'sphinxMatchAny' => 'confronta minca paròla',
 	'sphinxMatchAll' => 'confranta tute paròle',
@@ -429,3 +478,4 @@ $messages['ru'] = array(
 	'sphinxSearchFailed' => 'Ошибка при выполнении запроса $1',
 	'sphinxSearchWarning' => 'Предупреждение $1',
 );
+

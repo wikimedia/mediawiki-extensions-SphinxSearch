@@ -16,5 +16,6 @@ $aliases['en'] = array(
 
 /** Arabic (العربية) */
 $aliases['ar'] = array(
-	'SphinxSearch'   => array( 'بحث_سفنكس' ),
+	'SphinxSearch' => array( 'بحث_سفنكس' ),
 );
+
