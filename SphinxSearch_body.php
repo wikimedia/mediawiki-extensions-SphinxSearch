@@ -26,16 +26,12 @@ class SphinxSearch extends SpecialPage {
 	 * @return string
 	 */
 	function SphinxSearch() {
-		global $wgDisableInternalSearch, $wgSphinxSuggestMode, $wgAutoloadClasses;
+		global $wgDisableInternalSearch, $wgAutoloadClasses;
 
 		if ( $wgDisableInternalSearch ) {
 			SpecialPage::SpecialPage( 'Search' );
 		} else {
 			SpecialPage::SpecialPage( 'SphinxSearch' );
-		}
-
-		if ( $wgSphinxSuggestMode ) {
-		    $wgAutoloadClasses['SphinxSearch_spell'] = dirname( __FILE__ ) . '/SphinxSearch_spell.php';
 		}
 
 		if ( function_exists( 'wfLoadExtensionMessages' ) ) {
@@ -51,6 +47,7 @@ class SphinxSearch extends SpecialPage {
 				}
 			}
 		}
+
 		return true;
 	}
 
@@ -61,9 +58,9 @@ class SphinxSearch extends SpecialPage {
 	 */
 	function searchableNamespaces() {
 		$namespaces = SearchEngine::searchableNamespaces();
-		
+
 		wfRunHooks( 'SphinxSearchFilterSearchableNamespaces', array( &$namespaces ) );
-		
+
 		return $namespaces;
 	}
 
@@ -80,9 +77,9 @@ class SphinxSearch extends SpecialPage {
 		} else {
 			$categories = array();
 		}
-		
+
 		wfRunHooks( 'SphinxSearchGetSearchableCategories', array( &$categories ) );
-		
+
 		return $categories;
 	}
 
@@ -100,6 +97,7 @@ class SphinxSearch extends SpecialPage {
 			$cache_key = $wgDBname . ':sphinx_cats:' . md5( $parent );
 			$categories = $wgMemc->get( $cache_key );
 		}
+
 		if ( !is_array( $categories ) ) {
 			$categories = array();
 			$dbr = wfGetDB( DB_SLAVE );
@@ -110,7 +108,7 @@ class SphinxSearch extends SpecialPage {
 						'cl_from         =  page_id',
 						'cl_to'   => $parent,
 						'page_namespace' => NS_CATEGORY ),
-				'epSearchableCategories',
+				__METHOD__,
 				array( 'ORDER BY' => 'cl_sortkey' )
 			);
 			while ( $x = $dbr->fetchObject ( $res ) ) {
@@ -332,9 +330,9 @@ class SphinxSearch extends SpecialPage {
 	 * Returns the number of matches.
 	 */
 	function prepareSphinxClient( $term, $match_titles_only = false ) {
-		global $wgSphinxSearch_sortmode, $wgSphinxSearch_sortby,
-			$wgSphinxSearch_host,  $wgSphinxSearch_port, $wgSphinxSearch_index_weights,
-			$wgSphinxSearch_index, $wgSphinxSearch_matches, $wgSphinxSearch_mode, $wgSphinxSearch_weights,
+		global $wgSphinxSearch_sortmode, $wgSphinxSearch_sortby, $wgSphinxSearch_host,
+			$wgSphinxSearch_port, $wgSphinxSearch_index_weights, $wgSphinxSearch_index,
+			$wgSphinxSearch_matches, $wgSphinxSearch_mode, $wgSphinxSearch_weights,
 			$wgSphinxMatchAll, $wgSphinxSearch_maxmatches, $wgSphinxSearch_cutoff;
 
 		# don't do anything for blank searches
@@ -410,7 +408,8 @@ class SphinxSearch extends SpecialPage {
 
 	function wfSphinxDisplayResults( $term, $res, $cl ) {
 
-		global $wgOut, $wgSphinxSuggestMode, $wgSphinxSearch_matches, $wgSphinxSearch_index, $wgSphinxSearch_maxmatches;
+		global $wgOut, $wgSphinxSuggestMode, $wgSphinxSearch_matches,
+			$wgSphinxSearch_index, $wgSphinxSearch_maxmatches;
 
 		if ($cl->GetLastWarning()) {
 			$wgOut->addWikiText( wfMsg( 'sphinxSearchWarning', $cl->GetLastWarning() ) . "\n\n");
@@ -418,13 +417,12 @@ class SphinxSearch extends SpecialPage {
 		$found = $res['total_found'];
 
 		if ( $wgSphinxSuggestMode ) {
-			$sc = new SphinxSearch_spell;
-			$didyoumean = $sc->spell( $this->search_term );
+			$didyoumean = $this->spell();
 			if ( $didyoumean ) {
 				$wgOut->addhtml( wfMsg( 'sphinxSearchDidYouMean' ) .
 					" <b><a href='" .
 					$this->getActionURL( $didyoumean, $this->namespaces ) .
-					"1'>" . $didyoumean . '</a></b>?'
+					"1'>" . $didyoumean . '</a></b>'
 				);
 			}
 		}
@@ -461,7 +459,7 @@ class SphinxSearch extends SpecialPage {
 
 		if ( isset( $res["matches"] ) && is_array( $res["matches"] ) ) {
 			$wgOut->addWikiText( "----" );
-			$db = wfGetDB( DB_SLAVE );
+			$dbr = wfGetDB( DB_SLAVE );
 			$excerpts_opt = array(
 				"before_match"    => "<span style='color:red'>",
 				"after_match"     => "</span>",
@@ -469,22 +467,30 @@ class SphinxSearch extends SpecialPage {
 				"limit"           => 400,
 				"around"          => 15
 			);
-
 			foreach ( $res["matches"] as $doc => $docinfo ) {
-				$sql = "SELECT old_text FROM " . $db->tableName( 'text' ) . " WHERE old_id=" . $docinfo['attrs']['old_id'];
-				$res = $db->query( $sql, __METHOD__ );
-				if ( $db->numRows( $res ) ) {
-					$row = $db->fetchRow( $res );
+				$page_content = $dbr->selectField(
+					'text', 'old_text',
+					array(
+						'old_id' => $docinfo['attrs']['old_id']
+					),
+					__METHOD__
+				);
+				if ( $page_content ) {
 					$title_obj = Title::newFromID( $doc );
 					if ( is_object( $title_obj ) ) {
 						$wiki_title = $title_obj->getPrefixedText();
 						$wiki_path = $title_obj->getPrefixedDBkey();
 						$wgOut->addWikiText( "* <span style='font-size:110%;'>[[:$wiki_path|$wiki_title]]</span>" );
-						
+
 						# uncomment this line to see the weights etc. as HTML comments in the source of the page
 						# $wgOut->addHTML("<!-- page_id: ".$doc."\ninfo: ".print_r($docinfo, true)." -->");
-						
-						$excerpts = $cl->BuildExcerpts( array( $row[0] ), $wgSphinxSearch_index, $term, $excerpts_opt );
+
+						$excerpts = $cl->BuildExcerpts(
+							array( $page_content ),
+							$wgSphinxSearch_index,
+							$term,
+							$excerpts_opt
+						);
 						if ( !is_array( $excerpts ) ) {
 							$excerpts = array( wfMsg( 'sphinxSearchWarning', $cl->GetLastError() ) );
 						}
@@ -498,7 +504,6 @@ class SphinxSearch extends SpecialPage {
 						}
 					}
 				}
-				$db->freeResult( $res );
 			}
 			$time = number_format( microtime( true ) - $start_time, 3);
 			$wgOut->addWikiText( wfMsg( 'sphinxSearchEpilogue', $time ) );
@@ -586,8 +591,9 @@ class SphinxSearch extends SpecialPage {
 	}
 
 	function createNewSearchForm( $term ) {
-		global $wgOut, $wgDisableInternalSearch, $wgSphinxSearch_mode, $wgSphinxMatchAll, $wgUseExcludes;
-		global $wgUseAjax, $wgJsMimeType, $wgScriptPath, $wgSphinxSearchExtPath, $wgSphinxSearchJSPath, $wgRequest;
+		global $wgOut, $wgDisableInternalSearch, $wgSphinxSearch_mode, $wgSphinxMatchAll,
+			$wgUseExcludes, $wgUseAjax, $wgJsMimeType, $wgScriptPath,
+			$wgSphinxSearchExtPath, $wgSphinxSearchJSPath, $wgRequest;
 
 		$search_title = ( $wgDisableInternalSearch ? 'Search' : 'SphinxSearch' );
 		$titleObj = SpecialPage::getTitleFor( $search_title );
@@ -647,7 +653,7 @@ class SphinxSearch extends SpecialPage {
 			$wgOut->addHTML('<br />');
 			$wgOut->addHTML( $this->getCategoryCheckboxes( $all_categories, '', $cat_parents ) );
 		}
-		$wgOut->addHTML( "</div></form><br clear='both'>" );
+		$wgOut->addHTML( "</div></form><br clear='both' />" );
 
 		# Put a Sphinx label for this search
 		$wgOut->addHTML( "<div style='text-align:center'>" .
@@ -705,6 +711,108 @@ class SphinxSearch extends SpecialPage {
 				$html . "</div>";
 		}
 		return $html;
+	}
+
+	function spell() {
+		$string = str_replace( '"', '', $this->search_term );
+		$words = preg_split( '/(\s+|\|)/', $string, -1, PREG_SPLIT_NO_EMPTY );
+		if ( function_exists( 'pspell_check' ) ) {
+			$suggestion = $this->builtin_spell($words);
+		} else {
+			$suggestion = $this->nonnative_spell($words);
+		}
+		return $suggestion;
+	}
+
+	function builtin_spell($words) {
+		global $wgUser, $wgSphinxSearchPersonalDictionary, $wgSphinxSearchPspellDictionaryDir;
+
+		$ret = '';
+		$suggestion_needed = false;
+		foreach ( $words as $word ) {
+			$pspell_config = pspell_config_create(
+				$wgUser->getDefaultOption( 'language' ),
+				$wgUser->getDefaultOption( 'variant' )
+			);
+			if ( $wgSphinxSearchPspellDictionaryDir ) {
+				pspell_config_data_dir( $pspell_config, $wgSphinxSearchPspellDictionaryDir );
+				pspell_config_dict_dir( $pspell_config, $wgSphinxSearchPspellDictionaryDir );
+			}
+			pspell_config_mode( $pspell_config, PSPELL_FAST | PSPELL_RUN_TOGETHER );
+			if ( $wgSphinxSearchPersonalDictionary ) {
+				pspell_config_personal( $pspell_config, $wgSphinxSearchPersonalDictionary );
+			}
+			$pspell_link = pspell_new_config( $pspell_config );
+
+			if ( !$pspell_link ) {
+				return wfMsg( 'sphinxPspellError' );
+			}
+			if ( !pspell_check( $pspell_link, $word ) ) {
+				$suggestions = pspell_suggest( $pspell_link, $word );
+				if ( count( $suggestions ) ) {
+					$guess = array_shift($suggestions);
+				} else {
+					$guess = '';
+				}
+				if ( !$guess || (strtolower( $word ) == strtolower( $guess )) ) {
+					$ret .= "$word ";
+				} else {
+					$ret .=  "$guess ";
+					$suggestion_needed = true;
+				}
+			} else {
+				$ret .= "$word ";
+			}
+		}
+
+		return ( $suggestion_needed ? trim( $ret ) : '' );
+	}
+
+	function nonnative_spell($words) {
+		global $wgUser, $wgSphinxSearchPersonalDictionary, $wgSphinxSearchAspellPath;
+
+		// aspell will only return mis-spelled words, so remember all here
+		$word_suggestions = array();
+		foreach ( $words as $word ) {
+			$word_suggestions[$word] = $word;
+		}
+
+		// prepare the system call with optional dictionary
+		$aspellcommand = 'echo ' . escapeshellarg( join( ' ', $words ) ) .
+			' | ' . escapeshellarg( $wgSphinxSearchAspellPath ) .
+			' -a --ignore-accents --ignore-case';
+		if ( $wgUser ) {
+			$aspellcommand .= ' --lang=' . $wgUser->getDefaultOption( 'language' );
+		}
+		if ( $wgSphinxSearchPersonalDictionary ) {
+			$aspellcommand .= ' --home-dir=' . dirname( $wgSphinxSearchPersonalDictionary );
+			$aspellcommand .= ' -p ' . basename( $wgSphinxSearchPersonalDictionary );
+		}
+
+		// run aspell
+		$shell_return = shell_exec( $aspellcommand );
+
+		// parse return line by line
+		$returnarray = explode( "\n", $shell_return );
+		$suggestion_needed = false;
+		foreach ( $returnarray as $key => $value ) {
+			// lines with suggestions start with &
+			if ( substr( $value, 0, 1 ) == "&" ) {
+				$correction = explode( " ", $value );
+				$word = $correction[1];
+				$suggestions = substr( $value, strpos( $value, ":" ) + 2 );
+				$suggestions = explode( ", ", $suggestions );
+				if (count($suggestions)) {
+					$guess = array_shift($suggestions);
+					if ( strtolower( $word ) != strtolower( $guess ) ) {
+						$word_suggestions[$word] = $guess;
+						$suggestion_needed = true;
+					}
+				}
+			}
+		}
+		
+		return ( $suggestion_needed ? join( ' ', $word_suggestions ) : '' );
 	}
 
 }
