@@ -97,7 +97,18 @@ $messages['de'] = array(
 	'sphinxLoading' => 'Laden …',
 );
 
+/** Greek (Ελληνικά)
+ * @author Dada
+ */
+$messages['el'] = array(
+	'sphinxSearchInNamespaces' => 'Αναζήτηση στις ομάδες σελίδων:',
+	'sphinxSearchInCategories' => 'Αναζήτηση στις κατηγορίες:',
+	'sphinxSearchButton' => 'Αναζήτηση',
+	'sphinxSearchWarning' => 'Προειδοποίηση: $ 1',
+);
+
 /** Spanish (Español)
+ * @author Crazymadlover
  * @author Pertile
  */
 $messages['es'] = array(
@@ -110,8 +121,8 @@ $messages['es'] = array(
 	'sphinxPreviousPage' => 'Anterior',
 	'sphinxNextPage' => 'Siguiente',
 	'sphinxSearchPreamble' => 'Mostrando $1—$2 de $3 coincidencias para la búsqueda de "<nowiki>$4</nowiki>", recuperado en $5 segundo(s) incluyendo estas estadísticas',
-	'sphinxSearchStats' => '"$1" fue encontrado $2 veces en $3 documentos',
-	'sphinxSearchStatsInfo' => 'Los números mostrados arriba pueden incluir documentos no listados debido a las opciones de búsqueda.',
+	'sphinxSearchStats' => '* "$1" fue encontrado $2 veces en $3 documentos',
+	'sphinxSearchStatsInfo' => "''Los números mostrados arriba pueden incluir documentos no listados debido a las opciones de búsqueda.''",
 	'sphinxSearchButton' => 'Buscar',
 	'sphinxSearchEpilogue' => 'El tiempo de base de datos adicional fue de $1 segundos.',
 	'sphinxSearchDidYouMean' => 'Quizás quiso decir',
@@ -123,6 +134,7 @@ $messages['es'] = array(
 	'sphinxClientFailed' => 'No se pudo instanciar el cliente Sphinx.',
 	'sphinxSearchFailed' => 'Falló la búsqueda $1',
 	'sphinxSearchWarning' => 'Advertencia $1',
+	'sphinxPspellError' => 'No se pudo invocar la extensión pspell.',
 );
 
 /** Finnish (Suomi)
@@ -180,9 +192,9 @@ $messages['gl'] = array(
 	'sphinxResultPage' => 'Páxina de resultados',
 	'sphinxPreviousPage' => 'Anterior',
 	'sphinxNextPage' => 'Seguinte',
-	'sphinxSearchPreamble' => 'Mostrando $1—$2 coincidencias dun total de $3 que deu a pescuda "<nowiki>$4</nowiki>", obtidas en $5 segundos coas estatísticas',
-	'sphinxSearchStats' => '"$1" atopouse $2 veces en $3 documentos',
-	'sphinxSearchStatsInfo' => 'Os números superiores poden incluír documentos non listados debido ás opcións de procura.',
+	'sphinxSearchPreamble' => 'Mostrando de $1 a $2 coincidencias dun total de $3 que deu a pescuda "<nowiki>$4</nowiki>", obtidas en $5 segundos con estas estatísticas:',
+	'sphinxSearchStats' => '* "$1" atopouse $2 veces en $3 documentos',
+	'sphinxSearchStatsInfo' => "''Os números superiores poden incluír documentos non listados debido ás opcións de procura.''",
 	'sphinxSearchButton' => 'Procurar',
 	'sphinxSearchEpilogue' => 'O tempo adicional da base de datos foi de $1 segundos.',
 	'sphinxSearchDidYouMean' => 'Quizais quixo dicir',
@@ -191,9 +203,10 @@ $messages['gl'] = array(
 	'sphinxMatchTitles' => 'atopar só nos títulos',
 	'sphinxLoading' => 'Cargando...',
 	'sphinxPowered' => 'Desenvolvido por $1',
-	'sphinxClientFailed' => 'Non se puido conectar co SphinxClient.',
-	'sphinxSearchFailed' => 'Fallou a pescuda $1',
-	'sphinxSearchWarning' => 'Aviso $1',
+	'sphinxClientFailed' => 'Non se puido conectar co cliente Sphinx.',
+	'sphinxSearchFailed' => 'Fallou a pescuda: $1',
+	'sphinxSearchWarning' => 'Aviso: $1',
+	'sphinxPspellError' => 'Non se puido chamar a extensión pspell.',
 );
 
 /** Swiss German (Alemannisch)
@@ -209,8 +222,8 @@ $messages['gsw'] = array(
 	'sphinxPreviousPage' => 'Vorigi',
 	'sphinxNextPage' => 'Negschti',
 	'sphinxSearchPreamble' => '$1—$2 vu $3 Ergebnis fir d Abfrog "<nowiki>$4</nowiki>". Suechzyt: $5 Sekunde',
-	'sphinxSearchStats' => '"$1" $2 mol gfunde in $3 Dokumänt',
-	'sphinxSearchStatsInfo' => 'In däre Zahl wäre villicht Dokumänt mitzellt, wu wäge bstimmte Suechyystellige nit ufglischtet wäre',
+	'sphinxSearchStats' => '* „$1“ $2 mol gfunde in $3 Dokumänt',
+	'sphinxSearchStatsInfo' => "''In däre Zahl wäre villicht Dokumänt mitzellt, wu wäge bstimmte Suechyystellige nit ufglischtet wäre.''",
 	'sphinxSearchButton' => 'Sueche',
 	'sphinxSearchEpilogue' => 'Zuesätzligi Datebankzyt isch $1 Sekunde gsi.',
 	'sphinxSearchDidYouMean' => 'Hesch gmeint:',
@@ -222,6 +235,19 @@ $messages['gsw'] = array(
 	'sphinxClientFailed' => 'Het dr SphinxClient nit chenne inizialisiere',
 	'sphinxSearchFailed' => 'Abfrog fähl gschlaa: $1',
 	'sphinxSearchWarning' => 'Warnig: $1',
+	'sphinxPspellError' => 'Het d pspell-Erwyterig nit chenne ufruefe',
+);
+
+/** Hungarian (Magyar)
+ * @author Glanthor Reviol
+ */
+$messages['hu'] = array(
+	'sphinxSearchInNamespaces' => 'Keresés a következő névterekben:',
+	'sphinxSearchInCategories' => 'Keresés a következő kategóriákban:',
+	'sphinxPreviousPage' => 'Előző',
+	'sphinxNextPage' => 'Következő',
+	'sphinxSearchButton' => 'Keresés',
+	'sphinxLoading' => 'Betöltés…',
 );
 
 /** Interlingua (Interlingua)
@@ -250,6 +276,7 @@ $messages['ia'] = array(
 	'sphinxClientFailed' => 'Non poteva instantiar SphinxClient.',
 	'sphinxSearchFailed' => 'Consulta fallite: $1',
 	'sphinxSearchWarning' => 'Advertimento: $1',
+	'sphinxPspellError' => 'Non poteva invocar le extension pspell.',
 );
 
 /** Japanese (日本語)
@@ -266,7 +293,7 @@ $messages['ja'] = array(
 	'sphinxPreviousPage' => '前',
 	'sphinxNextPage' => '次',
 	'sphinxSearchPreamble' => '検索語 "<nowiki>$4</nowiki>" に対する$3件のヒットから $1—$2 件目の結果を表示中。検索にかかった時間 $5 :',
-	'sphinxSearchStats' => '"$1"が、$2の文書で、$3コ見つかりました',
+	'sphinxSearchStats' => '* 「$1」が、$2の文書で、$3コ見つかりました',
 	'sphinxSearchStatsInfo' => '検索結果の件数には、検索の設定に基づき表示されていない文書も含まれている可能性があります。',
 	'sphinxSearchButton' => '検索',
 	'sphinxSearchEpilogue' => '追加データベースにかかった時間は $1 秒です。',
@@ -314,8 +341,8 @@ $messages['mk'] = array(
 	'sphinxPreviousPage' => 'Претходна',
 	'sphinxNextPage' => 'Следна',
 	'sphinxSearchPreamble' => 'Приказ на $1—$2 од вкупно $3 совпаѓања за барањето "<nowiki>$4</nowiki>" извршено за $5 сек. со следниве статистики',
-	'sphinxSearchStats' => '"$1" е пронајдено $2 пати во $3 документи',
-	'sphinxSearchStatsInfo' => 'Горенаведените бројки може да содржат документи кои не се наведени поради нагодувањата на пребарувањето.',
+	'sphinxSearchStats' => '* „$1“ е пронајдено $2 пати во $3 документи',
+	'sphinxSearchStatsInfo' => "''Горенаведените бројки може да содржат документи кои не се наведени поради нагодувањата на пребарувањето.''",
 	'sphinxSearchButton' => 'Пребарај',
 	'sphinxSearchEpilogue' => 'Дополнителното време за базата на податоци изнесуваше $1 сек.',
 	'sphinxSearchDidYouMean' => 'Дали мислевте на:',
@@ -343,8 +370,8 @@ $messages['nl'] = array(
 	'sphinxPreviousPage' => 'Vorige',
 	'sphinxNextPage' => 'Volgende',
 	'sphinxSearchPreamble' => 'Resultaten $1 tot $2 van $3 worden weergegeven voor zoekopdracht "<nowiki>$4</nowiki>". Zoektijd: $5 seconden',
-	'sphinxSearchStats' => "'''%s''' is %d keer aangetroffen in %d documenten",
-	'sphinxSearchStatsInfo' => 'De bovenstaande aantallen kunnen documenten bevatten die niet worden weergegeven vanwege zoekinstellingen.',
+	'sphinxSearchStats' => '"$1" is $2 keer aangetroffen in $3 documenten',
+	'sphinxSearchStatsInfo' => "''De bovenstaande aantallen kunnen documenten bevatten die niet worden weergegeven vanwege zoekinstellingen.''",
 	'sphinxSearchButton' => 'Zoeken',
 	'sphinxSearchEpilogue' => 'Aanvullende databasetijd was $1 seconden.',
 	'sphinxSearchDidYouMean' => 'Bedoelde u:',
@@ -356,6 +383,7 @@ $messages['nl'] = array(
 	'sphinxClientFailed' => 'Het was niet mogelijk SphinxClient te initialiseren',
 	'sphinxSearchFailed' => 'Zoekopdracht mislukt $1',
 	'sphinxSearchWarning' => 'Waarschuwing $1',
+	'sphinxPspellError' => 'Het was niet mogelijk de uitbreiding "pspell" aan te spreken.',
 );
 
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
@@ -384,6 +412,7 @@ $messages['no'] = array(
 	'sphinxClientFailed' => 'Kunne ikke instansiere SphinxClient',
 	'sphinxSearchFailed' => 'Søk feilet $1',
 	'sphinxSearchWarning' => 'Advarsel $1',
+	'sphinxPspellError' => 'Kunne ikke starte utvidelsen pspell.',
 );
 
 /** Polish (Polski) */
@@ -408,8 +437,8 @@ $messages['pms'] = array(
 	'sphinxPreviousPage' => 'Prima',
 	'sphinxNextPage' => 'Apress',
 	'sphinxSearchPreamble' => 'Visualisé $1—$2 ëd $3 arzultà për query "<nowiki>$4</nowiki>" trovà an $5 sec con coste statìstiche',
-	'sphinxSearchStats' => '"$1" trovà $2 vire an $3 document',
-	'sphinxSearchStatsInfo' => "Ij nùmer sota a peulo anclude document pa listà a motiv dj'opsion d'arserca",
+	'sphinxSearchStats' => '* "$1" trovà $2 vire an $3 document',
+	'sphinxSearchStatsInfo' => "''Ij nùmer sota a peulo anclude document pa listà a motiv dj'opsion d'arserca.''",
 	'sphinxSearchButton' => 'Sërca',
 	'sphinxSearchEpilogue' => "Temp adissional ëd database a l'é stàit $1 sec.",
 	'sphinxSearchDidYouMean' => 'Vorìi-lo pa dì:',
@@ -421,6 +450,7 @@ $messages['pms'] = array(
 	'sphinxClientFailed' => 'As peul pa istansié SphinxClient',
 	'sphinxSearchFailed' => 'Query falìa: $1',
 	'sphinxSearchWarning' => 'Avis: $1',
+	'sphinxPspellError' => "As peul pa ciamesse l'estension pspell.",
 );
 
 /** Portuguese (Português)
@@ -436,8 +466,8 @@ $messages['pt'] = array(
 	'sphinxPreviousPage' => 'Anterior',
 	'sphinxNextPage' => 'Seguinte',
 	'sphinxSearchPreamble' => 'A mostrar $1—$2 de $3 resultados para a pesquisa"<nowiki>$4</nowiki>" obtidos em $5 seg., incluindo estas estatísticas',
-	'sphinxSearchStats' => '"$1" aparece $2 vezes em $3 documentos',
-	'sphinxSearchStatsInfo' => 'Os números acima podem incluir documentos que não são listados devido às opções de pesquisa.',
+	'sphinxSearchStats' => '* "$1" foi encontrado $2 vezes em $3 documentos',
+	'sphinxSearchStatsInfo' => "''Os números acima podem incluir documentos que não são listados devido às opções de pesquisa.''",
 	'sphinxSearchButton' => 'Pesquisar',
 	'sphinxSearchEpilogue' => 'O tempo adicional da base de dados foi $1 seg.',
 	'sphinxSearchDidYouMean' => 'Talvez pretendesse',
@@ -449,6 +479,7 @@ $messages['pt'] = array(
 	'sphinxClientFailed' => 'Não foi possível instanciar o cliente Sphinx.',
 	'sphinxSearchFailed' => 'Pesquisa falhou $1',
 	'sphinxSearchWarning' => 'Aviso $1',
+	'sphinxPspellError' => 'Não foi possível chamar a extensão pspell.',
 );
 
 /** Russian (Русский)
@@ -464,8 +495,8 @@ $messages['ru'] = array(
 	'sphinxPreviousPage' => 'Предыдущая',
 	'sphinxNextPage' => 'Следующая',
 	'sphinxSearchPreamble' => 'Отображение $1—$2 результатов из $3 для запроса "<nowiki>$4</nowiki>", поиска занял $5 с',
-	'sphinxSearchStats' => '"$1" найдено $2 раз в $3 документах',
-	'sphinxSearchStatsInfo' => 'Приведённые цифры могут включать в себя документы, не показанные из-за настроек поиска.',
+	'sphinxSearchStats' => '* «$1» найдено $2 раз в $3 документах',
+	'sphinxSearchStatsInfo' => "''Приведённые цифры могут включать в себя документы, не показанные из-за настроек поиска.''",
 	'sphinxSearchButton' => 'Найти',
 	'sphinxSearchEpilogue' => 'Дополнительное время базы данных составило $1 с.',
 	'sphinxSearchDidYouMean' => 'Возможно, вы имели в виду',
@@ -477,5 +508,6 @@ $messages['ru'] = array(
 	'sphinxClientFailed' => 'Невозможно создать экземпляр SphinxClient.',
 	'sphinxSearchFailed' => 'Ошибка при выполнении запроса $1',
 	'sphinxSearchWarning' => 'Предупреждение $1',
+	'sphinxPspellError' => 'Невозможно вызвать расширение pspell.',
 );
 
