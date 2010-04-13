@@ -29,6 +29,24 @@ $messages['en'] = array(
 	'sphinxPspellError'        => 'Could not invoke pspell extension.'
 );
 
+/** Arabic (العربية)
+ * @author OsamaK
+ */
+$messages['ar'] = array(
+	'sphinxSearchInCategories' => 'ابحث في التصانيف:',
+	'sphinxExcludeCategories' => 'تصانيف مطلوب استثناؤها',
+	'sphinxResultPage' => 'صفحة النتائج:',
+	'sphinxPreviousPage' => 'السابق',
+	'sphinxNextPage' => 'التالي',
+	'sphinxSearchButton' => 'ابحث',
+	'sphinxSearchDidYouMean' => 'هل كنت تعني:',
+	'sphinxMatchAny' => 'طابق أي كلمة',
+	'sphinxMatchAll' => 'طابق كل الكلمات',
+	'sphinxMatchTitles' => 'طابق العنوان فقط',
+	'sphinxLoading' => 'يُحمّل...',
+	'sphinxSearchWarning' => 'تحذير: $1',
+);
+
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
  * @author Jim-by
@@ -44,7 +62,7 @@ $messages['be-tarask'] = array(
 	'sphinxNextPage' => 'Наступная',
 	'sphinxSearchPreamble' => 'Паказ супадзеньні $1—$2 з $3 для запыту "<nowiki>$4</nowiki>", пошук склаў $5 с улічваючы гэтую статыстыку',
 	'sphinxSearchStats' => '"$1" знойдзена $2 разоў у $3 дакумэнтах',
-	'sphinxSearchStatsInfo' => 'Прыведзеныя лічбы могуць утрымліваць дакумэнты, не паказаныя з-за установак пошуку.',
+	'sphinxSearchStatsInfo' => "''Пададзеныя лічбы могуць утрымліваць дакумэнты, не паказаныя з-за установак пошуку.''",
 	'sphinxSearchButton' => 'Шукаць',
 	'sphinxSearchEpilogue' => 'Дадатковы час базы зьвестак склаў $1 с.',
 	'sphinxSearchDidYouMean' => 'Вы мелі на ўвазе:',
@@ -165,8 +183,8 @@ $messages['fr'] = array(
 	'sphinxPreviousPage' => 'Précédent',
 	'sphinxNextPage' => 'Suivant',
 	'sphinxSearchPreamble' => 'Affichage des résultats $1—$2 sur $3 pour la requête "<nowiki>$4</nowiki>" accomplie en $5 secondes avec ces statistiques',
-	'sphinxSearchStats' => '"$1" trouvé $2 fois dans $3 documents',
-	'sphinxSearchStatsInfo' => 'Les valeurs ci-dessus peuvent inclure des documents masqués par les options de recherche.',
+	'sphinxSearchStats' => '* « $1 » trouvé $2 fois dans $3 documents',
+	'sphinxSearchStatsInfo' => "''Les valeurs ci-dessus peuvent inclure des documents masqués par les options de recherche.''",
 	'sphinxSearchButton' => 'Rechercher',
 	'sphinxSearchEpilogue' => 'Le temps additionnel de la base de données était de $1 sec.',
 	'sphinxSearchDidYouMean' => 'Vouliez-vous dire',
@@ -178,6 +196,7 @@ $messages['fr'] = array(
 	'sphinxClientFailed' => "Impossible d'instancier SphinxClient.",
 	'sphinxSearchFailed' => 'Échec de la requête $1',
 	'sphinxSearchWarning' => 'Avertissement $1',
+	'sphinxPspellError' => "Impossible de lancer l'extension pspell.",
 );
 
 /** Galician (Galego)
@@ -244,10 +263,12 @@ $messages['gsw'] = array(
 $messages['hu'] = array(
 	'sphinxSearchInNamespaces' => 'Keresés a következő névterekben:',
 	'sphinxSearchInCategories' => 'Keresés a következő kategóriákban:',
+	'sphinxExcludeCategories' => 'Kihagyandó kategóriák',
 	'sphinxPreviousPage' => 'Előző',
 	'sphinxNextPage' => 'Következő',
 	'sphinxSearchButton' => 'Keresés',
 	'sphinxLoading' => 'Betöltés…',
+	'sphinxSearchWarning' => 'Figyelmeztetés: $1',
 );
 
 /** Interlingua (Interlingua)
@@ -263,8 +284,8 @@ $messages['ia'] = array(
 	'sphinxPreviousPage' => 'Precedente',
 	'sphinxNextPage' => 'Sequente',
 	'sphinxSearchPreamble' => 'Resultatos $1—$2 de $3 pro le recerca de "<nowiki>$4</nowiki>" recuperate in $5 secundas con iste statisticas',
-	'sphinxSearchStats' => '"$1" trovate $2 vices in $3 documentos',
-	'sphinxSearchStatsInfo' => 'Le numeros hic supra pote includer documentos non listate debite al optiones de recerca.',
+	'sphinxSearchStats' => '* "$1" trovate $2 vices in $3 documentos',
+	'sphinxSearchStatsInfo' => "''Le numeros hic supra pote includer documentos non listate debite al optiones de recerca.''",
 	'sphinxSearchButton' => 'Cercar',
 	'sphinxSearchEpilogue' => 'Le tempore additional del base de datos esseva $1 secundas.',
 	'sphinxSearchDidYouMean' => 'Esque tu vole dicer:',
@@ -313,13 +334,14 @@ $messages['ja'] = array(
  */
 $messages['lb'] = array(
 	'sphinxsearch' => 'Op der Wiki mat Sphinx sichen',
+	'sphinxsearch-desc' => "Ersetzt d'MediaWiki Sichmaschinn duerch [http://www.sphinxsearch.com/  Sphinx]",
 	'sphinxSearchInNamespaces' => 'Sich an den Nummraim:',
 	'sphinxSearchInCategories' => 'Sichen an de Kategorien:',
 	'sphinxExcludeCategories' => 'Kategorien fir auszeschléissen',
 	'sphinxResultPage' => 'Säit mat de Resultater:',
 	'sphinxPreviousPage' => 'Vireg',
 	'sphinxNextPage' => 'Nächst',
-	'sphinxSearchStats' => '"$1" gouf $2 mol an $3 Dokumenter fonnt',
+	'sphinxSearchStats' => '* "$1" gouf $2 mol an $3 Dokumenter fonnt',
 	'sphinxSearchButton' => 'Sichen',
 	'sphinxSearchDidYouMean' => 'Mengt Dir:',
 	'sphinxMatchTitles' => 'nëmmen an den Titele sichen',
@@ -425,10 +447,11 @@ $messages['pl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'sphinxsearch' => 'Serca wiki an dovrand Sphinx',
+	'sphinxsearch' => 'Arserché ant la wiki an dovrand Sphinx',
 	'sphinxsearch-desc' => "A rimpiassa ël motor d'arserca MediaWiki con [http://www.sphinxsearch.com/ Sphinx]",
 	'sphinxSearchInNamespaces' => 'Sërché ant jë spassi nominaj:',
 	'sphinxSearchInCategories' => 'Sërché ant le categorìe:',
@@ -436,19 +459,19 @@ $messages['pms'] = array(
 	'sphinxResultPage' => "Pàgina d'arzultà:",
 	'sphinxPreviousPage' => 'Prima',
 	'sphinxNextPage' => 'Apress',
-	'sphinxSearchPreamble' => 'Visualisé $1—$2 ëd $3 arzultà për query "<nowiki>$4</nowiki>" trovà an $5 sec con coste statìstiche',
+	'sphinxSearchPreamble' => 'Visualisassion dj\'arzultà $1—$2 ëd $3 për l\'arcesta "<nowiki>$4</nowiki>" trovà an $5 second con coste statìstiche',
 	'sphinxSearchStats' => '* "$1" trovà $2 vire an $3 document',
-	'sphinxSearchStatsInfo' => "''Ij nùmer sota a peulo anclude document pa listà a motiv dj'opsion d'arserca.''",
+	'sphinxSearchStatsInfo' => "''Ij nùmer sì-dzora a peulo anclude dij document pa listà a motiv dj'opsion d'arserca.''",
 	'sphinxSearchButton' => 'Sërca',
-	'sphinxSearchEpilogue' => "Temp adissional ëd database a l'é stàit $1 sec.",
-	'sphinxSearchDidYouMean' => 'Vorìi-lo pa dì:',
-	'sphinxMatchAny' => 'confronta minca paròla',
-	'sphinxMatchAll' => 'confranta tute paròle',
+	'sphinxSearchEpilogue' => "Ël temp adissional dla base ëd dàit a l'é stàit ëd $1 sec.",
+	'sphinxSearchDidYouMean' => 'Vorìj-lo pa dì:',
+	'sphinxMatchAny' => 'confronté na paròla qualsëssìa',
+	'sphinxMatchAll' => 'confronté tute le paròle',
 	'sphinxMatchTitles' => 'confronta mach ij tìtoj',
 	'sphinxLoading' => 'A caria ...',
 	'sphinxPowered' => 'Potensià da $1',
-	'sphinxClientFailed' => 'As peul pa istansié SphinxClient',
-	'sphinxSearchFailed' => 'Query falìa: $1',
+	'sphinxClientFailed' => 'As peul pa istansié ël client Sphinx.',
+	'sphinxSearchFailed' => 'Arcesta falìa: $1',
 	'sphinxSearchWarning' => 'Avis: $1',
 	'sphinxPspellError' => "As peul pa ciamesse l'estension pspell.",
 );
