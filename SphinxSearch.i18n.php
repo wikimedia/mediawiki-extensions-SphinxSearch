@@ -60,8 +60,8 @@ $messages['be-tarask'] = array(
 	'sphinxResultPage' => 'Старонка вынікаў:',
 	'sphinxPreviousPage' => 'Папярэдняя',
 	'sphinxNextPage' => 'Наступная',
-	'sphinxSearchPreamble' => 'Паказ супадзеньні $1—$2 з $3 для запыту "<nowiki>$4</nowiki>", пошук склаў $5 с улічваючы гэтую статыстыку',
-	'sphinxSearchStats' => '"$1" знойдзена $2 разоў у $3 дакумэнтах',
+	'sphinxSearchPreamble' => 'Паказ $1—$2 {{PLURAL:$3|супадзеньне|супадзеньні|супадзеньняў}} з $3 для запыту «<nowiki>$4</nowiki>», пошук склаў $5 с улічваючы гэтую статыстыку:',
+	'sphinxSearchStats' => '* «$1» знойдзены $2 {{PLURAL:$2|раз|разы|разоў}} у $3 {{PLURAL:$3|дакумэнце|дакумэнтах|дакумэнтах}}',
 	'sphinxSearchStatsInfo' => "''Пададзеныя лічбы могуць утрымліваць дакумэнты, не паказаныя з-за установак пошуку.''",
 	'sphinxSearchButton' => 'Шукаць',
 	'sphinxSearchEpilogue' => 'Дадатковы час базы зьвестак склаў $1 с.',
@@ -74,6 +74,7 @@ $messages['be-tarask'] = array(
 	'sphinxClientFailed' => 'Немагчыма стварыць экзэмпляр SphinxClient.',
 	'sphinxSearchFailed' => 'Памылка запыту: $1',
 	'sphinxSearchWarning' => 'Папярэджаньне: $1',
+	'sphinxPspellError' => 'Немагчыма выклікаць пашырэньне pspell.',
 );
 
 /** Bulgarian (Български) */
@@ -115,6 +116,35 @@ $messages['de'] = array(
 	'sphinxLoading' => 'Laden …',
 );
 
+/** Lower Sorbian (Dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'sphinxsearch' => 'Wiki z pomocu Sphinx pśepytaś',
+	'sphinxsearch-desc' => 'Wuměnja pytawu MediaWiki pśez [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxSearchInNamespaces' => 'W mjenjowych rumach pytaś:',
+	'sphinxSearchInCategories' => 'W kategorijach pytaś:',
+	'sphinxExcludeCategories' => 'Kategorije, kótarež maju se wuzamknuś',
+	'sphinxResultPage' => 'Bok wuslědkow:',
+	'sphinxPreviousPage' => 'Pjerwjejšny',
+	'sphinxNextPage' => 'Pśiducy',
+	'sphinxSearchPreamble' => 'Pokazuju se $1-$2 z $3 wótpowědnikow za napšašowanje "<nowiki>$4</nowiki>", wótwołanych za $5 sek. z toś tymi statistiskimi pódaśami:',
+	'sphinxSearchStats' => '* "$1" {{PLURAL:$2|raz|dwójcy|$2 raze|$2 razow}} w $3 {{PLURAL:$3|dokumenśe|dokumentoma|dokumentach|dokumentach}} namakany',
+	'sphinxSearchStatsInfo' => "''Licby górjejce mógu dokumenty wopśimjeś, kótarež njejsu nalicone pytańskich opcijow dla.''",
+	'sphinxSearchButton' => 'Pytaś',
+	'sphinxSearchEpilogue' => 'Pśidatny cas datoweje banki jo był $1 sek.',
+	'sphinxSearchDidYouMean' => 'Měniš:',
+	'sphinxMatchAny' => 'někake słowo',
+	'sphinxMatchAll' => 'wšykne słowa',
+	'sphinxMatchTitles' => 'jano titele',
+	'sphinxLoading' => 'Zacytujo se...',
+	'sphinxPowered' => 'Pódpěrany wót $1',
+	'sphinxClientFailed' => 'Njejo było móžno, instancu klienta Sphinx napóraś.',
+	'sphinxSearchFailed' => 'Napšašowanje jo se njeraźiło: $1',
+	'sphinxSearchWarning' => 'Warnowanje: $1',
+	'sphinxPspellError' => 'Rozšyrjenje Pspell njejo se dało aktiwěrowaś.',
+);
+
 /** Greek (Ελληνικά)
  * @author Dada
  */
@@ -138,8 +168,8 @@ $messages['es'] = array(
 	'sphinxResultPage' => 'Página de resultados',
 	'sphinxPreviousPage' => 'Anterior',
 	'sphinxNextPage' => 'Siguiente',
-	'sphinxSearchPreamble' => 'Mostrando $1—$2 de $3 coincidencias para la búsqueda de "<nowiki>$4</nowiki>", recuperado en $5 segundo(s) incluyendo estas estadísticas',
-	'sphinxSearchStats' => '* "$1" fue encontrado $2 veces en $3 documentos',
+	'sphinxSearchPreamble' => 'Mostrando $1—$2 de $3 {{PLURAL:$3|coincidencia|coincidencias}} para la consulta "<nowiki>$4</nowiki>" recuperado en $5 segundo(s) con estas estadísticas',
+	'sphinxSearchStats' => '* "$1" fue encontrado $2 {{PLURAL:$2|vez|veces}} en $3 {{PLURAL:$3|documentos}}',
 	'sphinxSearchStatsInfo' => "''Los números mostrados arriba pueden incluir documentos no listados debido a las opciones de búsqueda.''",
 	'sphinxSearchButton' => 'Buscar',
 	'sphinxSearchEpilogue' => 'El tiempo de base de datos adicional fue de $1 segundos.',
@@ -211,8 +241,8 @@ $messages['gl'] = array(
 	'sphinxResultPage' => 'Páxina de resultados',
 	'sphinxPreviousPage' => 'Anterior',
 	'sphinxNextPage' => 'Seguinte',
-	'sphinxSearchPreamble' => 'Mostrando de $1 a $2 coincidencias dun total de $3 que deu a pescuda "<nowiki>$4</nowiki>", obtidas en $5 segundos con estas estatísticas:',
-	'sphinxSearchStats' => '* "$1" atopouse $2 veces en $3 documentos',
+	'sphinxSearchPreamble' => 'Mostrando de $1 a $2 {{PLURAL:$3|coincidencia|coincidencias}} dun total de $3 que deu a pescuda "<nowiki>$4</nowiki>", {{PLURAL:$3|obtida|obtidas}} en $5 segundos con estas estatísticas:',
+	'sphinxSearchStats' => '* "$1" atopouse $2 {{PLURAL:$2|vez|veces}} en $3 {{PLURAL:$3|documento|documentos}}',
 	'sphinxSearchStatsInfo' => "''Os números superiores poden incluír documentos non listados debido ás opcións de procura.''",
 	'sphinxSearchButton' => 'Procurar',
 	'sphinxSearchEpilogue' => 'O tempo adicional da base de datos foi de $1 segundos.',
@@ -255,6 +285,35 @@ $messages['gsw'] = array(
 	'sphinxSearchFailed' => 'Abfrog fähl gschlaa: $1',
 	'sphinxSearchWarning' => 'Warnig: $1',
 	'sphinxPspellError' => 'Het d pspell-Erwyterig nit chenne ufruefe',
+);
+
+/** Upper Sorbian (Hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'sphinxsearch' => 'Wiki z pomocu Sphinx přepytać',
+	'sphinxsearch-desc' => 'Naruna pytawu MediaWiki přez [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxSearchInNamespaces' => 'W mjenowych rumach pytać:',
+	'sphinxSearchInCategories' => 'W kategorijach pytać:',
+	'sphinxExcludeCategories' => 'Kategorije, kotrež maja so wuzamknyć',
+	'sphinxResultPage' => 'Strona wuslědkow:',
+	'sphinxPreviousPage' => 'Předchadna',
+	'sphinxNextPage' => 'Přichodna',
+	'sphinxSearchPreamble' => 'Pokazuja so $1-$2 z $3 wotpowědnikow za naprašowanje "<nowiki>$4</nowiki>" , wotwołanych za $5 sek. z tutymi statistiskimi podaćemi:',
+	'sphinxSearchStats' => '* "$1" {{PLURAL:$2|$2 raz|dwójce|$2 razy|$2 razow}} w $3 {{PLURAL:$3|dokumenće|dokumentomaj|dokumentach|dokumentach}} namakany',
+	'sphinxSearchStatsInfo' => "''Ličby horjeka móžeja dokumenty wobsahować, kotrež njejsu pytanskich opcijow dla nalistowane.''",
+	'sphinxSearchButton' => 'Pytać',
+	'sphinxSearchEpilogue' => 'Přidatny čas datoweje banki bě $1 sek.',
+	'sphinxSearchDidYouMean' => 'Měnješe ty:',
+	'sphinxMatchAny' => 'někajke słowo',
+	'sphinxMatchAll' => 'wšě słowa',
+	'sphinxMatchTitles' => 'jenož titule',
+	'sphinxLoading' => 'Začituje so...',
+	'sphinxPowered' => 'Spěchowany wot $1',
+	'sphinxClientFailed' => 'Njebě móžno, instancu klienta Sphinx wutworić.',
+	'sphinxSearchFailed' => 'Naprašowanje je so njeporadźiło: $1',
+	'sphinxSearchWarning' => 'Warnowanje: $1',
+	'sphinxPspellError' => 'Rozšěrjenje Pspell njeda so aktiwizować.',
 );
 
 /** Hungarian (Magyar)
@@ -362,8 +421,8 @@ $messages['mk'] = array(
 	'sphinxResultPage' => 'Страница за резулати',
 	'sphinxPreviousPage' => 'Претходна',
 	'sphinxNextPage' => 'Следна',
-	'sphinxSearchPreamble' => 'Приказ на $1—$2 од вкупно $3 совпаѓања за барањето "<nowiki>$4</nowiki>" извршено за $5 сек. со следниве статистики',
-	'sphinxSearchStats' => '* „$1“ е пронајдено $2 пати во $3 документи',
+	'sphinxSearchPreamble' => 'Приказ на $1—$2 од вкупно $3 {{PLURAL:$3|совпаѓање|совпаѓања}} за барањето „<nowiki>$4</nowiki>“ извршено во рок од $5 сек. со следниве статистики:',
+	'sphinxSearchStats' => '* „$1“ е пронајдено {{PLURAL:$2|еднаш|$2 пати}} во $3 {{PLURAL:$3|документ|документи}}',
 	'sphinxSearchStatsInfo' => "''Горенаведените бројки може да содржат документи кои не се наведени поради нагодувањата на пребарувањето.''",
 	'sphinxSearchButton' => 'Пребарај',
 	'sphinxSearchEpilogue' => 'Дополнителното време за базата на податоци изнесуваше $1 сек.',
@@ -391,8 +450,8 @@ $messages['nl'] = array(
 	'sphinxResultPage' => 'Resultatenpagina:',
 	'sphinxPreviousPage' => 'Vorige',
 	'sphinxNextPage' => 'Volgende',
-	'sphinxSearchPreamble' => 'Resultaten $1 tot $2 van $3 worden weergegeven voor zoekopdracht "<nowiki>$4</nowiki>". Zoektijd: $5 seconden',
-	'sphinxSearchStats' => '"$1" is $2 keer aangetroffen in $3 documenten',
+	'sphinxSearchPreamble' => '{{PLURAL:$1|Resultaat|Resultaten $1 tot $2 van $3 worden weergegeven}} voor zoekopdracht "<nowiki>$4</nowiki>". Zoektijd: $5 seconden',
+	'sphinxSearchStats' => '"$1" is $2 {{PLURAL:$2|keer|keer}} aangetroffen in $3 {{PLURAL:$3|document|documenten}}',
 	'sphinxSearchStatsInfo' => "''De bovenstaande aantallen kunnen documenten bevatten die niet worden weergegeven vanwege zoekinstellingen.''",
 	'sphinxSearchButton' => 'Zoeken',
 	'sphinxSearchEpilogue' => 'Aanvullende databasetijd was $1 seconden.',
@@ -459,8 +518,8 @@ $messages['pms'] = array(
 	'sphinxResultPage' => "Pàgina d'arzultà:",
 	'sphinxPreviousPage' => 'Prima',
 	'sphinxNextPage' => 'Apress',
-	'sphinxSearchPreamble' => 'Visualisassion dj\'arzultà $1—$2 ëd $3 për l\'arcesta "<nowiki>$4</nowiki>" trovà an $5 second con coste statìstiche',
-	'sphinxSearchStats' => '* "$1" trovà $2 vire an $3 document',
+	'sphinxSearchPreamble' => 'Visualisassion $1—$2 ëd $3 {{PLURAL:$3|arzultà|arzultà}} për l\'arcesta "<nowiki>$4</nowiki>" trovà an $5 second con coste statìstiche:',
+	'sphinxSearchStats' => '* "$1" trovà $2 {{PLURAL:$2|vira|vire}} an $3 {{PLURAL:$3|document}}',
 	'sphinxSearchStatsInfo' => "''Ij nùmer sì-dzora a peulo anclude dij document pa listà a motiv dj'opsion d'arserca.''",
 	'sphinxSearchButton' => 'Sërca',
 	'sphinxSearchEpilogue' => "Ël temp adissional dla base ëd dàit a l'é stàit ëd $1 sec.",
@@ -488,8 +547,8 @@ $messages['pt'] = array(
 	'sphinxResultPage' => 'Página de resultados',
 	'sphinxPreviousPage' => 'Anterior',
 	'sphinxNextPage' => 'Seguinte',
-	'sphinxSearchPreamble' => 'A mostrar $1—$2 de $3 resultados para a pesquisa"<nowiki>$4</nowiki>" obtidos em $5 seg., incluindo estas estatísticas',
-	'sphinxSearchStats' => '* "$1" foi encontrado $2 vezes em $3 documentos',
+	'sphinxSearchPreamble' => 'A mostrar $1—$2 de $3 {{PLURAL:$3|resultado|resultados}}, para a pesquisa "<nowiki>$4</nowiki>", {{PLURAL:$3|obtido|obtidos}} em $5 seg. com estas estatísticas:',
+	'sphinxSearchStats' => '* "$1" foi encontrado $2 {{PLURAL:$2|vez|vezes}} em $3 {{PLURAL:$3|documento|documentos}}',
 	'sphinxSearchStatsInfo' => "''Os números acima podem incluir documentos que não são listados devido às opções de pesquisa.''",
 	'sphinxSearchButton' => 'Pesquisar',
 	'sphinxSearchEpilogue' => 'O tempo adicional da base de dados foi $1 seg.',
@@ -517,8 +576,8 @@ $messages['ru'] = array(
 	'sphinxResultPage' => 'Страница результатов',
 	'sphinxPreviousPage' => 'Предыдущая',
 	'sphinxNextPage' => 'Следующая',
-	'sphinxSearchPreamble' => 'Отображение $1—$2 результатов из $3 для запроса "<nowiki>$4</nowiki>", поиска занял $5 с',
-	'sphinxSearchStats' => '* «$1» найдено $2 раз в $3 документах',
+	'sphinxSearchPreamble' => 'Отображение $1—$2 {{PLURAL:$3|результата|результатов}} из $3 для запроса «<nowiki>$4</nowiki>», поиск занял $5 с',
+	'sphinxSearchStats' => '* «$1» найдено $2 {{PLURAL:$2|раз|раза|раз}} в $3 {{PLURAL:$3|документе|документах|документах}}',
 	'sphinxSearchStatsInfo' => "''Приведённые цифры могут включать в себя документы, не показанные из-за настроек поиска.''",
 	'sphinxSearchButton' => 'Найти',
 	'sphinxSearchEpilogue' => 'Дополнительное время базы данных составило $1 с.',
