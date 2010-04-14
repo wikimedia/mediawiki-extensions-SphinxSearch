@@ -435,7 +435,7 @@ class SphinxSearch extends SpecialPage {
 			$this->page * $wgSphinxSearch_matches,
 			$res['total']
 		);
-		$wgOut->addWikiText( wfMsg( 'sphinxSearchPreamble',
+		$wgOut->addWikiText( wfMsgExt( 'sphinxSearchPreamble', 'parsemag',
 			$from, $to, $res['total'], $term, $res['time'] )
 		);
 
@@ -443,7 +443,7 @@ class SphinxSearch extends SpecialPage {
 			$warn = false;
 			foreach ( $res["words"] as $word => $info ) {
 				$wgOut->addWikiText(
-					wfMsg( 'sphinxSearchStats', $word, $info['hits'], $info['docs'] )
+					wfMsgExt( 'sphinxSearchStats', 'parsemag', $word, $info['hits'], $info['docs'] )
 				);
 				if ( ( $info['docs'] < $wgSphinxSearch_maxmatches ) && ( $info['docs'] > $res['total'] ) ) {
 					$warn = true;
@@ -811,7 +811,7 @@ class SphinxSearch extends SpecialPage {
 				}
 			}
 		}
-		
+
 		return ( $suggestion_needed ? join( ' ', $word_suggestions ) : '' );
 	}
 
