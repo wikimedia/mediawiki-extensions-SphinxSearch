@@ -94,7 +94,7 @@ $messages['br'] = array(
 	'sphinxResultPage' => "Pajenn an disoc'hoù :",
 	'sphinxPreviousPage' => 'Kent',
 	'sphinxNextPage' => "War-lerc'h",
-	'sphinxSearchStats' => '"$1" bet kavet $2 gwech e $3 teul',
+	'sphinxSearchStats' => '"$1" bet kavet $2 gwech e $3 teul{{PLURAL:$3||}}',
 	'sphinxSearchButton' => 'Klask',
 	'sphinxSearchDidYouMean' => "N'hoc'h eus ket soñjet kentoc'h e :",
 	'sphinxMatchAny' => 'kavout forzh peseurt ger',
@@ -147,12 +147,13 @@ $messages['dsb'] = array(
 
 /** Greek (Ελληνικά)
  * @author Dada
+ * @author Απεργός
  */
 $messages['el'] = array(
 	'sphinxSearchInNamespaces' => 'Αναζήτηση στις ομάδες σελίδων:',
 	'sphinxSearchInCategories' => 'Αναζήτηση στις κατηγορίες:',
 	'sphinxSearchButton' => 'Αναζήτηση',
-	'sphinxSearchWarning' => 'Προειδοποίηση: $ 1',
+	'sphinxSearchWarning' => 'Προειδοποίηση: $1',
 );
 
 /** Spanish (Español)
