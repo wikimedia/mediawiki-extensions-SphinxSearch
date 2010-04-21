@@ -91,6 +91,7 @@ $messages['br'] = array(
 	'sphinxsearch-desc' => "Erlec'hiañ lusker enklask MediaWiki gant [http://www.sphinxsearch.com/ Sphinx].",
 	'sphinxSearchInNamespaces' => 'Klask en esaouennoù anv :',
 	'sphinxSearchInCategories' => 'Klask er rummadoù :',
+	'sphinxExcludeCategories' => 'Rummadoù da skarzhañ',
 	'sphinxResultPage' => "Pajenn an disoc'hoù :",
 	'sphinxPreviousPage' => 'Kent',
 	'sphinxNextPage' => "War-lerc'h",
@@ -102,6 +103,7 @@ $messages['br'] = array(
 	'sphinxMatchTitles' => 'klask en titloù hepken',
 	'sphinxLoading' => 'O kargañ...',
 	'sphinxPowered' => 'Savet diwar $1',
+	'sphinxSearchFailed' => "C'hwitet en deus ar reked : $1",
 	'sphinxSearchWarning' => 'Diwallit : $1',
 );
 
