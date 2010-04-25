@@ -29,6 +29,17 @@ $messages['en'] = array(
 	'sphinxPspellError'        => 'Could not invoke pspell extension.'
 );
 
+/** Message documentation (Message documentation)
+ * @author EugeneZelenko
+ */
+$messages['qqq'] = array(
+	'sphinxPreviousPage' => '{{Identical|Previous}}',
+	'sphinxNextPage' => '{{Identical|Next}}',
+	'sphinxSearchButton' => '{{Identical|Search}}',
+	'sphinxLoading' => '{{Identical|Loading}}',
+	'sphinxSearchWarning' => '{{Identical|Warning}}',
+);
+
 /** Arabic (العربية)
  * @author OsamaK
  */
