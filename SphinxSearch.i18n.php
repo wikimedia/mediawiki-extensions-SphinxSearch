@@ -391,6 +391,13 @@ $messages['ja'] = array(
 	'sphinxSearchWarning' => '警告： $1',
 );
 
+/** Kannada (ಕನ್ನಡ)
+ * @author Nayvik
+ */
+$messages['kn'] = array(
+	'sphinxSearchButton' => 'ಹುಡುಕು',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
