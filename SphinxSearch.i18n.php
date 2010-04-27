@@ -373,6 +373,14 @@ $messages['ia'] = array(
 	'sphinxPspellError' => 'Non poteva invocar le extension pspell.',
 );
 
+/** Indonesian (Bahasa Indonesia)
+ * @author Kenrick95
+ */
+$messages['id'] = array(
+	'sphinxPreviousPage' => 'Sebelumnya',
+	'sphinxNextPage' => 'Selanjutnya',
+);
+
 /** Japanese (日本語)
  * @author Aotake
  * @author 青子守歌
@@ -407,6 +415,7 @@ $messages['ja'] = array(
  */
 $messages['kn'] = array(
 	'sphinxSearchButton' => 'ಹುಡುಕು',
+	'sphinxSearchWarning' => 'ಎಚ್ಚರಿಕೆ: $1',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
