@@ -118,15 +118,33 @@ $messages['br'] = array(
 	'sphinxSearchWarning' => 'Diwallit : $1',
 );
 
-/** German (Deutsch) */
+/** German (Deutsch)
+ * @author Kghbln
+ */
 $messages['de'] = array(
+	'sphinxsearch' => 'Ermöglicht die Volltextsuche innerhalb des Wikis mit Hilfe von Sphinx',
+	'sphinxsearch-desc' => 'Ersetzt die MediaWiki-eigene Volltextsuchmaschine durch [http://www.sphinxsearch.com/ Sphinx]',
 	'sphinxSearchInNamespaces' => 'Suche in Namensräumen:',
 	'sphinxSearchInCategories' => 'Suche in Kategorien:',
+	'sphinxExcludeCategories' => 'Auszuschließende Kategorien',
+	'sphinxResultPage' => 'Ergebnisseite:',
 	'sphinxPreviousPage' => 'Vorherige',
 	'sphinxNextPage' => 'Nächste',
+	'sphinxSearchPreamble' => 'Zeige $1—$2 von $3 {{PLURAL:$3|Übereinstimmung|Übereinstimmungen}} für die Abfrage „<nowiki>$4</nowiki>“ an. Innerhalb $5 Sekunden ermittelt. Statistik:',
+	'sphinxSearchStats' => '* „$1“ wurde $2{{PLURAL:$2|-mal|-mal}} auf $3 {{PLURAL:$3|Seite|Seiten}} gefunden',
+	'sphinxSearchStatsInfo' => '„Obige Zahlen können auch Seiten enthalten, die aufgrund der Sucheinstellungen nicht angezeigt werden.“',
 	'sphinxSearchButton' => 'Suchen',
+	'sphinxSearchEpilogue' => 'Die zusätzlichen Datenbank-Zeit betrug $1 Sekunden.',
 	'sphinxSearchDidYouMean' => 'Meintest du',
+	'sphinxMatchAny' => 'finde eines der Wörter',
+	'sphinxMatchAll' => 'finde alle Wörter',
+	'sphinxMatchTitles' => 'Nur in Seitennamen suchen',
 	'sphinxLoading' => 'Laden …',
+	'sphinxPowered' => 'Nutzt $1',
+	'sphinxClientFailed' => 'Sphinx-Client konnte nicht initialisiert werden.',
+	'sphinxSearchFailed' => 'Abfrage fehlgeschlagen: $1',
+	'sphinxSearchWarning' => 'Warnung: $1',
+	'sphinxPspellError' => 'Die pspell-Softwareerweiterung konnte nicht aufgerufen werden.',
 );
 
 /** Lower Sorbian (Dolnoserbski)
