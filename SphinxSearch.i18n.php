@@ -132,9 +132,9 @@ $messages['de'] = array(
 	'sphinxNextPage' => 'Nächste',
 	'sphinxSearchPreamble' => 'Zeige $1—$2 von $3 {{PLURAL:$3|Übereinstimmung|Übereinstimmungen}} für die Abfrage „<nowiki>$4</nowiki>“ an. Innerhalb $5 Sekunden ermittelt. Statistik:',
 	'sphinxSearchStats' => '* „$1“ wurde $2{{PLURAL:$2|-mal|-mal}} auf $3 {{PLURAL:$3|Seite|Seiten}} gefunden',
-	'sphinxSearchStatsInfo' => '„Obige Zahlen können auch Seiten enthalten, die aufgrund der Sucheinstellungen nicht angezeigt werden.“',
+	'sphinxSearchStatsInfo' => "''Obige Zahlen können auch Seiten enthalten, die aufgrund der Sucheinstellungen nicht angezeigt werden.''",
 	'sphinxSearchButton' => 'Suchen',
-	'sphinxSearchEpilogue' => 'Die zusätzlichen Datenbank-Zeit betrug $1 Sekunden.',
+	'sphinxSearchEpilogue' => 'Die zusätzliche Datenbank-Zeit betrug $1 Sekunden.',
 	'sphinxSearchDidYouMean' => 'Meintest du',
 	'sphinxMatchAny' => 'finde eines der Wörter',
 	'sphinxMatchAll' => 'finde alle Wörter',
@@ -215,6 +215,13 @@ $messages['es'] = array(
 	'sphinxSearchFailed' => 'Falló la búsqueda $1',
 	'sphinxSearchWarning' => 'Advertencia $1',
 	'sphinxPspellError' => 'No se pudo invocar la extensión pspell.',
+);
+
+/** Estonian (Eesti)
+ * @author Hendrik
+ */
+$messages['et'] = array(
+	'sphinxSearchDidYouMean' => 'Kas mõtlesid:',
 );
 
 /** Finnish (Suomi)
