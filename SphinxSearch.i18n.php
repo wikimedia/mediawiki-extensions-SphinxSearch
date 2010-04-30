@@ -408,6 +408,7 @@ $messages['id'] = array(
 
 /** Japanese (日本語)
  * @author Aotake
+ * @author Fryed-peach
  * @author 青子守歌
  */
 $messages['ja'] = array(
@@ -419,9 +420,9 @@ $messages['ja'] = array(
 	'sphinxResultPage' => '結果ページ：',
 	'sphinxPreviousPage' => '前',
 	'sphinxNextPage' => '次',
-	'sphinxSearchPreamble' => '検索語 "<nowiki>$4</nowiki>" に対する$3件のヒットから $1—$2 件目の結果を表示中。検索にかかった時間 $5 :',
-	'sphinxSearchStats' => '* 「$1」が、$2の文書で、$3コ見つかりました',
-	'sphinxSearchStatsInfo' => '検索結果の件数には、検索の設定に基づき表示されていない文書も含まれている可能性があります。',
+	'sphinxSearchPreamble' => '検索語「<nowiki>$4</nowiki>」に対する$3件の{{PLURAL:$3|一致}}中 $1—$2 件目の結果を表示しています。検索にかかった時間は $5秒で、その他の統計は:',
+	'sphinxSearchStats' => '* 「$1」が、$3件の{{PLURAL:$3|文書}}中に、$2{{PLURAL:$2|回}}見つかりました',
+	'sphinxSearchStatsInfo' => "''検索結果の件数には、検索の設定により表示されていない文書も含まれている可能性があります。''",
 	'sphinxSearchButton' => '検索',
 	'sphinxSearchEpilogue' => '追加データベースにかかった時間は $1 秒です。',
 	'sphinxSearchDidYouMean' => 'もしかして：',
@@ -433,6 +434,7 @@ $messages['ja'] = array(
 	'sphinxClientFailed' => 'Sphinx クライアントを呼び出せませんでした。',
 	'sphinxSearchFailed' => '検索失敗: $1',
 	'sphinxSearchWarning' => '警告： $1',
+	'sphinxPspellError' => 'pspell 拡張機能を起動できませんでした。',
 );
 
 /** Kannada (ಕನ್ನಡ)
