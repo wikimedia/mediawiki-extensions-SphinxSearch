@@ -622,6 +622,15 @@ $messages['pt'] = array(
 	'sphinxPspellError' => 'Não foi possível chamar a extensão pspell.',
 );
 
+/** Brazilian Portuguese (Português do Brasil)
+ * @author Luckas Blade
+ */
+$messages['pt-br'] = array(
+	'sphinxSearchButton' => 'Pesquisar',
+	'sphinxSearchDidYouMean' => 'Você quis dizer:',
+	'sphinxLoading' => 'Carregando...',
+);
+
 /** Russian (Русский)
  * @author Александр Сигачёв
  */
