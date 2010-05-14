@@ -660,3 +660,11 @@ $messages['ru'] = array(
 	'sphinxPspellError' => 'Невозможно вызвать расширение pspell.',
 );
 
+/** Swedish (Svenska)
+ * @author Dafer45
+ */
+$messages['sv'] = array(
+	'sphinxLoading' => 'Laddar ...',
+	'sphinxSearchWarning' => 'Varning: $1',
+);
+
