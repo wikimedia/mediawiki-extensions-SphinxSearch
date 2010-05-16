@@ -492,7 +492,7 @@ $messages['mk'] = array(
 	'sphinxClientFailed' => 'Не можев да повикам Sphinx клиент.',
 	'sphinxSearchFailed' => 'Барањето не успеа $1',
 	'sphinxSearchWarning' => 'Предупредување $1',
-	'sphinxPspellError' => 'Не можев да повикам pspell проширување.',
+	'sphinxPspellError' => 'Не можев да повикам pspell додаток.',
 );
 
 /** Dutch (Nederlands)
