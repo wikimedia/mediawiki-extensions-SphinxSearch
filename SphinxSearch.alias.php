@@ -14,8 +14,18 @@ $aliases['en'] = array(
 	'SphinxSearch' => array( 'SphinxSearch' ),
 );
 
-/** Arabic (العربية) */
 $aliases['ar'] = array(
-	'SphinxSearch' => array( 'بحث_سفنكس' ),
+	'SphinxSearch'   => array( 'بحث_سفنكس' ),
 );
 
+$aliases['ja'] = array(
+	'SphinxSearch'   => array( 'Sphinx検索' ),
+);
+
+$aliases['lb'] = array(
+	'SphinxSearch'   => array( 'Sphinx Sich' ),
+);
+
+$aliases['nl'] = array(
+	'SphinxSearch'   => array( 'SphinxZoeken' ),
+);
