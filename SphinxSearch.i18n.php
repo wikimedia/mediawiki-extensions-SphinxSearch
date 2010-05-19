@@ -664,6 +664,12 @@ $messages['ru'] = array(
  * @author Dafer45
  */
 $messages['sv'] = array(
+	'sphinxsearch-desc' => 'Ersätter MediaWiki-sökmotorn med [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxSearchInCategories' => 'Sök i kategorier:',
+	'sphinxExcludeCategories' => 'Kategorier som skall uteslutas',
+	'sphinxResultPage' => 'Resultatsida:',
+	'sphinxPreviousPage' => 'Föregående',
+	'sphinxNextPage' => 'Nästa',
 	'sphinxLoading' => 'Laddar ...',
 	'sphinxSearchWarning' => 'Varning: $1',
 );
