@@ -435,6 +435,11 @@ $messages['id'] = array(
 	'sphinxNextPage' => 'Selanjutnya',
 );
 
+/** Igbo (Igbo) */
+$messages['ig'] = array(
+	'sphinxSearchButton' => 'Chöwá',
+);
+
 /** Japanese (日本語)
  * @author Aotake
  * @author Fryed-peach
@@ -581,6 +586,15 @@ $messages['no'] = array(
 	'sphinxSearchFailed' => 'Søk feilet: $1',
 	'sphinxSearchWarning' => 'Advarsel: $1',
 	'sphinxPspellError' => 'Kunne ikke starte utvidelsen pspell.',
+);
+
+/** Deitsch (Deitsch)
+ * @author Xqt
+ */
+$messages['pdc'] = array(
+	'sphinxNextPage' => 'Neegscht',
+	'sphinxSearchDidYouMean' => 'Hoscht du gmeent:',
+	'sphinxSearchWarning' => 'Warning: $1',
 );
 
 /** Polish (Polski) */
