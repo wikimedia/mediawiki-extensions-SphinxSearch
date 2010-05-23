@@ -496,6 +496,7 @@ $messages['lb'] = array(
 	'sphinxSearchDidYouMean' => 'Mengt Dir:',
 	'sphinxMatchTitles' => 'nëmmen an den Titele sichen',
 	'sphinxLoading' => 'Lueden...',
+	'sphinxPowered' => 'Notzt $1',
 	'sphinxSearchFailed' => 'Ufro huet net fonctionnéiert: $1',
 	'sphinxSearchWarning' => 'Warnung: $1',
 );
