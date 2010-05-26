@@ -33,21 +33,6 @@ class SphinxSearch extends SpecialPage {
 		} else {
 			SpecialPage::SpecialPage( 'SphinxSearch' );
 		}
-
-		if ( function_exists( 'wfLoadExtensionMessages' ) ) {
-			wfLoadExtensionMessages( 'SphinxSearch' );
-		} else {
-			static $messagesLoaded = false;
-			global $wgMessageCache;
-			if ( !$messagesLoaded ) {
-				$messagesLoaded = true;
-				include dirname( __FILE__ ) . '/SphinxSearch.i18n.php';
-				foreach ( $messages as $lang => $langMessages ) {
-					$wgMessageCache->addMessages( $langMessages, $lang );
-				}
-			}
-		}
-
 		return true;
 	}
 
