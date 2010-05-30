@@ -124,6 +124,7 @@ $messages['bg'] = array(
 );
 
 /** Breton (Brezhoneg)
+ * @author Fulup
  * @author Y-M D
  */
 $messages['br'] = array(
@@ -135,16 +136,21 @@ $messages['br'] = array(
 	'sphinxResultPage' => "Pajenn an disoc'hoù :",
 	'sphinxPreviousPage' => 'Kent',
 	'sphinxNextPage' => "War-lerc'h",
+	'sphinxSearchPreamble' => 'Diskwel $1—$2 diwar $3 {{PLURAL:$3|kenglot|kenglot}} evit ar goulenn "<nowiki>$4</nowiki>" sevenet dindan $5 eilenn gant ar stadegoù-mañ :',
 	'sphinxSearchStats' => '"$1" bet kavet $2 gwech e $3 teul{{PLURAL:$3||}}',
+	'sphinxSearchStatsInfo' => "''Gallout a ra bezañ teulioù masklet gant dibarzhioù klask en talvoudoù a-us.''",
 	'sphinxSearchButton' => 'Klask',
+	'sphinxSearchEpilogue' => '$1 eilenn a oa amzer ouzhpenn an diaz roadennoù.',
 	'sphinxSearchDidYouMean' => "N'hoc'h eus ket soñjet kentoc'h e :",
 	'sphinxMatchAny' => 'kavout forzh peseurt ger',
 	'sphinxMatchAll' => 'kavout an holl gerioù',
 	'sphinxMatchTitles' => 'klask en titloù hepken',
 	'sphinxLoading' => 'O kargañ...',
 	'sphinxPowered' => 'Savet diwar $1',
+	'sphinxClientFailed' => 'Dibosupl instantiñ an arval Sphinx',
 	'sphinxSearchFailed' => "C'hwitet en deus ar reked : $1",
 	'sphinxSearchWarning' => 'Diwallit : $1',
+	'sphinxPspellError' => 'Dibosupl lañsañ astenn pspell.',
 );
 
 /** German (Deutsch)
@@ -716,5 +722,34 @@ $messages['sv'] = array(
 	'sphinxNextPage' => 'Nästa',
 	'sphinxLoading' => 'Laddar ...',
 	'sphinxSearchWarning' => 'Varning: $1',
+);
+
+/** Tagalog (Tagalog)
+ * @author AnakngAraw
+ */
+$messages['tl'] = array(
+	'sphinxsearch' => 'Maghanap sa wiki na ginagamit ang Sphinx',
+	'sphinxsearch-desc' => 'Pinapalitan ang makinang panghanap sa MediaWiki ng [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxSearchInNamespaces' => 'Maghanap sa mga puwang ng pangalan:',
+	'sphinxSearchInCategories' => 'Maghanap sa mga kategorya:',
+	'sphinxExcludeCategories' => 'Hindi isasamang mga kategorya',
+	'sphinxResultPage' => 'Pahina ng resulta:',
+	'sphinxPreviousPage' => 'Nakaraan',
+	'sphinxNextPage' => 'Susunod',
+	'sphinxSearchPreamble' => 'Ipinapakita ang $1—$2 ng $3 na {{PLURAL:$3|katugma|mga katugma}} para sa tanong na "<nowiki>$4</nowiki>" na nakuha sa loob ng $5 segundo na may ganitong estadistika:',
+	'sphinxSearchStats' => '* Natagpuan ang "$1" na may $2 {{PLURAL:$2|ulit|mga ulit}} sa loob ng $3 na {{PLURAL:$3|kasulatan|mga kasulatan}}',
+	'sphinxSearchStatsInfo' => "''Ang nasa itaas na mga bilang ay maaaring nagsama ng mga kasulatang hindi nakatala dahil sa mga pinagpilian ng paghahanap.''",
+	'sphinxSearchButton' => 'Maghanap',
+	'sphinxSearchEpilogue' => 'Ang karagdagang oras sa kalipunan ng dato ay $1 segundo.',
+	'sphinxSearchDidYouMean' => 'Ibig mo bang sabihin:',
+	'sphinxMatchAny' => 'itugma sa anumang salita',
+	'sphinxMatchAll' => 'itugma sa lahat ng mga salita',
+	'sphinxMatchTitles' => 'itugma lang sa mga pamagat',
+	'sphinxLoading' => 'Ikinakarga...',
+	'sphinxPowered' => 'Pinapaandar ng $1',
+	'sphinxClientFailed' => 'Hindi masangdali ang kliyente ng Sphinx.',
+	'sphinxSearchFailed' => 'Nabigo ang tanong: $1',
+	'sphinxSearchWarning' => 'Babala: $1',
+	'sphinxPspellError' => 'Hindi masamo ang dugtong na pspell.',
 );
 
