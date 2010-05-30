@@ -569,20 +569,20 @@ class SphinxSearch extends SpecialPage {
 			<td valign='bottom' nowrap='1'>" . wfMsg( 'sphinxResultPage' ) . "</td>" );
 
 			if ( $first_page > 1 ) {
-				$prev_page  = "<td>&nbsp;<a href='{$qry}";
-				$prev_page .= ( $this->page - 1 ) . "'>" . wfMsg( 'sphinxPreviousPage' ) . "</a>&nbsp;</td>";
+				$prev_page  = "<td>&#160;<a href='{$qry}";
+				$prev_page .= ( $this->page - 1 ) . "'>" . wfMsg( 'sphinxPreviousPage' ) . "</a>&#160;</td>";
 				$wgOut->addHTML( $prev_page );
 			}
 			for ( $i = $first_page; $i < $this->page; $i++ ) {
-				$wgOut->addHTML( "<td>&nbsp;<a href='{$qry}{$i}'>{$i}</a>&nbsp;</td>" );
+				$wgOut->addHTML( "<td>&#160;<a href='{$qry}{$i}'>{$i}</a>&#160;</td>" );
 			}
-			$wgOut->addHTML( "<td>&nbsp;<b>{$this->page}</b>&nbsp;</td>" );
+			$wgOut->addHTML( "<td>&#160;<b>{$this->page}</b>&#160;</td>" );
 			for ( $i = $this->page + 1; $i <= $last_page; $i++ ) {
-				$wgOut->addHTML( "<td>&nbsp;<a href='{$qry}{$i}'>{$i}</a>&nbsp;</td>" );
+				$wgOut->addHTML( "<td>&#160;<a href='{$qry}{$i}'>{$i}</a>&#160;</td>" );
 			}
 			if ( $last_page < $max_page ) {
-				$next_page  = "<td>&nbsp;<a href='{$qry}";
-				$next_page .= ( $this->page + 1 ) . "'>" . wfMsg( 'sphinxNextPage' ) . "</a>&nbsp;</td>";
+				$next_page  = "<td>&#160;<a href='{$qry}";
+				$next_page .= ( $this->page + 1 ) . "'>" . wfMsg( 'sphinxNextPage' ) . "</a>&#160;</td>";
 				$wgOut->addHTML( $next_page );
 			}
 
@@ -614,7 +614,7 @@ class SphinxSearch extends SpecialPage {
 				wfMsg( 'sphinxMatchAll' )
 			);
 		}
-		$wgOut->addHTML( " &nbsp; <input type='checkbox' name='match_titles' value='1' " .
+		$wgOut->addHTML( " &#160; <input type='checkbox' name='match_titles' value='1' " .
 			( $wgRequest->getInt( 'match_titles' ) ? "checked='checked'" : "" ) . ">" .
 			wfMsg( 'sphinxMatchTitles' ) . "</div>"
 		);
