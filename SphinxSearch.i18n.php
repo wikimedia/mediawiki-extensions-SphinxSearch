@@ -40,6 +40,14 @@ $messages['qqq'] = array(
 	'sphinxSearchWarning' => '{{Identical|Warning}}',
 );
 
+/** Afrikaans (Afrikaans)
+ * @author Naudefj
+ */
+$messages['af'] = array(
+	'sphinxPreviousPage' => 'Vorige',
+	'sphinxNextPage' => 'Volgende',
+);
+
 /** Gheg Albanian (Gegë)
  * @author Mdupont
  */
