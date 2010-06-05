@@ -31,8 +31,10 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author EugeneZelenko
+ * @author Umherirrender
  */
 $messages['qqq'] = array(
+	'sphinxsearch-desc' => '{{desc}}',
 	'sphinxPreviousPage' => '{{Identical|Previous}}',
 	'sphinxNextPage' => '{{Identical|Next}}',
 	'sphinxSearchButton' => '{{Identical|Search}}',
@@ -716,6 +718,13 @@ $messages['ru'] = array(
 	'sphinxSearchFailed' => 'Ошибка при выполнении запроса $1',
 	'sphinxSearchWarning' => 'Предупреждение $1',
 	'sphinxPspellError' => 'Невозможно вызвать расширение pspell.',
+);
+
+/** Serbian Cyrillic ekavian (Српски (ћирилица))
+ * @author Михајло Анђелковић
+ */
+$messages['sr-ec'] = array(
+	'sphinxSearchDidYouMean' => 'Да ли сте мислили:',
 );
 
 /** Swedish (Svenska)
