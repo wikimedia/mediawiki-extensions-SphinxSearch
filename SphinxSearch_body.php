@@ -7,7 +7,8 @@
  *
  * Released under GNU General Public License (see http://www.fsf.org/licenses/gpl.html)
  *
- * @addtogroup Extensions
+ * @file
+ * @ingroup Extensions
  * @author Svemir Brkic <svemir@deveblog.com> and Paul Grinberg
  */
 
