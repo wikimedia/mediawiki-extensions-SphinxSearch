@@ -724,7 +724,11 @@ $messages['ru'] = array(
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
+	'sphinxPreviousPage' => 'Претходно',
+	'sphinxNextPage' => 'Следеће',
 	'sphinxSearchDidYouMean' => 'Да ли сте мислили:',
+	'sphinxLoading' => 'Учитава се...',
+	'sphinxSearchWarning' => 'Упозорење: $1',
 );
 
 /** Swedish (Svenska)
