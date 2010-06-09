@@ -79,6 +79,13 @@ $messages['aln'] = array(
 	'sphinxPspellError' => 'Nuk mund të kërkoj vazhdimin pspell.',
 );
 
+/** Aragonese (Aragonés)
+ * @author Juanpabl
+ */
+$messages['an'] = array(
+	'sphinxSearchWarning' => 'Pare cuenta: $1',
+);
+
 /** Arabic (العربية)
  * @author OsamaK
  */
