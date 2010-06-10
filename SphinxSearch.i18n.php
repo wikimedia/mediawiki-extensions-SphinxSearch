@@ -738,6 +738,15 @@ $messages['sr-ec'] = array(
 	'sphinxSearchWarning' => 'Упозорење: $1',
 );
 
+/** Serbian Latin ekavian (Srpski (latinica)) */
+$messages['sr-el'] = array(
+	'sphinxPreviousPage' => 'Prethodno',
+	'sphinxNextPage' => 'Sledeće',
+	'sphinxSearchDidYouMean' => 'Da li ste mislili:',
+	'sphinxLoading' => 'Učitava se...',
+	'sphinxSearchWarning' => 'Upozorenje: $1',
+);
+
 /** Swedish (Svenska)
  * @author Dafer45
  */
