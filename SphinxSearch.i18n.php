@@ -662,6 +662,20 @@ $messages['pms'] = array(
 	'sphinxPspellError' => "As peul pa ciamesse l'estension pspell.",
 );
 
+/** Pashto (پښتو)
+ * @author Ahmed-Najib-Biabani-Ibrahimkhel
+ */
+$messages['ps'] = array(
+	'sphinxSearchInNamespaces' => 'په نوم-تشيالونو کې پلټنه:',
+	'sphinxSearchInCategories' => 'په وېشنيزو کې پلټنه:',
+	'sphinxResultPage' => 'د پايلې مخ:',
+	'sphinxPreviousPage' => 'پخواني',
+	'sphinxNextPage' => 'راتلونکی',
+	'sphinxSearchButton' => 'پلټل',
+	'sphinxSearchDidYouMean' => 'آيا همدا مو موخه وه:',
+	'sphinxLoading' => 'د برسېرېدلو په حال کې...',
+);
+
 /** Portuguese (Português)
  * @author Hamilton Abreu
  */
