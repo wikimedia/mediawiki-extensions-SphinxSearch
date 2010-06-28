@@ -743,6 +743,15 @@ $messages['ru'] = array(
 	'sphinxPspellError' => 'Невозможно вызвать расширение pspell.',
 );
 
+/** Rusyn (русиньскый язык)
+ * @author Gazeb
+ */
+$messages['rue'] = array(
+	'sphinxPreviousPage' => 'Попереднї',
+	'sphinxNextPage' => 'Далшы',
+	'sphinxSearchButton' => 'Глядати',
+);
+
 /** Serbian Cyrillic ekavian (Српски (ћирилица))
  * @author Михајло Анђелковић
  */
