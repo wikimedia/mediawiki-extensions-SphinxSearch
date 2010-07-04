@@ -228,6 +228,11 @@ $messages['dsb'] = array(
 	'sphinxPspellError' => 'Rozšyrjenje Pspell njejo se dało aktiwěrowaś.',
 );
 
+/** Ewe (Eʋegbe) */
+$messages['ee'] = array(
+	'sphinxSearchButton' => 'Dii',
+);
+
 /** Greek (Ελληνικά)
  * @author Dada
  * @author Απεργός
