@@ -761,20 +761,38 @@ $messages['rue'] = array(
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
+	'sphinxsearch' => 'Претрага Викија са Sphinx-ом',
+	'sphinxSearchInNamespaces' => 'Претрага у именским просторима:',
+	'sphinxSearchInCategories' => 'Претрага у категоријама:',
+	'sphinxExcludeCategories' => 'Категорије за изузимање',
 	'sphinxPreviousPage' => 'Претходно',
 	'sphinxNextPage' => 'Следеће',
 	'sphinxSearchDidYouMean' => 'Да ли сте мислили:',
+	'sphinxMatchAny' => 'претражи на било коју реч',
+	'sphinxMatchAll' => 'претражи на све речи',
 	'sphinxLoading' => 'Учитава се...',
+	'sphinxClientFailed' => 'Sphinx клијент није могао бити инсталиран.',
+	'sphinxSearchFailed' => 'Упит није прошао: $1',
 	'sphinxSearchWarning' => 'Упозорење: $1',
+	'sphinxPspellError' => 'Није пронађена pspell екстензија.',
 );
 
 /** Serbian Latin ekavian (Srpski (latinica)) */
 $messages['sr-el'] = array(
+	'sphinxsearch' => 'Pretraga Vikija sa Sphinx-om',
+	'sphinxSearchInNamespaces' => 'Pretraga u imenskim prostorima:',
+	'sphinxSearchInCategories' => 'Pretraga u kategorijama:',
+	'sphinxExcludeCategories' => 'Kategorije za izuzimanje',
 	'sphinxPreviousPage' => 'Prethodno',
 	'sphinxNextPage' => 'Sledeće',
 	'sphinxSearchDidYouMean' => 'Da li ste mislili:',
+	'sphinxMatchAny' => 'pretraži na bilo koju reč',
+	'sphinxMatchAll' => 'pretraži na sve reči',
 	'sphinxLoading' => 'Učitava se...',
+	'sphinxClientFailed' => 'Sphinx klijent nije mogao biti instaliran.',
+	'sphinxSearchFailed' => 'Upit nije prošao: $1',
 	'sphinxSearchWarning' => 'Upozorenje: $1',
+	'sphinxPspellError' => 'Nije pronađena pspell ekstenzija.',
 );
 
 /** Swedish (Svenska)
