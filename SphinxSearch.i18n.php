@@ -624,6 +624,7 @@ $messages['no'] = array(
  */
 $messages['pdc'] = array(
 	'sphinxNextPage' => 'Neegscht',
+	'sphinxSearchButton' => 'Uffgucke',
 	'sphinxSearchDidYouMean' => 'Hoscht du gmeent:',
 	'sphinxSearchWarning' => 'Warning: $1',
 );
