@@ -712,12 +712,33 @@ $messages['pt'] = array(
 );
 
 /** Brazilian Portuguese (Português do Brasil)
+ * @author Giro720
  * @author Luckas Blade
  */
 $messages['pt-br'] = array(
+	'sphinxsearch' => 'Pesquisar na wiki usando o Sphinx',
+	'sphinxsearch-desc' => 'Substituir o motor de pesquisa do MediaWiki pelo [http://www.sphinxsearch.com/ Sphinx].',
+	'sphinxSearchInNamespaces' => 'Pesquisar nos espaços nominais',
+	'sphinxSearchInCategories' => 'Pesquisar nas categorias',
+	'sphinxExcludeCategories' => 'Categorias a excluir',
+	'sphinxResultPage' => 'Página de resultados:',
+	'sphinxPreviousPage' => 'Anterior',
+	'sphinxNextPage' => 'Próximo',
+	'sphinxSearchPreamble' => 'Mostrando $1—$2 de $3 {{PLURAL:$3|resultado|resultados}}, para a pesquisa "<nowiki>$4</nowiki>", {{PLURAL:$3|obtido|obtidos}} em $5 s com estas estatísticas:',
+	'sphinxSearchStats' => '* "$1" foi encontrado $2 {{PLURAL:$2|vez|vezes}} em $3 {{PLURAL:$3|documento|documentos}}',
+	'sphinxSearchStatsInfo' => "''Os números acima podem incluir documentos que não estão listados devido às opções de pesquisa.''",
 	'sphinxSearchButton' => 'Pesquisar',
+	'sphinxSearchEpilogue' => 'O tempo adicional da base de dados foi $1 s.',
 	'sphinxSearchDidYouMean' => 'Você quis dizer:',
+	'sphinxMatchAny' => 'localizar qualquer palavra',
+	'sphinxMatchAll' => 'localizar todas as palavras',
+	'sphinxMatchTitles' => 'localizar somente nos títulos',
 	'sphinxLoading' => 'Carregando...',
+	'sphinxPowered' => 'Powered by $1',
+	'sphinxClientFailed' => 'Não foi possível instanciar o cliente Sphinx.',
+	'sphinxSearchFailed' => 'Pesquisa falhou: $1',
+	'sphinxSearchWarning' => 'Aviso: $1',
+	'sphinxPspellError' => 'Não foi possível chamar a extensão pspell.',
 );
 
 /** Russian (Русский)
