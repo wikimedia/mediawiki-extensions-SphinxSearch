@@ -831,6 +831,17 @@ $messages['sv'] = array(
 	'sphinxSearchWarning' => 'Varning: $1',
 );
 
+/** Telugu (తెలుగు)
+ * @author Veeven
+ */
+$messages['te'] = array(
+	'sphinxSearchInCategories' => 'వర్గాలలో వెతుకు:',
+	'sphinxExcludeCategories' => 'వదిలేయాల్సిన వర్గాలు',
+	'sphinxNextPage' => 'తదుపరి',
+	'sphinxSearchButton' => 'వెతుకు',
+	'sphinxSearchWarning' => 'హెచ్చరిక: $1',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
