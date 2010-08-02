@@ -527,8 +527,10 @@ $messages['lb'] = array(
 	'sphinxMatchTitles' => 'nëmmen an den Titele sichen',
 	'sphinxLoading' => 'Lueden...',
 	'sphinxPowered' => 'Notzt $1',
+	'sphinxClientFailed' => 'De Sphinx Client konnt net initialiséiert ginn.',
 	'sphinxSearchFailed' => 'Ufro huet net fonctionnéiert: $1',
 	'sphinxSearchWarning' => 'Warnung: $1',
+	'sphinxPspellError' => "D'pspell-Erweiderung konnt net opgeruff ginn.",
 );
 
 /** Macedonian (Македонски)
