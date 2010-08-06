@@ -383,6 +383,11 @@ $messages['gsw'] = array(
 	'sphinxPspellError' => 'Het d pspell-Erwyterig nit chenne ufruefe',
 );
 
+/** Hausa (هَوُسَ) */
+$messages['ha'] = array(
+	'sphinxSearchButton' => 'Nema',
+);
+
 /** Upper Sorbian (Hornjoserbsce)
  * @author Michawiki
  */
