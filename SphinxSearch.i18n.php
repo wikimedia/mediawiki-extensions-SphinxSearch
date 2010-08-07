@@ -170,6 +170,11 @@ $messages['br'] = array(
 	'sphinxPspellError' => 'Dibosupl lañsañ astenn pspell.',
 );
 
+/** Sorani (کوردی) */
+$messages['ckb'] = array(
+	'sphinxSearchButton' => 'گەڕان',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
