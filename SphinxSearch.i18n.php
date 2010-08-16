@@ -466,11 +466,13 @@ $messages['ia'] = array(
 );
 
 /** Indonesian (Bahasa Indonesia)
+ * @author Farras
  * @author Kenrick95
  */
 $messages['id'] = array(
 	'sphinxPreviousPage' => 'Sebelumnya',
 	'sphinxNextPage' => 'Selanjutnya',
+	'sphinxPspellError' => 'Tidak dapat memanggil ekstensi pspell.',
 );
 
 /** Igbo (Igbo) */
@@ -801,9 +803,11 @@ $messages['sr-ec'] = array(
 	'sphinxExcludeCategories' => 'Категорије за изузимање',
 	'sphinxPreviousPage' => 'Претходно',
 	'sphinxNextPage' => 'Следеће',
+	'sphinxSearchEpilogue' => 'Додатно време потребно бази је било $1 сек.',
 	'sphinxSearchDidYouMean' => 'Да ли сте мислили:',
 	'sphinxMatchAny' => 'претражи на било коју реч',
 	'sphinxMatchAll' => 'претражи на све речи',
+	'sphinxMatchTitles' => 'шретражи само наслове',
 	'sphinxLoading' => 'Учитава се...',
 	'sphinxClientFailed' => 'Sphinx клијент није могао бити инсталиран.',
 	'sphinxSearchFailed' => 'Упит није прошао: $1',
