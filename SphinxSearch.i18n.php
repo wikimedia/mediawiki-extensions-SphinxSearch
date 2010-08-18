@@ -470,8 +470,28 @@ $messages['ia'] = array(
  * @author Kenrick95
  */
 $messages['id'] = array(
+	'sphinxsearch' => 'Telusuri wiki dengan Sphinx',
+	'sphinxsearch-desc' => 'Menggantikan mesin pencari MediaWiki dengan [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxSearchInNamespaces' => 'Cari di ruang nama:',
+	'sphinxSearchInCategories' => 'Cari di kategori:',
+	'sphinxExcludeCategories' => 'Kategori yang dikeluarkan',
+	'sphinxResultPage' => 'Halaman hasil:',
 	'sphinxPreviousPage' => 'Sebelumnya',
 	'sphinxNextPage' => 'Selanjutnya',
+	'sphinxSearchPreamble' => 'Menampilkan $1—$2 dari $3 {{PLURAL:$3|kecocokan|kecocokan}} untuk kueri "<nowiki>$4</nowiki>" yang diambil dalam $5 detik dengan statistik berikut:',
+	'sphinxSearchStats' => '* "$1" ditemukan $2 {{PLURAL:$2|kali|kali}} di $3 {{PLURAL:$3|dokumen|dokumen}}',
+	'sphinxSearchStatsInfo' => "''Angka di atas mungkin mencakup dokumen yang tidak terdaftar karena pilihan pencarian.''",
+	'sphinxSearchButton' => 'Cari',
+	'sphinxSearchEpilogue' => 'Waktu basis data tambahan adalah $1 detik.',
+	'sphinxSearchDidYouMean' => 'Maksud Anda:',
+	'sphinxMatchAny' => 'cocokkan kata apapun',
+	'sphinxMatchAll' => 'cocokkan semua kata',
+	'sphinxMatchTitles' => 'cocokkan judul saja',
+	'sphinxLoading' => 'Memuat...',
+	'sphinxPowered' => 'Didukung oleh $1',
+	'sphinxClientFailed' => 'Tidak dapat menginstankan klien Sphinx.',
+	'sphinxSearchFailed' => 'Kueri gagal: $1',
+	'sphinxSearchWarning' => 'Peringatan: $1',
 	'sphinxPspellError' => 'Tidak dapat memanggil ekstensi pspell.',
 );
 
