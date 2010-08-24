@@ -330,6 +330,32 @@ $messages['fr'] = array(
 	'sphinxPspellError' => "Impossible de lancer l'extension pspell.",
 );
 
+/** Franco-Provençal (Arpetan)
+ * @author ChrisPtDe
+ */
+$messages['frp'] = array(
+	'sphinxsearch' => 'Rechèrchiér dens lo vouiqui en utilisent Sfinxe',
+	'sphinxsearch-desc' => 'Remplace lo motor de rechèrche de MediaWiki per [http://www.sphinxsearch.com/ Sfinxe].',
+	'sphinxSearchInNamespaces' => 'Rechèrchiér dens los èspâços de noms :',
+	'sphinxSearchInCategories' => 'Rechèrchiér dens les catègories :',
+	'sphinxExcludeCategories' => 'Catègories a èxcllure',
+	'sphinxResultPage' => 'Pâge de rèsultats :',
+	'sphinxPreviousPage' => 'Devant',
+	'sphinxNextPage' => 'Aprés',
+	'sphinxSearchStats' => '* « $1 » trovâ $2 côp{{PLURAL:$2||s}} dens $3 document{{PLURAL:$3||s}}',
+	'sphinxSearchButton' => 'Rechèrchiér',
+	'sphinxSearchDidYouMean' => 'Vos éd volu dére :',
+	'sphinxMatchAny' => 'trovar un mot quint que seye',
+	'sphinxMatchAll' => 'trovar tôs los mots',
+	'sphinxMatchTitles' => 'trovar ren que los titros',
+	'sphinxLoading' => 'Chargement...',
+	'sphinxPowered' => 'Fonccione grâce a $1',
+	'sphinxClientFailed' => 'Empossiblo d’enstanciér lo cliant Sfinxe.',
+	'sphinxSearchFailed' => 'Falyita de la requéta : $1',
+	'sphinxSearchWarning' => 'Avèrtissement : $1',
+	'sphinxPspellError' => 'Empossiblo de lanciér l’èxtension pspell.',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */
