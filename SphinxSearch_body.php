@@ -30,9 +30,9 @@ class SphinxSearch extends SpecialPage {
 		global $wgDisableInternalSearch, $wgAutoloadClasses;
 
 		if ( $wgDisableInternalSearch ) {
-			SpecialPage::SpecialPage( 'Search' );
+			parent::__construct( 'Search' );
 		} else {
-			SpecialPage::SpecialPage( 'SphinxSearch' );
+			parent::__construct( 'SphinxSearch' );
 		}
 
 		if ( function_exists( 'wfLoadExtensionMessages' ) ) {
