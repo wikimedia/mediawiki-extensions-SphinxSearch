@@ -26,7 +26,7 @@ class SphinxSearch extends SpecialPage {
 	 * @param Title $title
 	 * @return string
 	 */
-	function SphinxSearch() {
+	function __construct() {
 		global $wgDisableInternalSearch, $wgAutoloadClasses;
 
 		if ( $wgDisableInternalSearch ) {
@@ -824,7 +824,7 @@ class SphinxSearch extends SpecialPage {
 class SphinxSearchResultSet extends SearchResultSet {
 	var $mNdx = 0;
 
-	function SphinxSearchResultSet( $term, $rs, $cl ) {
+	function __construct( $term, $rs, $cl ) {
 		global $wgSphinxSearch_index;
 
 		$this->mResultSet = array();
