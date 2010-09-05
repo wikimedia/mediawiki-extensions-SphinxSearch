@@ -579,6 +579,7 @@ $messages['lb'] = array(
 	'sphinxNextPage' => 'Nächst',
 	'sphinxSearchStats' => '* "$1" gouf {{PLURAL:$2|eemol| $2 mol}} an {{PLURAL:$3|engem Dokument| $3 Dokumenter}} fonnt',
 	'sphinxSearchButton' => 'Sichen',
+	'sphinxSearchEpilogue' => 'Déi zousätzlech Datebankzäit war $1 Sekonnen.',
 	'sphinxSearchDidYouMean' => 'Mengt Dir:',
 	'sphinxMatchAny' => 'eent vun de Wierder fannen',
 	'sphinxMatchAll' => 'all Wierder fannen',
