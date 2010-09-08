@@ -175,6 +175,13 @@ $messages['ckb'] = array(
 	'sphinxSearchButton' => 'گەڕان',
 );
 
+/** Czech (Česky) */
+$messages['cs'] = array(
+	'sphinxPreviousPage' => 'Předchozí',
+	'sphinxNextPage' => 'Další',
+	'sphinxSearchButton' => 'Hledat',
+);
+
 /** German (Deutsch)
  * @author Kghbln
  */
@@ -932,5 +939,13 @@ $messages['tl'] = array(
 	'sphinxSearchFailed' => 'Nabigo ang tanong: $1',
 	'sphinxSearchWarning' => 'Babala: $1',
 	'sphinxPspellError' => 'Hindi masamo ang dugtong na pspell.',
+);
+
+/** Simplified Chinese (‪中文(简体)‬) */
+$messages['zh-hans'] = array(
+	'sphinxPreviousPage' => '上一个',
+	'sphinxNextPage' => '下一个',
+	'sphinxSearchDidYouMean' => '您是不是要找：',
+	'sphinxLoading' => '载入中……',
 );
 
