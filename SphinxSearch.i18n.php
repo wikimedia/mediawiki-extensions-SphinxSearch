@@ -104,6 +104,13 @@ $messages['ar'] = array(
 	'sphinxSearchWarning' => 'تحذير: $1',
 );
 
+/** Aramaic (ܐܪܡܝܐ)
+ * @author Basharh
+ */
+$messages['arc'] = array(
+	'sphinxSearchWarning' => '↓ ܙܘܗܪܐ: $1',
+);
+
 /** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
  * @author EugeneZelenko
  * @author Jim-by
@@ -584,7 +591,9 @@ $messages['lb'] = array(
 	'sphinxResultPage' => 'Säit mat de Resultater:',
 	'sphinxPreviousPage' => 'Vireg',
 	'sphinxNextPage' => 'Nächst',
+	'sphinxSearchPreamble' => 'Weis $1—$2 vu(n) $3 {{PLURAL:$3|Treffer|Treffer}} fir d\'Ufro "<nowiki>$4</nowiki>". déi bannert $5 Sekonne mat dëse Statistike fonnt goufen:',
 	'sphinxSearchStats' => '* "$1" gouf {{PLURAL:$2|eemol| $2 mol}} an {{PLURAL:$3|engem Dokument| $3 Dokumenter}} fonnt',
+	'sphinxSearchStatsInfo' => "''An der Zuel uewendriwwer kënnen Dokumenter drasinn, déi duerch d'Sichoptiounen, net gewise ginn.''",
 	'sphinxSearchButton' => 'Sichen',
 	'sphinxSearchEpilogue' => 'Déi zousätzlech Datebankzäit war $1 Sekonnen.',
 	'sphinxSearchDidYouMean' => 'Mengt Dir:',
