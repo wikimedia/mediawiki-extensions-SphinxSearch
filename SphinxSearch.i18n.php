@@ -571,6 +571,14 @@ $messages['ja'] = array(
 	'sphinxPspellError' => 'pspell 拡張機能を起動できませんでした。',
 );
 
+/** Khmer (ភាសាខ្មែរ)
+ * @author គីមស៊្រុន
+ */
+$messages['km'] = array(
+	'sphinxPreviousPage' => 'មុន',
+	'sphinxNextPage' => 'បន្ទាប់',
+);
+
 /** Kannada (ಕನ್ನಡ)
  * @author Nayvik
  */
