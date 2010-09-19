@@ -7,8 +7,6 @@
  * @ingroup Extensions
  */
 
-$specialPageAliases = array();
-
 /** English (English) */
 $specialPageAliases['en'] = array(
 	'SphinxSearch' => array( 'SphinxSearch' ),
