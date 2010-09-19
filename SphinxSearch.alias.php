@@ -7,30 +7,32 @@
  * @ingroup Extensions
  */
 
-$aliases = array();
-
-/** English */
-$aliases['en'] = array(
+/** English (English) */
+$specialPageAliases['en'] = array(
 	'SphinxSearch' => array( 'SphinxSearch' ),
 );
 
 /** Arabic (العربية) */
-$aliases['ar'] = array(
+$specialPageAliases['ar'] = array(
 	'SphinxSearch' => array( 'بحث_سفنكس' ),
 );
 
 /** Japanese (日本語) */
-$aliases['ja'] = array(
+$specialPageAliases['ja'] = array(
 	'SphinxSearch' => array( 'Sphinx検索' ),
 );
 
 /** Luxembourgish (Lëtzebuergesch) */
-$aliases['lb'] = array(
-	'SphinxSearch' => array( 'Sphinx Sich' ),
+$specialPageAliases['lb'] = array(
+	'SphinxSearch' => array( 'Sphinx_Sich' ),
 );
 
 /** Dutch (Nederlands) */
-$aliases['nl'] = array(
+$specialPageAliases['nl'] = array(
 	'SphinxSearch' => array( 'SphinxZoeken' ),
 );
 
+/**
+ * For backwards compatibility with MediaWiki 1.15 and earlier.
+ */
+$aliases =& $specialPageAliases;
