@@ -124,6 +124,12 @@ class SphinxSearch extends SpecialPage {
 		return $categories;
 	}
 
+	/**
+	 * $wgAjaxExportList callback - create a category filter sub-menu
+	 *
+	 * @param string $parent_id
+	 * @return string
+	 */
 	function ajaxGetCategoryChildren( $parent_id ) {
 
 		$title = Title::newFromID( $parent_id );
@@ -159,6 +165,11 @@ class SphinxSearch extends SpecialPage {
 		return $response;
 	}
 
+	/**
+	 * Main execution function
+	 *
+	 * @param string $par Parameters passed to the page
+	 */
 	function execute( $par ) {
 		global $wgRequest, $wgOut, $wgUser, $wgSphinxMatchAll, $wgSphinxSearch_index_list;
 
@@ -226,6 +237,11 @@ class SphinxSearch extends SpecialPage {
 		$this->createNewSearchForm( $term );
 	}
 
+	/**
+	 * If an exact title match can be found, jump straight ahead to it.
+	 *
+	 * @param string $term
+	 */
 	function goResult( $term ) {
 		global $wgOut, $wgGoToEdit;
 
@@ -387,9 +403,6 @@ class SphinxSearch extends SpecialPage {
 			$cl->SetFilter( 'category', $this->exc_categories, true );
 		}
 
-		if ( isset( $wgSphinxSearch_groupby ) && isset( $wgSphinxSearch_groupsort ) ) {
-			$cl->SetGroupBy( $wgSphinxSearch_groupby, SPH_GROUPBY_ATTR, $wgSphinxSearch_groupsort );
-		}
 		$cl->SetSortMode( $wgSphinxSearch_sortmode, $wgSphinxSearch_sortby );
 		$cl->SetLimits(
 			( $this->page - 1 ) * $wgSphinxSearch_matches,

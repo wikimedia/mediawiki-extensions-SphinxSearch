@@ -11,7 +11,7 @@ EOT;
 
 $wgExtensionCredits['specialpage'][] = array(
 	'path'           => __FILE__,
-	'version'        => '0.7.0',
+	'version'        => '0.7.1',
 	'name'           => 'SphinxSearch',
 	'author'         => array( 'Svemir Brkic', 'Paul Grinberg' ),
 	'email'          => 'svemir at deveblog dot com, gri6507 at yahoo dot com',
