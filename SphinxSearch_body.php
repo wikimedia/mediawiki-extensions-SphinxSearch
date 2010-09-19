@@ -270,8 +270,8 @@ class SphinxSearch extends SpecialPage {
 				return;
 			}
 		}
-
-		$wgOut->addWikiText( wfMsg( 'noexactmatch', wfEscapeWikiText( $term ) ) );
+		
+		$wgOut->addWikiText( wfMsg( 'searchmenu-new', wfEscapeWikiText( $term ) ) );
 	}
 
 	/**
