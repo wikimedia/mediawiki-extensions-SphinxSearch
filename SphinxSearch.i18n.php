@@ -714,8 +714,13 @@ $messages['pdc'] = array(
 	'sphinxSearchWarning' => 'Warning: $1',
 );
 
-/** Polish (Polski) */
+/** Polish (Polski)
+ * @author Sp5uhe
+ */
 $messages['pl'] = array(
+	'sphinxsearch' => 'Przeszukiwanie wiki z użyciem Sphinx',
+	'sphinxsearch-desc' => 'Zastępuje wyszukiwarką [http://www.sphinxsearch.com/ Sphinx] standardową MediaWiki',
+	'sphinxSearchInNamespaces' => 'Szukaj w przestrzeniach nazw:',
 	'sphinxPreviousPage' => 'Poprzednia',
 	'sphinxNextPage' => 'Następna',
 	'sphinxSearchButton' => 'Szukaj',
