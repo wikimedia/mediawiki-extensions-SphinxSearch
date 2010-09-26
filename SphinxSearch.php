@@ -30,8 +30,8 @@ $wgExtensionMessagesFiles['SphinxSearch'] = $dir . 'SphinxSearch.i18n.php';
 if ( $wgSearchType == 'SphinxMWSearch' ) {
 	$wgAutoloadClasses['SphinxMWSearch'] = $dir . 'SphinxMWSearch.php';
 } else {
+	$wgAutoloadClasses['SphinxSearch'] = $dir . 'SphinxSearch_body.php';
 	if ( $wgSearchType == 'SphinxSearch' ) {
-		$wgAutoloadClasses['SphinxSearch'] = $dir . 'SphinxSearch_body.php';
 		$wgDisableInternalSearch = true;
 		$wgDisableSearchUpdate = true;
 		$wgSpecialPages['Search'] = 'SphinxSearch';
@@ -87,23 +87,23 @@ if ( $wgSearchType == 'SphinxMWSearch' ) {
 	# By default, search will return articles that match any of the words in the search
 	# To change that to require all words to match by default, set the following to true
 	$wgSphinxMatchAll = false;
-	
+
 	# Number of matches to display at once
 	$wgSphinxSearch_matches = 10;
 
 	# To enable hierarchical category search, specify the top category of your hierarchy
 	$wgSphinxTopSearchableCategory = '';
-	
+
 	# This will fetch sub-categories as parent categories are checked
 	# Requires $wgUseAjax to be true
 	$wgAjaxExportList[] = 'SphinxSearch::ajaxGetCategoryChildren';
-	
+
 	# Allow excluding selected categories when filtering
 	$wgUseExcludes = false;
 
 	# Web-accessible path to the extension's folder
 	$wgSphinxSearchExtPath = $wgScriptPath . '/extensions/SphinxSearch';
-	
+
 	# Web-accessible path to the folder with SphinxSearch.js file (if different from $wgSphinxSearchExtPath)
 	$wgSphinxSearchJSPath = '';
 }
@@ -112,7 +112,7 @@ if ( $wgSearchType == 'SphinxMWSearch' ) {
 # Use Aspell to suggest possible misspellings. This can be provided via
 # PHP pspell module (http://www.php.net/manual/en/ref.pspell.php)
 # or command line insterface to ASpell
-	
+
 # Should the suggestion mode be enabled?
 $wgSphinxSuggestMode = false;
 
