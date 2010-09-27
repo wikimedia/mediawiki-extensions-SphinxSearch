@@ -774,6 +774,7 @@ $messages['ps'] = array(
 
 /** Portuguese (Português)
  * @author Hamilton Abreu
+ * @author Waldir
  */
 $messages['pt'] = array(
 	'sphinxsearch' => 'Pesquisar a wiki usando o Sphinx',
@@ -794,7 +795,7 @@ $messages['pt'] = array(
 	'sphinxMatchAll' => 'localizar todas as palavras',
 	'sphinxMatchTitles' => 'localizar somente nos títulos',
 	'sphinxLoading' => 'A carregar...',
-	'sphinxPowered' => 'Powered by $1',
+	'sphinxPowered' => 'Potenciado por $1',
 	'sphinxClientFailed' => 'Não foi possível instanciar o cliente Sphinx.',
 	'sphinxSearchFailed' => 'Pesquisa falhou $1',
 	'sphinxSearchWarning' => 'Aviso $1',
