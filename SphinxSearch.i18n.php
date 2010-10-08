@@ -727,9 +727,16 @@ $messages['pl'] = array(
 	'sphinxPreviousPage' => 'Poprzednia',
 	'sphinxNextPage' => 'Następna',
 	'sphinxSearchPreamble' => 'Wyświetlono od $1 do $2 z $3 {{PLURAL:$3|pasującego|pasujących}} dla zapytania „<nowiki>$4</nowiki>” wykonanego w $5 sekund z tymi statystykami:',
+	'sphinxSearchStats' => '* „$1” odnaleziono $2 {{PLURAL:$2|raz|razy}} w $3 {{PLURAL:$3|dokumencie|dokumentach}}',
+	'sphinxSearchStatsInfo' => "''Powyższa liczba może uwzględniać dokumenty nie wymienione ze względu na wybrane opcje wyszukiwania.''",
 	'sphinxSearchButton' => 'Szukaj',
-	'sphinxSearchDidYouMean' => 'Czy chodziło Ci o',
-	'sphinxLoading' => 'Trwa ładowanie…',
+	'sphinxSearchEpilogue' => 'Dodatkowy czas dla bazy danych to $1 {{PLURAL:$1|sekunda|sekundy|sekund}}.',
+	'sphinxSearchDidYouMean' => 'Czy miałeś na myśli:',
+	'sphinxMatchAny' => 'dopasuj dowolne ze słów',
+	'sphinxMatchAll' => 'dopasuj wszystkie słowa',
+	'sphinxMatchTitles' => 'dopasuj tylko do tytułów',
+	'sphinxLoading' => 'Ładowanie...',
+	'sphinxPowered' => 'Wykorzystano $1',
 );
 
 /** Piedmontese (Piemontèis)
