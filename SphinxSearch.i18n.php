@@ -46,8 +46,29 @@ $messages['qqq'] = array(
  * @author Naudefj
  */
 $messages['af'] = array(
+	'sphinxsearch' => 'Deursoek wiki met Sphinx',
+	'sphinxsearch-desc' => 'Vervang MediaWiki se soekenjin met [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxSearchInNamespaces' => 'Soek in naamruimtes:',
+	'sphinxSearchInCategories' => 'Soek in kategorieë:',
+	'sphinxExcludeCategories' => 'Kategorieë om uit te sluit',
+	'sphinxResultPage' => 'Resultaatbladsy:',
 	'sphinxPreviousPage' => 'Vorige',
 	'sphinxNextPage' => 'Volgende',
+	'sphinxSearchPreamble' => '{{PLURAL:$1|Resultaat|Resultate $1 tot $2 van $3 word weergegee}} vir soekopdrag "<nowiki>$4</nowiki>". Soektyd: $5 sekondes',
+	'sphinxSearchStats' => '* "$1" is $2 {{PLURAL:$2|keer|keer}} aangetref in $3 {{PLURAL:$3|dokument|dokumente}}',
+	'sphinxSearchStatsInfo' => "''Die bogenoemde getalle kan dokumente bevat wat nie gelys is as gevolg van soekopsies nie.''",
+	'sphinxSearchButton' => 'Soek',
+	'sphinxSearchEpilogue' => 'Addisionele databasistyd was $1 sekondes.',
+	'sphinxSearchDidYouMean' => 'Bedoeld u:',
+	'sphinxMatchAny' => 'ieder woord',
+	'sphinxMatchAll' => 'alle woorde',
+	'sphinxMatchTitles' => 'slegs bladsyname',
+	'sphinxLoading' => 'Besig om te laai...',
+	'sphinxPowered' => 'Aangedryf deur $1',
+	'sphinxClientFailed' => 'Dit was nie moontlik om SphinxClient te instansieer nie',
+	'sphinxSearchFailed' => 'Soekopdrag het misluk: $1',
+	'sphinxSearchWarning' => 'Waarskuwing: $1',
+	'sphinxPspellError' => 'Kom nie die "pspell"-uitbreiding laai nie.',
 );
 
 /** Gheg Albanian (Gegë)
