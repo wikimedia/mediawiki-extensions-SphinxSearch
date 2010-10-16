@@ -758,6 +758,10 @@ $messages['pl'] = array(
 	'sphinxMatchTitles' => 'dopasuj tylko do tytułów',
 	'sphinxLoading' => 'Ładowanie...',
 	'sphinxPowered' => 'Wykorzystano $1',
+	'sphinxClientFailed' => 'Nie można utworzyć instancji klienta Sfinksa.',
+	'sphinxSearchFailed' => 'Zapytanie nie powiodło się – $1',
+	'sphinxSearchWarning' => 'Uwaga – $1',
+	'sphinxPspellError' => 'Nie można wywołać rozszerzenia pspell.',
 );
 
 /** Piedmontese (Piemontèis)
