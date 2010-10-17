@@ -696,6 +696,20 @@ $messages['nl'] = array(
 	'sphinxPspellError' => 'Het was niet mogelijk de uitbreiding "pspell" aan te spreken.',
 );
 
+/** Norwegian Nynorsk (‪Norsk (nynorsk)‬)
+ * @author Nghtwlkr
+ */
+$messages['nn'] = array(
+	'sphinxSearchInNamespaces' => 'Søk i namnerom:',
+	'sphinxSearchInCategories' => 'Søk i kategoriar:',
+	'sphinxResultPage' => 'Resultatside:',
+	'sphinxPreviousPage' => 'Førre',
+	'sphinxNextPage' => 'Neste',
+	'sphinxSearchButton' => 'Søk',
+	'sphinxLoading' => 'Lastar...',
+	'sphinxSearchWarning' => 'Åtvaring: $1',
+);
+
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
  */
