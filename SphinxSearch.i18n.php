@@ -198,6 +198,19 @@ $messages['br'] = array(
 	'sphinxPspellError' => 'Dibosupl lañsañ astenn pspell.',
 );
 
+/** Bosnian (Bosanski)
+ * @author CERminator
+ */
+$messages['bs'] = array(
+	'sphinxsearch' => 'Pretraga wikija koristeći Sphinx',
+	'sphinxSearchInNamespaces' => 'Pretraga u imenskim prostorima:',
+	'sphinxSearchInCategories' => 'Pretraga u kategorijama',
+	'sphinxExcludeCategories' => 'Kategorije za izostaviti',
+	'sphinxPreviousPage' => 'Prethodno',
+	'sphinxNextPage' => 'Slijedeći',
+	'sphinxSearchButton' => 'Traži',
+);
+
 /** Sorani (کوردی) */
 $messages['ckb'] = array(
 	'sphinxSearchButton' => 'گەڕان',
@@ -452,6 +465,19 @@ $messages['gsw'] = array(
 /** Hausa (هَوُسَ) */
 $messages['ha'] = array(
 	'sphinxSearchButton' => 'Nema',
+);
+
+/** Hebrew (עברית)
+ * @author YaronSh
+ */
+$messages['he'] = array(
+	'sphinxResultPage' => 'דף תוצאות:',
+	'sphinxPreviousPage' => 'הקודם',
+	'sphinxNextPage' => 'הבא',
+	'sphinxSearchButton' => 'חיפוש',
+	'sphinxLoading' => 'בטעינה…',
+	'sphinxPowered' => 'מופעל על גבי $1',
+	'sphinxSearchWarning' => 'אזהרה: $1',
 );
 
 /** Upper Sorbian (Hornjoserbsce)
