@@ -1040,6 +1040,13 @@ $messages['tl'] = array(
 	'sphinxPspellError' => 'Hindi masamo ang dugtong na pspell.',
 );
 
+/** Ukrainian (Українська)
+ * @author Тест
+ */
+$messages['uk'] = array(
+	'sphinxSearchButton' => 'Знайти',
+);
+
 /** Simplified Chinese (‪中文(简体)‬) */
 $messages['zh-hans'] = array(
 	'sphinxPreviousPage' => '上一个',
