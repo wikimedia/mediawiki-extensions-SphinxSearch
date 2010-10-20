@@ -1044,6 +1044,8 @@ $messages['tl'] = array(
  * @author Тест
  */
 $messages['uk'] = array(
+	'sphinxPreviousPage' => 'Попередня',
+	'sphinxNextPage' => 'Наступна',
 	'sphinxSearchButton' => 'Знайти',
 );
 
