@@ -510,16 +510,25 @@ $messages['hsb'] = array(
 );
 
 /** Hungarian (Magyar)
+ * @author Dani
  * @author Glanthor Reviol
  */
 $messages['hu'] = array(
+	'sphinxsearch' => 'Keresés a wikiben a Sphinx használatával',
 	'sphinxSearchInNamespaces' => 'Keresés a következő névterekben:',
 	'sphinxSearchInCategories' => 'Keresés a következő kategóriákban:',
 	'sphinxExcludeCategories' => 'Kihagyandó kategóriák',
 	'sphinxPreviousPage' => 'Előző',
 	'sphinxNextPage' => 'Következő',
 	'sphinxSearchButton' => 'Keresés',
+	'sphinxSearchDidYouMean' => 'Keresési javaslat:',
+	'sphinxMatchAny' => 'bármely szóra',
+	'sphinxMatchAll' => 'minden szóra',
+	'sphinxMatchTitles' => 'keresés csak a címekben',
 	'sphinxLoading' => 'Betöltés…',
+	'sphinxPowered' => 'A keresést a $1 működteti.',
+	'sphinxClientFailed' => 'Nem sikerült elindítani a Sphinx klienst.',
+	'sphinxSearchFailed' => 'Sikertelen lekérdezés: $1',
 	'sphinxSearchWarning' => 'Figyelmeztetés: $1',
 );
 
@@ -616,6 +625,13 @@ $messages['ja'] = array(
 	'sphinxSearchFailed' => '検索失敗: $1',
 	'sphinxSearchWarning' => '警告： $1',
 	'sphinxPspellError' => 'pspell 拡張機能を起動できませんでした。',
+);
+
+/** Kalaallisut (Kalaallisut)
+ * @author Qaqqalik
+ */
+$messages['kl'] = array(
+	'sphinxSearchButton' => 'Ujarlerit',
 );
 
 /** Khmer (ភាសាខ្មែរ)
@@ -1047,6 +1063,7 @@ $messages['uk'] = array(
 	'sphinxPreviousPage' => 'Попередня',
 	'sphinxNextPage' => 'Наступна',
 	'sphinxSearchButton' => 'Знайти',
+	'sphinxLoading' => 'Завантаження ...',
 );
 
 /** Simplified Chinese (‪中文(简体)‬) */
