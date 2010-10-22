@@ -1022,8 +1022,11 @@ $messages['sv'] = array(
 $messages['te'] = array(
 	'sphinxSearchInCategories' => 'వర్గాలలో వెతుకు:',
 	'sphinxExcludeCategories' => 'వదిలేయాల్సిన వర్గాలు',
+	'sphinxResultPage' => 'ఫలితపు పుట:',
+	'sphinxPreviousPage' => 'గత',
 	'sphinxNextPage' => 'తదుపరి',
 	'sphinxSearchButton' => 'వెతుకు',
+	'sphinxSearchDidYouMean' => 'మీరు అంటున్నది ఇదా:',
 	'sphinxSearchWarning' => 'హెచ్చరిక: $1',
 );
 
