@@ -297,6 +297,31 @@ $messages['el'] = array(
 	'sphinxSearchWarning' => 'Προειδοποίηση: $1',
 );
 
+/** Esperanto (Esperanto)
+ * @author Yekrats
+ */
+$messages['eo'] = array(
+	'sphinxSearchInNamespaces' => 'Serĉi en nomspacoj:',
+	'sphinxSearchInCategories' => 'Serĉi en kategorioj:',
+	'sphinxExcludeCategories' => 'Kategorioj por ekskluvizi',
+	'sphinxResultPage' => 'Rezulta paĝo:',
+	'sphinxPreviousPage' => 'Antaŭa',
+	'sphinxNextPage' => 'Sekva',
+	'sphinxSearchStats' => '* "$1" troviĝis $2 {{PLURAL:$2|fojo|fojoj}} en $3 {{PLURAL:$3|dokumento|dokumentoj}}',
+	'sphinxSearchButton' => 'Serĉi',
+	'sphinxSearchEpilogue' => 'Plua tempo de datumbazo ests $1 sekundoj.',
+	'sphinxSearchDidYouMean' => 'Ĉi vi signifas:',
+	'sphinxMatchAny' => 'kongruigi ĉiun vorton',
+	'sphinxMatchAll' => 'kongruigi ĉiujn vortojn',
+	'sphinxMatchTitles' => 'kongruigi nur titolojn',
+	'sphinxLoading' => 'Ŝarĝante...',
+	'sphinxPowered' => 'Funkcias per $1',
+	'sphinxClientFailed' => 'Ne povas starti klienton Sphinx.',
+	'sphinxSearchFailed' => 'Mendo malsukcesis: $1',
+	'sphinxSearchWarning' => 'Averto: $1',
+	'sphinxPspellError' => 'Ne povis envoki kromprogramon pspell.',
+);
+
 /** Spanish (Español)
  * @author Crazymadlover
  * @author Pertile
@@ -1027,6 +1052,7 @@ $messages['te'] = array(
 	'sphinxNextPage' => 'తదుపరి',
 	'sphinxSearchButton' => 'వెతుకు',
 	'sphinxSearchDidYouMean' => 'మీరు అంటున్నది ఇదా:',
+	'sphinxLoading' => 'లోడవుతోంది...',
 	'sphinxSearchWarning' => 'హెచ్చరిక: $1',
 );
 
