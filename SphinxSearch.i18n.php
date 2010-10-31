@@ -429,6 +429,13 @@ $messages['frp'] = array(
 	'sphinxPspellError' => 'Empossiblo de lanciér l’èxtension pspell.',
 );
 
+/** Traditional Gan script (贛語(繁體))
+ * @author Symane
+ */
+$messages['gan-hant'] = array(
+	'sphinxSearchButton' => '尋吖',
+);
+
 /** Galician (Galego)
  * @author Toliño
  */

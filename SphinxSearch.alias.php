@@ -19,6 +19,11 @@ $specialPageAliases['ar'] = array(
 	'SphinxSearch' => array( 'بحث_سفنكس' ),
 );
 
+/** Interlingua (Interlingua) */
+$specialPageAliases['ia'] = array(
+	'SphinxSearch' => array( 'Recerca_Sphinx' ),
+);
+
 /** Japanese (日本語) */
 $specialPageAliases['ja'] = array(
 	'SphinxSearch' => array( 'Sphinx検索' ),
