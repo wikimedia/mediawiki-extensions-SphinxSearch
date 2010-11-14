@@ -18,7 +18,7 @@
 	var $exc_categories = array();
 	var $db;
 	var $sphinx_client = null;
-	
+
 	function __construct( $db ) {
 		$this->db = $db;
 	}
@@ -75,7 +75,7 @@
 		} else {
 			$resultSet = false;
 		}
-		
+
 		if ( $resultSet === false ) {
 			return null;
 		} else {
@@ -85,12 +85,8 @@
 
 	/**
 	 * We do a weighted title/body search, no need to return titles separately
-	 *
-	 * @param string $term - Raw search term
-	 * @return SphinxMWSearchResultSet
-	 * @access public
 	 */
-	function searchTitle( $term ) {
+	function searchTitle() {
 		return null;
 	}
 
@@ -170,23 +166,20 @@
 		return "A-Za-z_'./\"!~0-9\\x80-\\xFF\\-";
 	}
 
- }
+}
 
-/**
- * @ingroup Search
- */
 class SphinxMWSearchResultSet extends SearchResultSet {
 	var $mNdx = 0;
 	var $sphinx_client = null;
 	var $mSuggestion = '';
-	
+
 	function __construct( $resultSet, $terms, $sphinx_client, $dbr ) {
 		global $wgSphinxSearch_index;
 
 		$this->sphinx_client = $sphinx_client;
 		$this->mResultSet = array();
 
-		if ( is_array( $resultSet ) && is_array( $resultSet['matches'] ) ) {
+		if ( is_array( $resultSet ) && isset( $resultSet['matches'] ) ) {
 			foreach ( $resultSet['matches'] as $id => $docinfo ) {
 				$res = $dbr->select(
 					'page',
@@ -212,27 +205,79 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 */
 	function hasSuggestion() {
 		global $wgSphinxSuggestMode;
-		
+
 		if ( $wgSphinxSuggestMode ) {
-			// Initial (weak) implementation - will be replaced
-			$dbr = wfGetDB( DB_SLAVE );
-			$res = $dbr->select(
-				array( 'page' ),
-				array( 'page_title' ),
-				array( "page_title SOUNDS LIKE " . $dbr->addQuotes($this->mTerms[0]) ),
-				__METHOD__,
-				array(
-					'ORDER BY' => 'page_counter desc',
-					'LIMIT' => 1
-				)
-			);
-			$suggestion = $dbr->fetchObject ( $res );
-			$this->mSuggestion = $suggestion->page_title;
+			$this->mSuggestion = '';
+			if ( $wgSphinxSuggestMode == 'enchant' ) {
+				$this->suggestWithEnchant();
+			} else {
+				$this->suggestWithSoundex();
+			}
 			if ($this->mSuggestion) {
 				return true;
 			}
 		}
 		return false;
+	}
+
+	/**
+	 * Wiki-specific search suggestions using enchant library.
+	 * Use SphinxSearch_setup.php to create the dictionary
+	 */
+	function suggestWithEnchant() {
+		$broker = enchant_broker_init();
+		enchant_broker_set_dict_path($broker, ENCHANT_MYSPELL, dirname( __FILE__ ));
+		if ( enchant_broker_dict_exists( $broker, 'sphinx' ) ) {
+			$dict = enchant_broker_request_dict( $broker, 'sphinx' );
+			$suggestion_found = false;
+			$full_suggestion = '';
+			foreach ( $this->mTerms as $word ) {
+				$suggestions = array();
+				if ( !enchant_dict_check($dict, $word) ) {
+					$suggestions = enchant_dict_suggest($dict, $word);
+					while ( count( $suggestions ) ) {
+						$candidate = array_shift( $suggestions );
+						if ( strtolower($candidate) != strtolower($word) ) {
+							$word = $candidate;
+							$suggestion_found = true;
+							break;
+						}
+					}
+				}
+				$full_suggestion .= $word . ' ';
+			}
+			enchant_broker_free_dict( $dict );
+			if ($suggestion_found) {
+				$this->mSuggestion = trim( $full_suggestion );
+			}
+		}
+		enchant_broker_free( $broker );
+	}
+
+	/**
+	 * Default (weak) suggestions implementation relies on MySQL soundex
+	 */
+	function suggestWithSoundex() {
+		$dbr = wfGetDB( DB_SLAVE );
+		$joined_terms = $dbr->addQuotes( join( ' ', $this->mTerms ) );
+		$res = $dbr->select(
+			array( 'page' ),
+			array( 'page_title' ),
+			array(
+				"page_title SOUNDS LIKE " . $joined_terms,
+				// avoid (re)recommending the search string
+				"page_title NOT LIKE " . $joined_terms
+			),
+			__METHOD__,
+			array(
+				'ORDER BY' => 'page_counter desc',
+				'LIMIT' => 1
+			)
+		);
+		$suggestion = $dbr->fetchObject( $res );
+		if ( is_object( $suggestion ) ) {
+			$this->mSuggestion = trim( $suggestion->page_title );
+		}
 	}
 
 	/**
@@ -285,12 +330,12 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 class SphinxMWSearchResult extends SearchResult {
 
 	var $sphinx_client = null;
-	
+
 	function __construct( $row, $sphinx_client ) {
 		$this->sphinx_client = $sphinx_client;
 		parent::__construct( $row );
 	}
-	
+
 	/**
 	 * @param $terms Array: terms to highlight
 	 * @return String: highlighted text snippet, null (and not '') if not supported
@@ -333,7 +378,7 @@ class SphinxMWSearchResult extends SearchResult {
 			}
 		} else {
 			$ret = wfMsg( 'sphinxSearchWarning', $this->sphinx_client->GetLastError() );
-		}	
+		}
 		return $ret;
 	}
 
