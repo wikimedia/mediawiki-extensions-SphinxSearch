@@ -12,7 +12,7 @@
  * @author Svemir Brkic <svemir@deveblog.com>
  */
 
- class SphinxMWSearch extends SearchEngine {
+class SphinxMWSearch extends SearchEngine {
 
 	var $categories = array();
 	var $exc_categories = array();
@@ -20,7 +20,7 @@
 	var $sphinx_client = null;
 
 	function __construct( $db ) {
-		$this->db = $db;
+		parent::__construct( $db );
 	}
 
 	/**
