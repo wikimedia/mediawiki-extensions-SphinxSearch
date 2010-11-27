@@ -817,9 +817,9 @@ $messages['no'] = array(
  * @author Xqt
  */
 $messages['pdc'] = array(
-	'sphinxNextPage' => 'Neegscht',
+	'sphinxNextPage' => 'Neegschte',
 	'sphinxSearchButton' => 'Uffgucke',
-	'sphinxSearchDidYouMean' => 'Hoscht du gmeent:',
+	'sphinxSearchDidYouMean' => 'Hoscht du gemeent:',
 	'sphinxSearchWarning' => 'Warning: $1',
 );
 
