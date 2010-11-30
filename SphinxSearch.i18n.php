@@ -823,6 +823,14 @@ $messages['pdc'] = array(
 	'sphinxSearchWarning' => 'Warning: $1',
 );
 
+/** Pfälzisch (Pfälzisch)
+ * @author Xqt
+ */
+$messages['pfl'] = array(
+	'sphinxPreviousPage' => 'Voriche',
+	'sphinxNextPage' => 'Negschte',
+);
+
 /** Polish (Polski)
  * @author Sp5uhe
  */
