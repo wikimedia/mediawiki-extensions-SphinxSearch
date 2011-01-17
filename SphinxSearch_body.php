@@ -35,19 +35,7 @@ class SphinxSearch extends SpecialPage {
 			parent::__construct( 'SphinxSearch' );
 		}
 
-		if ( function_exists( 'wfLoadExtensionMessages' ) ) {
-			wfLoadExtensionMessages( 'SphinxSearch' );
-		} else {
-			static $messagesLoaded = false;
-			global $wgMessageCache;
-			if ( !$messagesLoaded ) {
-				$messagesLoaded = true;
-				include dirname( __FILE__ ) . '/SphinxSearch.i18n.php';
-				foreach ( $messages as $lang => $langMessages ) {
-					$wgMessageCache->addMessages( $langMessages, $lang );
-				}
-			}
-		}
+		wfLoadExtensionMessages( 'SphinxSearch' );
 
 		return true;
 	}
