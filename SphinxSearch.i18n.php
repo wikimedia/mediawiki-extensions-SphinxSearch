@@ -1118,3 +1118,15 @@ $messages['zh-hans'] = array(
 	'sphinxLoading' => '载入中……',
 );
 
+/** Traditional Chinese (‪中文(繁體)‬)
+ * @author Mark85296341
+ */
+$messages['zh-hant'] = array(
+	'sphinxSearchInNamespaces' => '在以下的名字空間中搜尋：',
+	'sphinxSearchButton' => '搜尋',
+	'sphinxSearchDidYouMean' => '您是不是要找：',
+	'sphinxLoading' => '載入中...',
+	'sphinxSearchFailed' => '查詢失敗：$1',
+	'sphinxSearchWarning' => '警告：$1',
+);
+
