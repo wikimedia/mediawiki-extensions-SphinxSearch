@@ -132,7 +132,7 @@ $messages['arc'] = array(
 	'sphinxSearchWarning' => '↓ ܙܘܗܪܐ: $1',
 );
 
-/** Belarusian (Taraškievica orthography) (Беларуская (тарашкевіца))
+/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  */
@@ -429,7 +429,7 @@ $messages['frp'] = array(
 	'sphinxPspellError' => 'Empossiblo de lanciér l’èxtension pspell.',
 );
 
-/** Traditional Gan script (贛語(繁體))
+/** Traditional Gan script (‪贛語(繁體)‬)
  * @author Symane
  */
 $messages['gan-hant'] = array(
@@ -823,7 +823,7 @@ $messages['pdc'] = array(
 	'sphinxSearchWarning' => 'Warning: $1',
 );
 
-/** Pfälzisch (Pfälzisch)
+/** Pälzisch (Pälzisch)
  * @author Xqt
  */
 $messages['pfl'] = array(
@@ -1002,7 +1002,7 @@ $messages['rue'] = array(
 	'sphinxSearchButton' => 'Глядати',
 );
 
-/** Serbian Cyrillic ekavian (Српски (ћирилица))
+/** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -1024,7 +1024,7 @@ $messages['sr-ec'] = array(
 	'sphinxPspellError' => 'Није пронађена pspell екстензија.',
 );
 
-/** Serbian Latin ekavian (Srpski (latinica)) */
+/** Serbian Latin ekavian (‪Srpski (latinica)‬) */
 $messages['sr-el'] = array(
 	'sphinxsearch' => 'Pretraga Vikija sa Sphinx-om',
 	'sphinxSearchInNamespaces' => 'Pretraga u imenskim prostorima:',
