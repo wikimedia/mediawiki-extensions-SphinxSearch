@@ -135,6 +135,7 @@ $messages['arc'] = array(
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
+ * @author Zedlik
  */
 $messages['be-tarask'] = array(
 	'sphinxsearch' => 'Пошук у вікі з выкарыстаньнем Sphinx',
@@ -147,7 +148,7 @@ $messages['be-tarask'] = array(
 	'sphinxNextPage' => 'Наступная',
 	'sphinxSearchPreamble' => 'Паказ $1—$2 з $3 {{PLURAL:$3|супадзеньня|супадзеньняў|супадзеньняў}} для запыту «<nowiki>$4</nowiki>», пошук склаў $5 с з улікам гэтай статыстыкі:',
 	'sphinxSearchStats' => '* «$1» знойдзены $2 {{PLURAL:$2|раз|разы|разоў}} у $3 {{PLURAL:$3|дакумэнце|дакумэнтах|дакумэнтах}}',
-	'sphinxSearchStatsInfo' => "''Пададзеныя лічбы могуць утрымліваць дакумэнты, не паказаныя з-за установак пошуку.''",
+	'sphinxSearchStatsInfo' => "''Пададзеныя лічбы могуць утрымліваць дакумэнты, не паказаныя з-за наладаў пошуку.''",
 	'sphinxSearchButton' => 'Шукаць',
 	'sphinxSearchEpilogue' => 'Дадатковы час базы зьвестак склаў $1 с.',
 	'sphinxSearchDidYouMean' => 'Вы мелі на ўвазе:',
