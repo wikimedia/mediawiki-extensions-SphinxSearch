@@ -1004,6 +1004,7 @@ $messages['rue'] = array(
 );
 
 /** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
+ * @author Rancher
  * @author Михајло Анђелковић
  */
 $messages['sr-ec'] = array(
@@ -1019,6 +1020,7 @@ $messages['sr-ec'] = array(
 	'sphinxMatchAll' => 'претражи на све речи',
 	'sphinxMatchTitles' => 'шретражи само наслове',
 	'sphinxLoading' => 'Учитава се...',
+	'sphinxPowered' => 'Покреће $1',
 	'sphinxClientFailed' => 'Sphinx клијент није могао бити инсталиран.',
 	'sphinxSearchFailed' => 'Упит није прошао: $1',
 	'sphinxSearchWarning' => 'Упозорење: $1',
@@ -1109,6 +1111,13 @@ $messages['uk'] = array(
 	'sphinxNextPage' => 'Наступна',
 	'sphinxSearchButton' => 'Знайти',
 	'sphinxLoading' => 'Завантаження ...',
+);
+
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'sphinxNextPage' => 'נעקסטע',
 );
 
 /** Simplified Chinese (‪中文(简体)‬) */
