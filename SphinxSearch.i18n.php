@@ -1024,7 +1024,7 @@ $messages['sr-ec'] = array(
 	'sphinxClientFailed' => 'Sphinx клијент није могао бити инсталиран.',
 	'sphinxSearchFailed' => 'Упит није прошао: $1',
 	'sphinxSearchWarning' => 'Упозорење: $1',
-	'sphinxPspellError' => 'Није пронађена pspell екстензија.',
+	'sphinxPspellError' => 'Није пронађено pspell проширење.',
 );
 
 /** Serbian Latin ekavian (‪Srpski (latinica)‬) */
