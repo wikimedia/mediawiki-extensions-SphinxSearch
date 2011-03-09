@@ -501,16 +501,33 @@ $messages['ha'] = array(
 );
 
 /** Hebrew (עברית)
+ * @author Amire80
  * @author YaronSh
  */
 $messages['he'] = array(
+	'sphinxsearch' => 'חיפוש בוויקי באמצעות תוכנת ספינקס',
+	'sphinxsearch-desc' => 'החלפת מנוע החיפוש של מדיה־ויקי במנוע [http://www.sphinxsearch.com/ ספינקס]',
+	'sphinxSearchInNamespaces' => 'חיפוש במרחבי שם:',
+	'sphinxSearchInCategories' => 'חיפוש בקטגוריות:',
+	'sphinxExcludeCategories' => 'לא לחפש בקטגוריות הבאות',
 	'sphinxResultPage' => 'דף תוצאות:',
 	'sphinxPreviousPage' => 'הקודם',
 	'sphinxNextPage' => 'הבא',
+	'sphinxSearchPreamble' => '{{PLURAL:$3|הצגת התוצאה היחידה|הצגה של $1–$2 מתוך $3 תוצאות}} לשאילתה "<nowiki>$4</nowiki>" ב־{{PLURAL:$5|שנייה אחת|$5 שניות}}. סטטיסטיקות:',
+	'sphinxSearchStats' => '* המחרוזת "$1" נמצאה {{PLURAL:$2|פעם אחת|$1 פעמים}} ב{{PLURAL:$3|מסמך אחד|־$3 מסמכים}}',
+	'sphinxSearchStatsInfo' => "'''ייתכן שהמספרים למעלה כוללים מסמכים שאינם מופיעם בגלל הגדרות החיפוש.'''",
 	'sphinxSearchButton' => 'חיפוש',
+	'sphinxSearchEpilogue' => 'זמן מסד הנתונים הנוסף היה {{PLURAL:$1|שנייה אחת|$1 שניות}}.',
+	'sphinxSearchDidYouMean' => 'האם התכוונתם ל:',
+	'sphinxMatchAny' => 'התאמה של מילה כלשהי',
+	'sphinxMatchAll' => 'התאמה של כל המילים',
+	'sphinxMatchTitles' => 'התאמה בכותרות בלבד',
 	'sphinxLoading' => 'בטעינה…',
 	'sphinxPowered' => 'מופעל על גבי $1',
+	'sphinxClientFailed' => 'נכשלה יצירת מופע של לקוח ספינקס.',
+	'sphinxSearchFailed' => 'שאילתה נכשלה: $1',
 	'sphinxSearchWarning' => 'אזהרה: $1',
+	'sphinxPspellError' => 'נכשלה הפעלת ההרחבה pspell.',
 );
 
 /** Upper Sorbian (Hornjoserbsce)
@@ -1117,6 +1134,7 @@ $messages['uk'] = array(
  * @author פוילישער
  */
 $messages['yi'] = array(
+	'sphinxResultPage' => 'רעזולטאַט בלאַט:',
 	'sphinxNextPage' => 'נעקסטע',
 );
 
