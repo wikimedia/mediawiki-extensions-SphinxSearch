@@ -700,6 +700,13 @@ $messages['kn'] = array(
 	'sphinxSearchWarning' => 'ಎಚ್ಚರಿಕೆ: $1',
 );
 
+/** Colognian (Ripoarisch)
+ * @author Purodha
+ */
+$messages['ksh'] = array(
+	'sphinxsearch-desc' => 'Donn dem WediaWiki sing Projramm för et Söhke jääje [http://www.sphinxsearch.com/ Sphinx] ußtuusche.',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
