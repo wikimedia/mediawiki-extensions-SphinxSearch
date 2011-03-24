@@ -704,7 +704,31 @@ $messages['kn'] = array(
  * @author Purodha
  */
 $messages['ksh'] = array(
+	'sphinxsearch' => 'Em Wiki Söhke met <i lang="en">Sphinx</i>',
 	'sphinxsearch-desc' => 'Donn dem WediaWiki sing Projramm för et Söhke jääje [http://www.sphinxsearch.com/ Sphinx] ußtuusche.',
+	'sphinxSearchInNamespaces' => 'Söhk en de Apachtemangs:',
+	'sphinxSearchInCategories' => 'Söhk en de Saachjroppe:',
+	'sphinxExcludeCategories' => 'Ußjeschloße Saachjroppe',
+	'sphinxResultPage' => 'De Sigg met dämm, wat eruß jekumme es:',
+	'sphinxPreviousPage' => 'Vörijje',
+	'sphinxNextPage' => 'Näächste',
+	'sphinxSearchPreamble' => '{{PLURAL:$3|Zeish dä|Zeish $1 beß $2 vun $3|Et jitt keine}} Träffer för di Frooch „<nowiki>$4</nowiki>“.
+{{PLURAL:$3|Dä|Se|Dat}} wood en $5 Sekunde jefonge.
+Shtatißtik:',
+	'sphinxSearchStats' => '* „$1“ wood {{PLURAL:$2|eimohl|$2 mohl|}} en {{PLURAL:$3|einem Dokemänt|$3 Dokemänt|kein Dokemänte}} jefonge.',
+	'sphinxSearchStatsInfo' => 'Et künnte och Dokemänte mitjezallt sin, di wäje dä Ußwahl beim Söhke nit met opjeleß wääde.',
+	'sphinxSearchButton' => 'Söhke',
+	'sphinxSearchEpilogue' => 'De zohsäzlejje Zick för de Daatebangk wohr {{PLURAL:$1|en Sekund|$1 Sekunde|nit ens en Sekund}}.',
+	'sphinxSearchDidYouMean' => 'Häß De velleish jemeint:',
+	'sphinxMatchAny' => 'fengk öhnds e Woot',
+	'sphinxMatchAll' => 'Fengk all de Wööter',
+	'sphinxMatchTitles' => 'bloß en Siggenaame looere',
+	'sphinxLoading' => 'Ben am Lade&nbsp;…',
+	'sphinxPowered' => 'Op de Reih jebraat vun $1',
+	'sphinxClientFailed' => 'Mer kunnte kein neu Ußjab för ene Klijänt vu däm Projramm <i lang="en">Sphinx</i> opboue.',
+	'sphinxSearchFailed' => 'Di Frooch es donävve jejange: $1',
+	'sphinxSearchWarning' => 'Opjepaß: $1',
+	'sphinxPspellError' => 'Mer kunnte dat Zohsazprojramm <code lang="en">pspell</code> nit oproofe.',
 );
 
 /** Luxembourgish (Lëtzebuergesch)
