@@ -35,7 +35,7 @@ class SphinxSearch extends SpecialPage {
 			parent::__construct( 'SphinxSearch' );
 		}
 
-		wfLoadExtensionMessages( 'SphinxSearch' );
+		
 
 		return true;
 	}
