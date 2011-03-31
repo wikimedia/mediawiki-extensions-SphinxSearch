@@ -31,6 +31,8 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author EugeneZelenko
+ * @author Nike
+ * @author Purodha
  * @author Umherirrender
  */
 $messages['qqq'] = array(
@@ -38,7 +40,10 @@ $messages['qqq'] = array(
 	'sphinxPreviousPage' => '{{Identical|Previous}}',
 	'sphinxNextPage' => '{{Identical|Next}}',
 	'sphinxSearchButton' => '{{Identical|Search}}',
+	'sphinxSearchEpilogue' => 'Parameters
+* $1 is a floating point number.',
 	'sphinxLoading' => '{{Identical|Loading}}',
+	'sphinxPowered' => '$1 is replaced with a text "Sphinx" inside a link.',
 	'sphinxSearchWarning' => '{{Identical|Warning}}',
 );
 
@@ -718,13 +723,13 @@ Shtatißtik:',
 	'sphinxSearchStats' => '* „$1“ wood {{PLURAL:$2|eimohl|$2 mohl|}} en {{PLURAL:$3|einem Dokemänt|$3 Dokemänt|kein Dokemänte}} jefonge.',
 	'sphinxSearchStatsInfo' => 'Et künnte och Dokemänte mitjezallt sin, di wäje dä Ußwahl beim Söhke nit met opjeleß wääde.',
 	'sphinxSearchButton' => 'Söhke',
-	'sphinxSearchEpilogue' => 'De zohsäzlejje Zick för de Daatebangk wohr {{PLURAL:$1|en Sekund|$1 Sekunde|nit ens en Sekund}}.',
+	'sphinxSearchEpilogue' => 'De zohsäzlejje Zick för de Daatebangk wohr {{PLURAL:$1|$1 Sekund|$1 Sekunde|$1 Sekunde}}.',
 	'sphinxSearchDidYouMean' => 'Häß De velleish jemeint:',
 	'sphinxMatchAny' => 'fengk öhnds e Woot',
 	'sphinxMatchAll' => 'Fengk all de Wööter',
 	'sphinxMatchTitles' => 'bloß en Siggenaame looere',
 	'sphinxLoading' => 'Ben am Lade&nbsp;…',
-	'sphinxPowered' => 'Op de Reih jebraat vun $1',
+	'sphinxPowered' => 'Op de Reih jebraat vun $1.',
 	'sphinxClientFailed' => 'Mer kunnte kein neu Ußjab för ene Klijänt vu däm Projramm <i lang="en">Sphinx</i> opboue.',
 	'sphinxSearchFailed' => 'Di Frooch es donävve jejange: $1',
 	'sphinxSearchWarning' => 'Opjepaß: $1',
