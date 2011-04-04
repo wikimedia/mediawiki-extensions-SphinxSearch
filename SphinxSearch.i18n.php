@@ -31,6 +31,7 @@ $messages['en'] = array(
 
 /** Message documentation (Message documentation)
  * @author EugeneZelenko
+ * @author Lloffiwr
  * @author Nike
  * @author Purodha
  * @author Umherirrender
@@ -41,7 +42,7 @@ $messages['qqq'] = array(
 	'sphinxNextPage' => '{{Identical|Next}}',
 	'sphinxSearchButton' => '{{Identical|Search}}',
 	'sphinxSearchEpilogue' => 'Parameters
-* $1 is a floating point number.',
+* $1 is a floating point number ([http://en.wikipedia.org/wiki/Floating-point_number definition]).',
 	'sphinxLoading' => '{{Identical|Loading}}',
 	'sphinxPowered' => '$1 is replaced with a text "Sphinx" inside a link.',
 	'sphinxSearchWarning' => '{{Identical|Warning}}',
