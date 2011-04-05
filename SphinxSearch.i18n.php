@@ -135,7 +135,7 @@ $messages['ar'] = array(
  * @author Basharh
  */
 $messages['arc'] = array(
-	'sphinxSearchWarning' => '↓ ܙܘܗܪܐ: $1',
+	'sphinxSearchWarning' => 'ܙܘܗܪܐ: $1',
 );
 
 /** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
