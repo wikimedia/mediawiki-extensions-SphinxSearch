@@ -213,9 +213,14 @@ $messages['bs'] = array(
 	'sphinxSearchInNamespaces' => 'Pretraga u imenskim prostorima:',
 	'sphinxSearchInCategories' => 'Pretraga u kategorijama',
 	'sphinxExcludeCategories' => 'Kategorije za izostaviti',
+	'sphinxResultPage' => 'Stranica rezultata:',
 	'sphinxPreviousPage' => 'Prethodno',
 	'sphinxNextPage' => 'Slijedeći',
 	'sphinxSearchButton' => 'Traži',
+	'sphinxSearchDidYouMean' => 'Da li ste mislili:',
+	'sphinxLoading' => 'Učitavam...',
+	'sphinxSearchFailed' => 'Upit nije uspio: $1',
+	'sphinxSearchWarning' => 'Upozorenje: $1',
 );
 
 /** Sorani (کوردی) */
