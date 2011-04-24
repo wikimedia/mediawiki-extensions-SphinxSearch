@@ -800,6 +800,14 @@ $messages['mk'] = array(
 	'sphinxPspellError' => 'Не можев да повикам pspell додаток.',
 );
 
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'sphinxPreviousPage' => 'Sebelumnya',
+	'sphinxNextPage' => 'Berikutnya',
+);
+
 /** Dutch (Nederlands)
  * @author McDutchie
  * @author Siebrand
