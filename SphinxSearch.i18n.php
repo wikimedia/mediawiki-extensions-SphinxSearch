@@ -1141,6 +1141,13 @@ $messages['te'] = array(
 	'sphinxSearchWarning' => 'హెచ్చరిక: $1',
 );
 
+/** Tetum (Tetun)
+ * @author MF-Warburg
+ */
+$messages['tet'] = array(
+	'sphinxSearchButton' => 'Buka',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
