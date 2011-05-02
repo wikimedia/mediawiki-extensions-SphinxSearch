@@ -806,6 +806,7 @@ $messages['mk'] = array(
 $messages['ms'] = array(
 	'sphinxPreviousPage' => 'Sebelumnya',
 	'sphinxNextPage' => 'Berikutnya',
+	'sphinxLoading' => 'Sedang dimuatkan...',
 );
 
 /** Dutch (Nederlands)
