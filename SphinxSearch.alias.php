@@ -19,6 +19,11 @@ $specialPageAliases['ar'] = array(
 	'SphinxSearch' => array( 'بحث_سفنكس' ),
 );
 
+/** Haitian (Kreyòl ayisyen) */
+$specialPageAliases['ht'] = array(
+	'SphinxSearch' => array( 'ChacheSphinks' ),
+);
+
 /** Interlingua (Interlingua) */
 $specialPageAliases['ia'] = array(
 	'SphinxSearch' => array( 'Recerca_Sphinx' ),
@@ -32,6 +37,11 @@ $specialPageAliases['ja'] = array(
 /** Luxembourgish (Lëtzebuergesch) */
 $specialPageAliases['lb'] = array(
 	'SphinxSearch' => array( 'Sphinx_Sich' ),
+);
+
+/** Macedonian (Македонски) */
+$specialPageAliases['mk'] = array(
+	'SphinxSearch' => array( 'ПребарувањеСоSphinx' ),
 );
 
 /** Dutch (Nederlands) */
