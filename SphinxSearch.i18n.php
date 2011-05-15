@@ -1071,6 +1071,13 @@ $messages['rue'] = array(
 	'sphinxSearchButton' => 'Глядати',
 );
 
+/** Somali (Soomaaliga)
+ * @author Maax
+ */
+$messages['so'] = array(
+	'sphinxSearchButton' => 'Raadi',
+);
+
 /** Serbian Cyrillic ekavian (‪Српски (ћирилица)‬)
  * @author Rancher
  * @author Михајло Анђелковић
