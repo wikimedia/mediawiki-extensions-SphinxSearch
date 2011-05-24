@@ -388,6 +388,7 @@ $messages['fi'] = array(
 /** French (Français)
  * @author IAlex
  * @author Peter17
+ * @author Verdy p
  */
 $messages['fr'] = array(
 	'sphinxsearch' => 'Rechercher dans le wiki en utilisant Sphinx',
@@ -407,7 +408,7 @@ $messages['fr'] = array(
 	'sphinxMatchAny' => "trouver n'importe quel mot",
 	'sphinxMatchAll' => 'trouver tous les mots',
 	'sphinxMatchTitles' => 'ne chercher que dans les titres',
-	'sphinxLoading' => 'Chargement …',
+	'sphinxLoading' => 'Chargement...',
 	'sphinxPowered' => 'Propulsé par $1',
 	'sphinxClientFailed' => "Impossible d'instancier SphinxClient.",
 	'sphinxSearchFailed' => 'Échec de la requête $1',
