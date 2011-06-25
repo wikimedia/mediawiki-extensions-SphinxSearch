@@ -749,7 +749,7 @@ Shtatißtik:',
 $messages['lb'] = array(
 	'sphinxsearch' => 'Op der Wiki mat Sphinx sichen',
 	'sphinxsearch-desc' => "Ersetzt d'MediaWiki Sichmaschinn duerch [http://www.sphinxsearch.com/  Sphinx]",
-	'sphinxSearchInNamespaces' => 'Sich an den Nummraim:',
+	'sphinxSearchInNamespaces' => 'Sichen an den Nummraim:',
 	'sphinxSearchInCategories' => 'Sichen an de Kategorien:',
 	'sphinxExcludeCategories' => 'Kategorien fir auszeschléissen',
 	'sphinxResultPage' => 'Säit mat de Resultater:',
