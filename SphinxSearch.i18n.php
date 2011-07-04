@@ -1035,10 +1035,11 @@ $messages['pt-br'] = array(
 );
 
 /** Russian (Русский)
+ * @author Reedy
  * @author Александр Сигачёв
  */
 $messages['ru'] = array(
-	'sphinxsearch' => 'Поиск по вики в помощью Sphinx',
+	'sphinxsearch' => 'Поиск по вики с помощью Sphinx',
 	'sphinxsearch-desc' => 'Замена поискового движка MediaWiki на [http://www.sphinxsearch.com/ Sphinx].',
 	'sphinxSearchInNamespaces' => 'Поиск в пространствах имён',
 	'sphinxSearchInCategories' => 'Поиск по категориям',
