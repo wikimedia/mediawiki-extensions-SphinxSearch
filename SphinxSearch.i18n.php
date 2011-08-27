@@ -691,6 +691,13 @@ $messages['ja'] = array(
 	'sphinxPspellError' => 'pspell 拡張機能を起動できませんでした。',
 );
 
+/** Kazakh (Cyrillic) (Қазақша (Cyrillic))
+ * @author GaiJin
+ */
+$messages['kk-cyrl'] = array(
+	'sphinxSearchButton' => 'Іздеу',
+);
+
 /** Kalaallisut (Kalaallisut)
  * @author Qaqqalik
  */
