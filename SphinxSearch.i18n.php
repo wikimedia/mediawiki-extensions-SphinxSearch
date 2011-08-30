@@ -1223,7 +1223,7 @@ $messages['zh-hans'] = array(
 	'sphinxPreviousPage' => '上一个',
 	'sphinxNextPage' => '下一个',
 	'sphinxSearchDidYouMean' => '您是不是要找：',
-	'sphinxLoading' => '载入中……',
+	'sphinxLoading' => '正在载入...',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
