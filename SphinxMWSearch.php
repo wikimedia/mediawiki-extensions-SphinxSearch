@@ -155,6 +155,18 @@ class SphinxMWSearch extends SearchEngine {
 		return $cl;
 	}
 
+	/**
+	 * Find snippet highlight settings for a given user
+	 *
+	 * @param $user User
+	 * @return Array contextlines, contextchars
+	 */
+	public static function userHighlightPrefs( &$user ) {
+		$contextlines = $user->getOption( 'contextlines', 2 );
+		$contextchars = $user->getOption( 'contextchars', 75 );
+		return array( $contextlines, $contextchars );
+	}
+
 }
 
 class SphinxMWSearchResultSet extends SearchResultSet {
@@ -410,8 +422,7 @@ class SphinxMWSearchResult extends SearchResult {
 
 		$this->initText();
 
-		list( $contextlines, $contextchars ) = SearchEngine::userHighlightPrefs( $wgUser );
-
+		list( $contextlines, $contextchars ) = SphinxMWSearch::userHighlightPrefs( $wgUser );
 		$excerpts_opt = array(
 			"before_match"    => "<span class='searchmatch'>",
 			"after_match"     => "</span>",
