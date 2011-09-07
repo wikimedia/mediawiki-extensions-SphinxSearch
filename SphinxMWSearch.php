@@ -271,7 +271,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	}
 
 	function suggestWithAspell() {
-		global $wgUser, $wgSphinxSearchPersonalDictionary, $wgSphinxSearchAspellPath;
+		global $wgLanguageCode, $wgSphinxSearchPersonalDictionary, $wgSphinxSearchAspellPath;
 
 		// aspell will only return mis-spelled words, so remember all here
 		$words = $this->mTerms;
@@ -283,10 +283,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		// prepare the system call with optional dictionary
 		$aspellcommand = 'echo ' . escapeshellarg( join( ' ', $words ) ) .
 			' | ' . escapeshellarg( $wgSphinxSearchAspellPath ) .
-			' -a --ignore-accents --ignore-case';
-		if ( $wgUser ) {
-			$aspellcommand .= ' --lang=' . $wgUser->getDefaultOption( 'language' );
-		}
+			' -a --ignore-accents --ignore-case --lang=' . $wgLanguageCode;
 		if ( $wgSphinxSearchPersonalDictionary ) {
 			$aspellcommand .= ' --home-dir=' . dirname( $wgSphinxSearchPersonalDictionary );
 			$aspellcommand .= ' -p ' . basename( $wgSphinxSearchPersonalDictionary );
