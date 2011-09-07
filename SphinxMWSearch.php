@@ -163,13 +163,14 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	var $sphinx_client;
 	var $mSuggestion = '';
 	var $db;
+	var $total_hits = 0;
 
 	function __construct( $resultSet, $terms, $sphinx_client, $dbr ) {
 		$this->sphinx_client = $sphinx_client;
 		$this->mResultSet = array();
 		$this->db = $dbr ? $dbr : wfGetDB( DB_SLAVE );
-
 		if ( is_array( $resultSet ) && isset( $resultSet['matches'] ) ) {
+			$this->total_hits = $resultSet[ 'total_found' ];
 			foreach ( $resultSet['matches'] as $id => $docinfo ) {
 				$res = $this->db->select(
 					'page',
@@ -343,6 +344,29 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 */
 	function numRows() {
 		return count( $this->mResultSet );
+	}
+
+	/**
+	 * Some search modes return a total hit count for the query
+	 * in the entire article database. This may include pages
+	 * in namespaces that would not be matched on the given
+	 * settings.
+	 *
+	 * Return null if no total hits number is supported.
+	 *
+	 * @return Integer
+	 */
+	function getTotalHits() {
+		return $this->total_hits;
+	}
+
+	/**
+	 * Return information about how and from where the results were fetched.
+	 *
+	 * @return string
+	 */
+	function getInfo() {
+		return wfMsg( 'sphinxPowered', "http://www.sphinxsearch.com" );
 	}
 
 	/**
