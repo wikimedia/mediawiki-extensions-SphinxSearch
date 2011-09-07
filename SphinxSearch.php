@@ -74,8 +74,10 @@ $wgSphinxSearch_sortby = '';
 # Set to true to use MW's default search snippets and highlighting
 $wgSphinxSearchMWHighlighter = false;
 
-# Should the suggestion (Did you mean?) mode be enabled?
-# Possible values: enchant, soundex, aspell
+# Should the suggestion (Did you mean?) mode be enabled? Possible values:
+# enchant - see http://www.mediawiki.org/wiki/Extension_talk:SphinxSearch#Search_suggestions
+# soundex - uses MySQL soundex() function to recommend existing titles
+# aspell - uses aspell command-line utility to look for similar spellings
 $wgSphinxSuggestMode = '';
 
 # Path to aspell, adjust value if not in the system path

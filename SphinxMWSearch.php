@@ -230,6 +230,9 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 * Use SphinxSearch_setup.php to create the dictionary
 	 */
 	function suggestWithEnchant() {
+		if (!function_exists('enchant_broker_init')) {
+			return;
+		}
 		$broker = enchant_broker_init();
 		enchant_broker_set_dict_path($broker, ENCHANT_MYSPELL, dirname( __FILE__ ));
 		if ( enchant_broker_dict_exists( $broker, 'sphinx' ) ) {
