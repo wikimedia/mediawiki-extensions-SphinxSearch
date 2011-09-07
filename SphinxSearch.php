@@ -11,7 +11,7 @@ EOT;
 
 $wgExtensionCredits['specialpage'][] = array(
 	'path'           => __FILE__,
-	'version'        => '0.7.2',
+	'version'        => '0.8.0',
 	'name'           => 'SphinxSearch',
 	'author'         => array( 'Svemir Brkic', 'Paul Grinberg' ),
 	'email'          => 'svemir at deveblog dot com, gri6507 at yahoo dot com',
@@ -26,20 +26,16 @@ $wgExtensionMessagesFiles['SphinxSearch'] = $dir . 'SphinxSearch.i18n.php';
 # To completely disable the default search and replace it with SphinxSearch,
 # set this BEFORE including SphinxSearch.php in LocalSettings.php
 # $wgSearchType = 'SphinxSearch';
+
+# prior to version 0.8.0 there was a SphinxSearch search type
+if ( $wgSearchType == 'SphinxSearch' ) {
+	$wgSearchType == 'SphinxMWSearch';
+}
+
 # To use the new approach (added in 0.7.2) set it to SphinxMWSearch
 if ( $wgSearchType == 'SphinxMWSearch' ) {
 	$wgAutoloadClasses['SphinxMWSearch'] = $dir . 'SphinxMWSearch.php';
-} else {
-	$wgAutoloadClasses['SphinxSearch'] = $dir . 'SphinxSearch_body.php';
-	if ( $wgSearchType == 'SphinxSearch' ) {
-		$wgDisableInternalSearch = true;
-		$wgDisableSearchUpdate = true;
-		$wgSpecialPages['Search'] = 'SphinxSearch';
-		$wgDisableSearchUpdate = true;
-	} else {
-		$wgExtensionAliasesFiles['SphinxSearch'] = $dir . 'SphinxSearch.alias.php';
-		$wgSpecialPages['SphinxSearch'] = 'SphinxSearch';
-	}
+	$wgDisableSearchUpdate = true;
 }
 
 # this assumes you have copied sphinxapi.php from your Sphinx
@@ -50,7 +46,7 @@ if ( !class_exists( 'SphinxClient' ) ) {
 }
 
 # Host and port on which searchd deamon is running
-$wgSphinxSearch_host = 'localhost';
+$wgSphinxSearch_host = '127.0.0.1';
 $wgSphinxSearch_port = 9312;
 
 # Main sphinx.conf index to search
@@ -76,37 +72,8 @@ $wgSphinxSearch_mode = SPH_MATCH_EXTENDED;
 $wgSphinxSearch_sortmode = SPH_SORT_RELEVANCE;
 $wgSphinxSearch_sortby = '';
 
-if ( $wgSearchType == 'SphinxMWSearch' ) {
-	# Following settings apply only in the new search model
-
-	# Set to true to use MW's default search snippets and highlighting
-	$wgSphinxSearchMWHighlighter = false;
-} else {
-	# Following settings apply only in the old search model
-
-	# By default, search will return articles that match any of the words in the search
-	# To change that to require all words to match by default, set the following to true
-	$wgSphinxMatchAll = false;
-
-	# Number of matches to display at once
-	$wgSphinxSearch_matches = 10;
-
-	# To enable hierarchical category search, specify the top category of your hierarchy
-	$wgSphinxTopSearchableCategory = '';
-
-	# This will fetch sub-categories as parent categories are checked
-	# Requires $wgUseAjax to be true
-	$wgAjaxExportList[] = 'SphinxSearch::ajaxGetCategoryChildren';
-
-	# Allow excluding selected categories when filtering
-	$wgUseExcludes = false;
-
-	# Web-accessible path to the extension's folder
-	$wgSphinxSearchExtPath = $wgScriptPath . '/extensions/SphinxSearch';
-
-	# Web-accessible path to the folder with SphinxSearch.js file (if different from $wgSphinxSearchExtPath)
-	$wgSphinxSearchJSPath = '';
-}
+# Set to true to use MW's default search snippets and highlighting
+$wgSphinxSearchMWHighlighter = false;
 
 # #########################################################
 # Use Aspell to suggest possible misspellings. This can be provided via
