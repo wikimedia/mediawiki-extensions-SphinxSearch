@@ -25,20 +25,19 @@ $wgExtensionMessagesFiles['SphinxSearch'] = $dir . 'SphinxSearch.i18n.php';
 
 # To completely disable the default search and replace it with SphinxSearch,
 # set this BEFORE including SphinxSearch.php in LocalSettings.php
-# $wgSearchType = 'SphinxSearch';
+# $wgSearchType = 'SphinxMWSearch';
 
-# prior to version 0.8.0 there was a SphinxSearch search type
+# Prior to version 0.8.0 there was a SphinxSearch search type
 if ( $wgSearchType == 'SphinxSearch' ) {
 	$wgSearchType == 'SphinxMWSearch';
 }
 
-# To use the new approach (added in 0.7.2) set it to SphinxMWSearch
 if ( $wgSearchType == 'SphinxMWSearch' ) {
 	$wgAutoloadClasses['SphinxMWSearch'] = $dir . 'SphinxMWSearch.php';
 	$wgDisableSearchUpdate = true;
 }
 
-# this assumes you have copied sphinxapi.php from your Sphinx
+# This assumes you have copied sphinxapi.php from your Sphinx
 # installation folder to your SphinxSearch extension folder
 # not needed if you install http://pecl.php.net/package/sphinx
 if ( !class_exists( 'SphinxClient' ) ) {
@@ -75,22 +74,15 @@ $wgSphinxSearch_sortby = '';
 # Set to true to use MW's default search snippets and highlighting
 $wgSphinxSearchMWHighlighter = false;
 
-# #########################################################
-# Use Aspell to suggest possible misspellings. This can be provided via
-# PHP pspell module (http://www.php.net/manual/en/ref.pspell.php)
-# or command line insterface to ASpell
+# Should the suggestion (Did you mean?) mode be enabled?
+# Possible values: enchant, soundex, aspell
+$wgSphinxSuggestMode = '';
 
-# Should the suggestion mode be enabled?
-$wgSphinxSuggestMode = false;
+# Path to aspell, adjust value if not in the system path
+$wgSphinxSearchAspellPath = 'aspell';
 
-# Path to personal dictionary (for example personal.en.pws.) Needed only if using a personal dictionary
+# Path to (optional) personal aspell dictionary
 $wgSphinxSearchPersonalDictionary = '';
-
-# Path to Aspell. Used only if your PHP does not have the pspell extension.
-$wgSphinxSearchAspellPath = "/usr/bin/aspell";
-
-# Path to aspell location and language data files. Do not set if not sure.
-$wgSphinxSearchPspellDictionaryDir = '';
 
 # How many matches searchd will keep in RAM while searching
 $wgSphinxSearch_maxmatches = 1000;

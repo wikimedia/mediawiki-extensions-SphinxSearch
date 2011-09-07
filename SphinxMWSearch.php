@@ -210,8 +210,10 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 			$this->mSuggestion = '';
 			if ( $wgSphinxSuggestMode == 'enchant' ) {
 				$this->suggestWithEnchant();
-			} else {
+			} elseif ( $wgSphinxSuggestMode == 'soundex' ) {
 				$this->suggestWithSoundex();
+			} elseif ( $wgSphinxSuggestMode == 'aspell' ) {
+				$this->suggestWithAspell();
 			}
 			if ($this->mSuggestion) {
 				return true;
@@ -232,7 +234,6 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 			$suggestion_found = false;
 			$full_suggestion = '';
 			foreach ( $this->mTerms as $word ) {
-				$suggestions = array();
 				if ( !enchant_dict_check($dict, $word) ) {
 					$suggestions = enchant_dict_suggest($dict, $word);
 					while ( count( $suggestions ) ) {
@@ -277,6 +278,56 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		$suggestion = $dbr->fetchObject( $res );
 		if ( is_object( $suggestion ) ) {
 			$this->mSuggestion = trim( $suggestion->page_title );
+		}
+	}
+
+	function suggestWithAspell() {
+		global $wgUser, $wgSphinxSearchPersonalDictionary, $wgSphinxSearchAspellPath;
+
+		// aspell will only return mis-spelled words, so remember all here
+		$words = $this->mTerms;
+		$word_suggestions = array();
+		foreach ( $words as $word ) {
+			$word_suggestions[ $word ] = $word;
+		}
+
+		// prepare the system call with optional dictionary
+		$aspellcommand = 'echo ' . escapeshellarg( join( ' ', $words ) ) .
+			' | ' . escapeshellarg( $wgSphinxSearchAspellPath ) .
+			' -a --ignore-accents --ignore-case';
+		if ( $wgUser ) {
+			$aspellcommand .= ' --lang=' . $wgUser->getDefaultOption( 'language' );
+		}
+		if ( $wgSphinxSearchPersonalDictionary ) {
+			$aspellcommand .= ' --home-dir=' . dirname( $wgSphinxSearchPersonalDictionary );
+			$aspellcommand .= ' -p ' . basename( $wgSphinxSearchPersonalDictionary );
+		}
+
+		// run aspell
+		$shell_return = shell_exec( $aspellcommand );
+
+		// parse return line by line
+		$returnarray = explode( "\n", $shell_return );
+		$suggestion_needed = false;
+		foreach ( $returnarray as $key => $value ) {
+			// lines with suggestions start with &
+			if ( $value[0] === '&' ) {
+				$correction = explode( ' ', $value );
+				$word = $correction[ 1 ];
+				$suggestions = substr( $value, strpos( $value, ':' ) + 2 );
+				$suggestions = explode( ', ', $suggestions );
+				if ( count( $suggestions ) ) {
+					$guess = array_shift( $suggestions );
+					if ( strtolower( $word ) != strtolower( $guess ) ) {
+						$word_suggestions[ $word ] = $guess;
+						$suggestion_needed = true;
+					}
+				}
+			}
+		}
+
+		if ( $suggestion_needed ) {
+			$this->mSuggestion = join( ' ', $word_suggestions );
 		}
 	}
 
