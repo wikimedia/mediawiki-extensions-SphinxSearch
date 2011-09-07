@@ -9,9 +9,9 @@ EOT;
 	exit( 1 );
 }
 
-$wgExtensionCredits['specialpage'][] = array(
+$wgExtensionCredits['other'][] = array(
 	'path'           => __FILE__,
-	'version'        => '0.8.0',
+	'version'        => '0.8.1',
 	'name'           => 'SphinxSearch',
 	'author'         => array( 'Svemir Brkic', 'Paul Grinberg' ),
 	'email'          => 'svemir at deveblog dot com, gri6507 at yahoo dot com',
@@ -23,7 +23,6 @@ $dir = dirname( __FILE__ ) . '/';
 
 $wgAutoloadClasses[ 'SphinxMWSearch' ] = $dir . 'SphinxMWSearch.php';
 $wgExtensionMessagesFiles['SphinxSearch'] = $dir . 'SphinxSearch.i18n.php';
-$wgExtensionAliasesFiles['SphinxSearch'] = $dir . 'SphinxSearch.alias.php';
 
 # To completely disable the default search and replace it with SphinxSearch,
 # set this BEFORE including SphinxSearch.php in LocalSettings.php
