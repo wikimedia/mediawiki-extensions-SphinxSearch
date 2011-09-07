@@ -21,6 +21,7 @@ $wgExtensionCredits['specialpage'][] = array(
 
 $dir = dirname( __FILE__ ) . '/';
 
+$wgAutoloadClasses[ 'SphinxMWSearch' ] = $dir . 'SphinxMWSearch.php';
 $wgExtensionMessagesFiles['SphinxSearch'] = $dir . 'SphinxSearch.i18n.php';
 
 # To completely disable the default search and replace it with SphinxSearch,
@@ -33,7 +34,6 @@ if ( $wgSearchType == 'SphinxSearch' ) {
 }
 
 if ( $wgSearchType == 'SphinxMWSearch' ) {
-	$wgAutoloadClasses['SphinxMWSearch'] = $dir . 'SphinxMWSearch.php';
 	$wgDisableSearchUpdate = true;
 }
 
