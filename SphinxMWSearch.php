@@ -19,8 +19,18 @@ class SphinxMWSearch extends SearchEngine {
 	var $db;
 	var $sphinx_client = null;
 
-	function __construct( $db ) {
-		parent::__construct( $db );
+	/**
+	 * Do not go to a near match if query prefixed with ~
+	 *
+	 * @param $searchterm String
+	 * @return Title
+	 */
+	public static function getNearMatch( $searchterm ) {
+		if ( $searchterm[ 0 ] === '~' ) {
+			return null;
+		} else {
+			return parent::getNearMatch( $searchterm );
+		}
 	}
 
 	/**
@@ -84,19 +94,12 @@ class SphinxMWSearch extends SearchEngine {
 	}
 
 	/**
-	 * We do a weighted title/body search, no need to return titles separately
-	 */
-	function searchTitle() {
-		return null;
-	}
-
-	/**
 	 * @return SphinxClient: ready to run or false if term is empty
 	 */
 	function prepareSphinxClient( &$term ) {
 		global $wgSphinxSearch_sortmode, $wgSphinxSearch_sortby, $wgSphinxSearch_host,
-			$wgSphinxSearch_port, $wgSphinxSearch_index_weights, $wgSphinxSearch_index,
-			$wgSphinxSearch_mode, $wgSphinxMatchAll, $wgSphinxSearch_maxmatches,
+			$wgSphinxSearch_port, $wgSphinxSearch_index_weights,
+			$wgSphinxSearch_mode, $wgSphinxSearch_maxmatches,
 			$wgSphinxSearch_cutoff, $wgSphinxSearch_weights;
 
 		// don't do anything for blank searches
@@ -152,44 +155,31 @@ class SphinxMWSearch extends SearchEngine {
 		return $cl;
 	}
 
-	/**
-	 * @return Boolean: can we list/unlist redirects
-	 */
-	function acceptListRedirects() {
-		return true;
-	}
-
-	/**
-	 * @return String: allowed query characters
-	 */
-	public static function legalSearchChars() {
-		return "A-Za-z_'./\"!~0-9\\x80-\\xFF\\-";
-	}
-
 }
 
 class SphinxMWSearchResultSet extends SearchResultSet {
+
 	var $mNdx = 0;
-	var $sphinx_client = null;
+	var $sphinx_client;
 	var $mSuggestion = '';
+	var $db;
 
 	function __construct( $resultSet, $terms, $sphinx_client, $dbr ) {
-		global $wgSphinxSearch_index;
-
 		$this->sphinx_client = $sphinx_client;
 		$this->mResultSet = array();
+		$this->db = $dbr ? $dbr : wfGetDB( DB_SLAVE );
 
 		if ( is_array( $resultSet ) && isset( $resultSet['matches'] ) ) {
 			foreach ( $resultSet['matches'] as $id => $docinfo ) {
-				$res = $dbr->select(
+				$res = $this->db->select(
 					'page',
 					array( 'page_id', 'page_title', 'page_namespace' ),
 					array( 'page_id' => $id ),
 					__METHOD__,
 					array()
 				);
-				if ( $dbr->numRows( $res ) > 0 ) {
-					$this->mResultSet[] = $dbr->fetchObject( $res );
+				if ( $this->db->numRows( $res ) > 0 ) {
+					$this->mResultSet[] = $this->db->fetchObject( $res );
 				}
 			}
 		}
@@ -208,11 +198,11 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 
 		if ( $wgSphinxSuggestMode ) {
 			$this->mSuggestion = '';
-			if ( $wgSphinxSuggestMode == 'enchant' ) {
+			if ( $wgSphinxSuggestMode === 'enchant' ) {
 				$this->suggestWithEnchant();
-			} elseif ( $wgSphinxSuggestMode == 'soundex' ) {
+			} elseif ( $wgSphinxSuggestMode === 'soundex' ) {
 				$this->suggestWithSoundex();
-			} elseif ( $wgSphinxSuggestMode == 'aspell' ) {
+			} elseif ( $wgSphinxSuggestMode === 'aspell' ) {
 				$this->suggestWithAspell();
 			}
 			if ($this->mSuggestion) {
@@ -259,9 +249,8 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 * Default (weak) suggestions implementation relies on MySQL soundex
 	 */
 	function suggestWithSoundex() {
-		$dbr = wfGetDB( DB_SLAVE );
-		$joined_terms = $dbr->addQuotes( join( ' ', $this->mTerms ) );
-		$res = $dbr->select(
+		$joined_terms = $this->db->addQuotes( join( ' ', $this->mTerms ) );
+		$res = $this->db->select(
 			array( 'page' ),
 			array( 'page_title' ),
 			array(
@@ -275,7 +264,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 				'LIMIT' => 1
 			)
 		);
-		$suggestion = $dbr->fetchObject( $res );
+		$suggestion = $this->db->fetchObject( $res );
 		if ( is_object( $suggestion ) ) {
 			$this->mSuggestion = trim( $suggestion->page_title );
 		}
