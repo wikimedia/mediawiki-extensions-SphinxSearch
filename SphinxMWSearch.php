@@ -19,7 +19,6 @@ class SphinxMWSearch extends SearchEngine {
 	var $db;
 	var $sphinx_client = null;
 	var $prefix_handlers = array(
-		'all' => 'searchAllNamespaces',
 		'intitle' => 'filterByTitle',
 		'incategory' => 'filterByCategory',
 		'prefix' => 'filterByPrefix',
@@ -216,28 +215,25 @@ class SphinxMWSearch extends SearchEngine {
 	function preparePrefixRegexp() {
 		global $wgContLang, $wgCanonicalNamespaceNames, $wgNamespaceAliases;
 
-		$nsNamesRaw = array_merge(
-			$wgContLang->getNamespaces(),
-			$wgCanonicalNamespaceNames,
-			array_keys( array_merge( $wgNamespaceAliases, $wgContLang->getNamespaceAliases() ) )
-		);
-
-		// add all namespace names w/o spaces
-		$nsNames = array();
-		foreach ( $nsNamesRaw as $ns ) {
-			if ( $ns != '' ) {
-				$nsNames[] = str_replace( ' ', '_', $ns );
-			}
-		}
-
 		// "search everything" keyword
 		$allkeyword = wfMsgForContent( 'searchall' );
 		$this->prefix_handlers[ $allkeyword ] = 'searchAllNamespaces';
 
-		// add other kinds of prefixes we support
-		$nsNames = array_merge( $nsNames, array_keys( $this->prefix_handlers ) );
+		$all_prefixes = array_merge(
+			$wgContLang->getNamespaces(),
+			$wgCanonicalNamespaceNames,
+			array_keys( array_merge( $wgNamespaceAliases, $wgContLang->getNamespaceAliases() ) ),
+			array_keys( $this->prefix_handlers )
+		);
 
-		return implode( '|', array_unique( $nsNames ) );
+		$regexp_prefixes = array();
+		foreach ( $all_prefixes as $prefix ) {
+			if ( $prefix != '' ) {
+				$regexp_prefixes[] = preg_quote( str_replace( ' ', '_', $prefix ) );
+			}
+		}
+
+		return implode( '|', array_unique( $regexp_prefixes ) );
 	}
 
 	/**
