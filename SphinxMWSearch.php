@@ -229,7 +229,7 @@ class SphinxMWSearch extends SearchEngine {
 		$regexp_prefixes = array();
 		foreach ( $all_prefixes as $prefix ) {
 			if ( $prefix != '' ) {
-				$regexp_prefixes[] = preg_quote( str_replace( ' ', '_', $prefix ) );
+				$regexp_prefixes[] = preg_quote( str_replace( ' ', '_', $prefix ), '/' );
 			}
 		}
 
