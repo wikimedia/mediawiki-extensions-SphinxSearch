@@ -65,7 +65,7 @@ $wgSphinxSearch_index_list = "*";
 $wgSphinxSearch_index_weights = null;
 
 # Default Sphinx search mode
-$wgSphinxSearch_mode = SPH_MATCH_EXTENDED;
+$wgSphinxSearch_mode = SPH_MATCH_EXTENDED2;
 
 # Default sort mode
 $wgSphinxSearch_sortmode = SPH_SORT_RELEVANCE;
