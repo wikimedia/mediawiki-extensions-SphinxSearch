@@ -324,6 +324,8 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	var $total_hits = 0;
 
 	function __construct( $resultSet, $terms, $sphinx_client, $dbr ) {
+		global $wgSearchHighlightBoundaries;
+
 		$this->sphinx_client = $sphinx_client;
 		$this->mResultSet = array();
 		$this->db = $dbr ? $dbr : wfGetDB( DB_SLAVE );
@@ -343,7 +345,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 			}
 		}
 		$this->mNdx = 0;
-		$this->mTerms = preg_split('/\W+/', $terms);
+		$this->mTerms = preg_split( "/$wgSearchHighlightBoundaries+/ui", $terms );
 	}
 
 	/**
@@ -559,48 +561,23 @@ class SphinxMWSearchResult extends SearchResult {
 	}
 
 	/**
-	 * @param $terms Array: terms to highlight
-	 * @return String: highlighted text snippet, null (and not '') if not supported
+	 * Emulates SearchEngine getTextSnippet so that we can use our own userHighlightPrefs
+	 * (only needed until userHighlightPrefs in SearchEngine is fixed)
+	 *
+	 * @param $terms array of terms to highlight
+	 * @return string highlighted text snippet
 	 */
-	function getTextSnippet( $terms ){
-		global $wgUser, $wgSphinxSearchMWHighlighter, $wgSphinxSearch_index;
-
-		if ( $wgSphinxSearchMWHighlighter ) {
-			return parent::getTextSnippet( $terms );
-		}
+	function getTextSnippet( $terms ) {
+		global $wgUser, $wgAdvancedSearchHighlighting;
 
 		$this->initText();
-
 		list( $contextlines, $contextchars ) = SphinxMWSearch::userHighlightPrefs( $wgUser );
-		$excerpts_opt = array(
-			"before_match"    => "<span class='searchmatch'>",
-			"after_match"     => "</span>",
-			"chunk_separator" => " ... ",
-			"limit"           => $contextlines * $contextchars,
-			"around"          => $contextchars
-		);
-
-		$excerpts = $this->sphinx_client->BuildExcerpts(
-			array( $this->mText ),
-			$wgSphinxSearch_index,
-			join( ' ', $terms ),
-			$excerpts_opt
-		);
-
-		if ( is_array( $excerpts ) ) {
-			$ret = '';
-			foreach ( $excerpts as $entry ) {
-				// remove some wiki markup
-				$entry = preg_replace( '/([\[\]\{\}\*\#\|\!]+|==+)/',
-					' ',
-					strip_tags( $entry, '<span><br>' )
-				);
-				$ret .= "<div style='margin: 0.2em 1em 0.2em 1em;'>$entry</div>\n";
-			}
+		$h = new SearchHighlighter();
+		if ( $wgAdvancedSearchHighlighting ) {
+			return $h->highlightText( $this->mText, $terms, $contextlines, $contextchars );
 		} else {
-			$ret = wfMsg( 'sphinxSearchWarning', $this->sphinx_client->GetLastError() );
+			return $h->highlightSimple( $this->mText, $terms, $contextlines, $contextchars );
 		}
-		return $ret;
 	}
 
 }

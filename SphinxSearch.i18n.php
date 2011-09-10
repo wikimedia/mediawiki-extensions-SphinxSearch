@@ -8,7 +8,6 @@ $messages['en'] = array(
 	'sphinxPowered'            => 'Powered by $1',
 	'sphinxClientFailed'       => 'Could not instantiate Sphinx client.',
 	'sphinxSearchFailed'       => 'Query failed: $1',
-	'sphinxSearchWarning'      => 'Warning: $1',
 	'sphinxPspellError'        => 'Could not invoke pspell extension.'
 );
 
