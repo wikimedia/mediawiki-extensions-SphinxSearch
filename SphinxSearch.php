@@ -11,10 +11,9 @@ EOT;
 
 $wgExtensionCredits['other'][] = array(
 	'path'           => __FILE__,
-	'version'        => '0.8.1',
+	'version'        => '0.8.2',
 	'name'           => 'SphinxSearch',
 	'author'         => array( 'Svemir Brkic', 'Paul Grinberg' ),
-	'email'          => 'svemir at deveblog dot com, gri6507 at yahoo dot com',
 	'url'            => 'http://www.mediawiki.org/wiki/Extension:SphinxSearch',
 	'descriptionmsg' => 'sphinxsearch-desc'
 );
@@ -28,6 +27,7 @@ $wgExtensionFunctions[ ] = 'efSphinxSearchPrefixSetup';
 # To completely disable the default search and replace it with SphinxSearch,
 # set this BEFORE including SphinxSearch.php in LocalSettings.php
 # $wgSearchType = 'SphinxMWSearch';
+# All other variables should be set AFTER you include this file in LocalSettings
 
 # Prior to version 0.8.0 there was a SphinxSearch search type
 if ( $wgSearchType == 'SphinxSearch' ) {
@@ -72,6 +72,18 @@ $wgSphinxSearch_mode = SPH_MATCH_EXTENDED2;
 $wgSphinxSearch_sortmode = SPH_SORT_RELEVANCE;
 $wgSphinxSearch_sortby = '';
 
+# How many matches searchd will keep in RAM while searching
+$wgSphinxSearch_maxmatches = 1000;
+
+# When to stop searching all together (if not zero)
+$wgSphinxSearch_cutoff = 0;
+
+# Weights of individual indexed columns. This gives page titles extra weight
+$wgSphinxSearch_weights = array(
+	'old_text' => 1,
+	'page_title' => 100
+);
+
 # Set to true to use MW's default search snippets and highlighting
 $wgSphinxSearchMWHighlighter = false;
 
@@ -86,18 +98,6 @@ $wgSphinxSearchAspellPath = 'aspell';
 
 # Path to (optional) personal aspell dictionary
 $wgSphinxSearchPersonalDictionary = '';
-
-# How many matches searchd will keep in RAM while searching
-$wgSphinxSearch_maxmatches = 1000;
-
-# When to stop searching all together (if not zero)
-$wgSphinxSearch_cutoff = 0;
-
-# Weights of individual indexed columns. This gives page titles extra weight
-$wgSphinxSearch_weights = array(
-	'old_text' => 1,
-	'page_title' => 100
-);
 
 # If true, use SphinxMWSearch for search suggestions displayed while typing
 # $wgEnableMWSuggest needs to be set to true as well
