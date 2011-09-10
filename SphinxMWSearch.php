@@ -39,6 +39,23 @@ class SphinxMWSearch extends SearchEngine {
 	}
 
 	/**
+	 *  PrefixSearchBackend override for OpenSearch results
+	 */
+	static function prefixSearch( $namespaces, $term, $limit, &$results ) {
+		$search_engine = new SphinxMWSearch( wfGetDB( DB_SLAVE ) );
+		$search_engine->namespaces = $namespaces;
+		$search_engine->setLimitOffset( $limit, 0 );
+		$result_set = $search_engine->searchText( '@page_title: ^' . $term . '*' );
+		$results = array();
+		if ( $result_set ) {
+			while ( $res = $result_set->next() ) {
+				$results[ ] = $res->getTitle()->getPrefixedText();
+			}
+		}
+		return false;
+	}
+
+	/**
 	 * Perform a full text search query and return a result set.
 	 *
 	 * @param string $term - Raw search term
@@ -566,7 +583,7 @@ class SphinxMWSearchResult extends SearchResult {
 		$excerpts = $this->sphinx_client->BuildExcerpts(
 			array( $this->mText ),
 			$wgSphinxSearch_index,
-			join(' ', $terms),
+			join( ' ', $terms ),
 			$excerpts_opt
 		);
 

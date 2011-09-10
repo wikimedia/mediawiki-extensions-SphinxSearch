@@ -23,6 +23,7 @@ $dir = dirname( __FILE__ ) . '/';
 
 $wgAutoloadClasses[ 'SphinxMWSearch' ] = $dir . 'SphinxMWSearch.php';
 $wgExtensionMessagesFiles['SphinxSearch'] = $dir . 'SphinxSearch.i18n.php';
+$wgExtensionFunctions[ ] = 'efSphinxSearchPrefixSetup';
 
 # To completely disable the default search and replace it with SphinxSearch,
 # set this BEFORE including SphinxSearch.php in LocalSettings.php
@@ -75,7 +76,7 @@ $wgSphinxSearch_sortby = '';
 $wgSphinxSearchMWHighlighter = false;
 
 # Should the suggestion (Did you mean?) mode be enabled? Possible values:
-# enchant - see http://www.mediawiki.org/wiki/Extension_talk:SphinxSearch#Search_suggestions
+# enchant - see http://www.mediawiki.org/wiki/Extension:SphinxSearch/Search_suggestions
 # soundex - uses MySQL soundex() function to recommend existing titles
 # aspell - uses aspell command-line utility to look for similar spellings
 $wgSphinxSuggestMode = '';
@@ -97,3 +98,15 @@ $wgSphinxSearch_weights = array(
 	'old_text' => 1,
 	'page_title' => 100
 );
+
+# If true, use SphinxMWSearch for search suggestions displayed while typing
+# $wgEnableMWSuggest needs to be set to true as well
+$wgEnableSphinxPrefixSearch = false;
+
+function efSphinxSearchPrefixSetup() {
+	global $wgHooks, $wgEnableSphinxPrefixSearch;
+
+	if ( $wgEnableSphinxPrefixSearch ) {
+		$wgHooks[ 'PrefixSearchBackend' ][ ] = 'SphinxMWSearch::prefixSearch';
+	}
+}
