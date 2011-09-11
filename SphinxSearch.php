@@ -11,7 +11,7 @@ EOT;
 
 $wgExtensionCredits['other'][] = array(
 	'path'           => __FILE__,
-	'version'        => '0.8.3',
+	'version'        => '0.8.4',
 	'name'           => 'SphinxSearch',
 	'author'         => array( 'Svemir Brkic', 'Paul Grinberg' ),
 	'url'            => 'http://www.mediawiki.org/wiki/Extension:SphinxSearch',

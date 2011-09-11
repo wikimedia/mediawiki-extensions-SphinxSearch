@@ -100,8 +100,10 @@ class SphinxMWSearch extends SearchEngine {
 				}
 			}
 			$term = str_replace($placeholders, array_keys($placeholders), $term);
+			$term = addcslashes( $term, $escape );
+			wfDebug( "SphinxSearch query: $term\n" );
 			$resultSet = $this->sphinx_client->Query(
-				addcslashes( $term, $escape ),
+				$term,
 				$wgSphinxSearch_index_list
 			);
 		} else {
@@ -157,9 +159,11 @@ class SphinxMWSearch extends SearchEngine {
 		}
 		if ( $this->categories && count( $this->categories ) ) {
 			$cl->SetFilter( 'category', $this->categories );
+			wfDebug( "SphinxSearch included categories: " . join( ', ', $this->categories ) . "\n" );
 		}
 		if ( $this->exc_categories && count( $this->exc_categories ) ) {
 			$cl->SetFilter( 'category', $this->exc_categories, true );
+			wfDebug( "SphinxSearch excluded categories: " . join( ', ', $this->exc_categories ) . "\n" );
 		}
 		$cl->SetSortMode( $wgSphinxSearch_sortmode, $wgSphinxSearch_sortby );
 		$cl->SetLimits(
@@ -201,7 +205,7 @@ class SphinxMWSearch extends SearchEngine {
 		$parts = preg_split( '/(")/', $query, -1, PREG_SPLIT_DELIM_CAPTURE );
 		$inquotes = false;
 		$rewritten = '';
-		foreach ( $parts as $part ) {
+		foreach ( $parts as $key => $part ) {
 			if ( $part == '"' ) { // stuff in quotes doesn't get rewritten
 				$rewritten .= $part;
 				$inquotes = !$inquotes;
@@ -211,7 +215,7 @@ class SphinxMWSearch extends SearchEngine {
 				if ( strpos( $query, ':' ) !== false ) {
 					$regexp = $this->preparePrefixRegexp();
 					$part = preg_replace_callback(
-						'/(^|[| :])(' . $regexp . '):([^ ]+)/i',
+						'/(^|[| :]|-)(' . $regexp . '):([^ ]+)/i',
 						array( $this, 'replaceQueryPrefix' ),
 						$part
 					);
@@ -309,7 +313,12 @@ class SphinxMWSearch extends SearchEngine {
 			),
 			__METHOD__
 		);
-		$this->categories[] = intval( $page_id );
+		$category = intval( $page_id );
+		if ( $matches[ 1 ] === '-' ) {
+			$this->exc_categories[ ] = $category;
+		} else {
+			$this->categories[ ] = $category;
+		}
 		return '';
 	}
 
