@@ -11,7 +11,7 @@ EOT;
 
 $wgExtensionCredits['other'][] = array(
 	'path'           => __FILE__,
-	'version'        => '0.8.4',
+	'version'        => '0.8.5',
 	'name'           => 'SphinxSearch',
 	'author'         => array( 'Svemir Brkic', 'Paul Grinberg' ),
 	'url'            => 'http://www.mediawiki.org/wiki/Extension:SphinxSearch',
@@ -83,6 +83,9 @@ $wgSphinxSearch_weights = array(
 	'old_text' => 1,
 	'page_title' => 100
 );
+
+# Set to true to use MW's default search snippets and highlighting
+$wgSphinxSearchMWHighlighter = false;
 
 # Should the suggestion (Did you mean?) mode be enabled? Possible values:
 # enchant - see http://www.mediawiki.org/wiki/Extension:SphinxSearch/Search_suggestions
