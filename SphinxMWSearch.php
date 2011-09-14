@@ -197,6 +197,10 @@ class SphinxMWSearch extends SearchEngine {
 	 * @return string rewritten query
 	 */
 	function replacePrefixes( $query ) {
+		if ( trim( $query ) === '' ) {
+			return $query;
+		}
+
 		// ~ prefix is used to avoid near-term search, remove it now
 		if ( $query[ 0 ] === '~' ) {
 			$query = substr( $query, 1 );
