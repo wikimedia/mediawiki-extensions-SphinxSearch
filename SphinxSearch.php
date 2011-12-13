@@ -14,7 +14,7 @@ $wgExtensionCredits['other'][] = array(
 	'version'        => '0.8.5',
 	'name'           => 'SphinxSearch',
 	'author'         => array( 'Svemir Brkic', 'Paul Grinberg' ),
-	'url'            => 'http://www.mediawiki.org/wiki/Extension:SphinxSearch',
+	'url'            => 'https://www.mediawiki.org/wiki/Extension:SphinxSearch',
 	'descriptionmsg' => 'sphinxsearch-desc'
 );
 
