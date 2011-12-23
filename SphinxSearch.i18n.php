@@ -371,6 +371,7 @@ $messages['sr-ec'] = array(
 
 /** Serbian (Latin script) (‪Srpski (latinica)‬) */
 $messages['sr-el'] = array(
+	'sphinxPowered' => 'Pokreće $1',
 	'sphinxClientFailed' => 'Sphinx klijent nije mogao biti instaliran.',
 	'sphinxSearchFailed' => 'Upit nije prošao: $1',
 	'sphinxPspellError' => 'Nije pronađena pspell ekstenzija.',
@@ -392,6 +393,11 @@ $messages['tl'] = array(
 	'sphinxClientFailed' => 'Hindi masangdali ang kliyente ng Sphinx.',
 	'sphinxSearchFailed' => 'Nabigo ang tanong: $1',
 	'sphinxPspellError' => 'Hindi masamo ang dugtong na pspell.',
+);
+
+/** Simplified Chinese (‪中文(简体)‬) */
+$messages['zh-hans'] = array(
+	'sphinxSearchFailed' => '查询失败：$1',
 );
 
 /** Traditional Chinese (‪中文(繁體)‬)
