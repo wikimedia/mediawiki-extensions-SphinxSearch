@@ -291,7 +291,7 @@ $messages['nl'] = array(
 /** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
  * @author Nghtwlkr
  */
-$messages['no'] = array(
+$messages['nb'] = array(
 	'sphinxsearch-desc' => 'Erstatt MediaWiki-søkemotoren med [http://www.sphinxsearch.com/ Sphinx].',
 	'sphinxPowered' => 'Drevet av $1',
 	'sphinxClientFailed' => 'Kunne ikke instansiere Sphinx-klienten.',
