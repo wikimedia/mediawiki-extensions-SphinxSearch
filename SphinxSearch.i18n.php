@@ -276,6 +276,17 @@ $messages['mk'] = array(
 	'sphinxPspellError' => 'Не можев да повикам pspell додаток.',
 );
 
+/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+ * @author Nghtwlkr
+ */
+$messages['nb'] = array(
+	'sphinxsearch-desc' => 'Erstatt MediaWiki-søkemotoren med [http://www.sphinxsearch.com/ Sphinx].',
+	'sphinxPowered' => 'Drevet av $1',
+	'sphinxClientFailed' => 'Kunne ikke instansiere Sphinx-klienten.',
+	'sphinxSearchFailed' => 'Søk feilet: $1',
+	'sphinxPspellError' => 'Kunne ikke starte utvidelsen pspell.',
+);
+
 /** Dutch (Nederlands)
  * @author McDutchie
  * @author Siebrand
@@ -286,17 +297,6 @@ $messages['nl'] = array(
 	'sphinxClientFailed' => 'Het was niet mogelijk SphinxClient te initialiseren',
 	'sphinxSearchFailed' => 'Zoekopdracht mislukt $1',
 	'sphinxPspellError' => 'Het was niet mogelijk de uitbreiding "pspell" aan te spreken.',
-);
-
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
- * @author Nghtwlkr
- */
-$messages['nb'] = array(
-	'sphinxsearch-desc' => 'Erstatt MediaWiki-søkemotoren med [http://www.sphinxsearch.com/ Sphinx].',
-	'sphinxPowered' => 'Drevet av $1',
-	'sphinxClientFailed' => 'Kunne ikke instansiere Sphinx-klienten.',
-	'sphinxSearchFailed' => 'Søk feilet: $1',
-	'sphinxPspellError' => 'Kunne ikke starte utvidelsen pspell.',
 );
 
 /** Polish (Polski)
@@ -369,12 +369,14 @@ $messages['sr-ec'] = array(
 	'sphinxPspellError' => 'Није пронађено pspell проширење.',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬) */
+/** Serbian (Latin script) (‪Srpski (latinica)‬)
+ * @author Rancher
+ */
 $messages['sr-el'] = array(
 	'sphinxPowered' => 'Pokreće $1',
 	'sphinxClientFailed' => 'Sphinx klijent nije mogao biti instaliran.',
 	'sphinxSearchFailed' => 'Upit nije prošao: $1',
-	'sphinxPspellError' => 'Nije pronađena pspell ekstenzija.',
+	'sphinxPspellError' => 'Nije pronađeno pspell proširenje.',
 );
 
 /** Swedish (Svenska)
