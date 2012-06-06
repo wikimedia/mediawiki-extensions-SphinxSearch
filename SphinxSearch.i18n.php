@@ -233,10 +233,11 @@ $messages['id'] = array(
 /** Japanese (日本語)
  * @author Aotake
  * @author Fryed-peach
+ * @author Shirayuki
  * @author 青子守歌
  */
 $messages['ja'] = array(
-	'sphinxsearch-desc' => 'メディアウィキの検索エンジンを [http://www.sphinxsearch.com/ Sphinx] で置き換える',
+	'sphinxsearch-desc' => 'MediaWikiの検索エンジンを[http://www.sphinxsearch.com/ Sphinx]に置き換える',
 	'sphinxPowered' => '$1の提供',
 	'sphinxClientFailed' => 'Sphinx クライアントを呼び出せませんでした。',
 	'sphinxSearchFailed' => '検索失敗: $1',
