@@ -24,7 +24,7 @@ class SphinxSearch_setup extends Maintenance {
 	
 	/* Override parameters setup becuase we do not need some of the default ones */
 	protected function addDefaultParams() {
-		$this->addOption( 'spinxconf', 'Location of Sphinx configuration file', true, true );
+		$this->addOption( 'sphinxconf', 'Location of Sphinx configuration file', true, true );
 		$this->addOption( 'indexer', 'Full path to Sphinx indexer if not in the path', false, true );
 		$this->addOption( 'useindex', 'Sphinx index to use (defaults to wiki_main)', false, true );
 		$this->addOption( 'maxwords', 'Maximum number of words to extract (defaults to 10000)', false, true );
@@ -36,7 +36,7 @@ class SphinxSearch_setup extends Maintenance {
 		$max_words = intval( $this->getOption( 'maxwords', 10000 ) );
 		$indexer = wfEscapeShellArg( $this->getOption( 'indexer', 'indexer' ) );
 		$index = wfEscapeShellArg( $this->getOption( 'useindex', 'wiki_main' ) );
-		$conf = wfEscapeShellArg( $this->getOption( 'spinxconf' ) );
+		$conf = wfEscapeShellArg( $this->getOption( 'sphinxconf' ) );
 
 		$cmd = "$indexer  --config $conf $index --buildstops sphinx.dic $max_words";
 		$this->output( wfShellExec( $cmd, $retval ) );
