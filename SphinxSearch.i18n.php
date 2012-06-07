@@ -230,6 +230,14 @@ $messages['id'] = array(
 	'sphinxPspellError' => 'Tidak dapat memanggil ekstensi pspell.',
 );
 
+/** Italian (italiano)
+ * @author Beta16
+ */
+$messages['it'] = array(
+	'sphinxsearch-desc' => 'Sostituisce il motore di ricerca MediaWiki con [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxPowered' => 'Realizzato con $1',
+);
+
 /** Japanese (日本語)
  * @author Aotake
  * @author Fryed-peach
