@@ -63,7 +63,7 @@ class SphinxMWSearch extends SearchEngine {
 	 * @access public
 	 */
 	function searchText( $term ) {
-		global $wgSphinxSearch_index_list;
+		global $wgSphinxSearch_index_list, $wgSphinxSuggestMode;
 
 		if ( !$this->sphinx_client ) {
 			$this->sphinx_client = $this->prepareSphinxClient( $term );
@@ -110,7 +110,7 @@ class SphinxMWSearch extends SearchEngine {
 			$resultSet = false;
 		}
 
-		if ( $resultSet === false ) {
+		if ( $resultSet === false && !$wgSphinxSuggestMode ) {
 			return null;
 		} else {
 			return new SphinxMWSearchResultSet( $resultSet, $term, $this->sphinx_client, $this->db );
