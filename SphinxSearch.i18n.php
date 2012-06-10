@@ -236,6 +236,9 @@ $messages['id'] = array(
 $messages['it'] = array(
 	'sphinxsearch-desc' => 'Sostituisce il motore di ricerca MediaWiki con [http://www.sphinxsearch.com/ Sphinx]',
 	'sphinxPowered' => 'Realizzato con $1',
+	'sphinxClientFailed' => "Impossibile creare un'istanza per il client Sphinx.",
+	'sphinxSearchFailed' => 'Interrogazione non riuscita: $1',
+	'sphinxPspellError' => "Impossibile richiamare l'estensione pspell.",
 );
 
 /** Japanese (日本語)
