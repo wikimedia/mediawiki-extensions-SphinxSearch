@@ -58,7 +58,7 @@ $messages['be-tarask'] = array(
 	'sphinxPspellError' => 'Немагчыма выклікаць пашырэньне pspell.',
 );
 
-/** Breton (Brezhoneg)
+/** Breton (brezhoneg)
  * @author Fulup
  * @author Y-M D
  */
@@ -70,7 +70,7 @@ $messages['br'] = array(
 	'sphinxPspellError' => 'Dibosupl lañsañ astenn pspell.',
 );
 
-/** Bosnian (Bosanski)
+/** Bosnian (bosanski)
  * @author CERminator
  */
 $messages['bs'] = array(
@@ -109,7 +109,7 @@ $messages['eo'] = array(
 	'sphinxPspellError' => 'Ne povis envoki kromprogramon pspell.',
 );
 
-/** Spanish (Español)
+/** Spanish (español)
  * @author Crazymadlover
  * @author Pertile
  */
@@ -121,14 +121,14 @@ $messages['es'] = array(
 	'sphinxPspellError' => 'No se pudo invocar la extensión pspell.',
 );
 
-/** Finnish (Suomi)
+/** Finnish (suomi)
  * @author Crt
  */
 $messages['fi'] = array(
 	'sphinxPowered' => 'Palvelun mahdollistaa $1',
 );
 
-/** French (Français)
+/** French (français)
  * @author IAlex
  * @author Peter17
  * @author Verdy p
@@ -141,7 +141,7 @@ $messages['fr'] = array(
 	'sphinxPspellError' => "Impossible de lancer l'extension pspell.",
 );
 
-/** Franco-Provençal (Arpetan)
+/** Franco-Provençal (arpetan)
  * @author ChrisPtDe
  */
 $messages['frp'] = array(
@@ -197,7 +197,7 @@ $messages['hsb'] = array(
 	'sphinxPspellError' => 'Rozšěrjenje Pspell njeda so aktiwizować.',
 );
 
-/** Hungarian (Magyar)
+/** Hungarian (magyar)
  * @author Dani
  * @author Glanthor Reviol
  */
@@ -207,7 +207,7 @@ $messages['hu'] = array(
 	'sphinxSearchFailed' => 'Sikertelen lekérdezés: $1',
 );
 
-/** Interlingua (Interlingua)
+/** Interlingua (interlingua)
  * @author McDutchie
  */
 $messages['ia'] = array(
@@ -277,7 +277,7 @@ $messages['lb'] = array(
 	'sphinxPspellError' => "D'pspell-Erweiderung konnt net opgeruff ginn.",
 );
 
-/** Macedonian (Македонски)
+/** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
@@ -311,7 +311,7 @@ $messages['nl'] = array(
 	'sphinxPspellError' => 'Het was niet mogelijk de uitbreiding "pspell" aan te spreken.',
 );
 
-/** Polish (Polski)
+/** Polish (polski)
  * @author Sp5uhe
  */
 $messages['pl'] = array(
@@ -334,7 +334,7 @@ $messages['pms'] = array(
 	'sphinxPspellError' => "As peul pa ciamesse l'estension pspell.",
 );
 
-/** Portuguese (Português)
+/** Portuguese (português)
  * @author Hamilton Abreu
  * @author Waldir
  */
@@ -346,7 +346,7 @@ $messages['pt'] = array(
 	'sphinxPspellError' => 'Não foi possível chamar a extensão pspell.',
 );
 
-/** Brazilian Portuguese (Português do Brasil)
+/** Brazilian Portuguese (português do Brasil)
  * @author Giro720
  * @author Luckas Blade
  */
@@ -358,7 +358,7 @@ $messages['pt-br'] = array(
 	'sphinxPspellError' => 'Não foi possível chamar a extensão pspell.',
 );
 
-/** Russian (Русский)
+/** Russian (русский)
  * @author Reedy
  * @author Александр Сигачёв
  */
@@ -370,7 +370,7 @@ $messages['ru'] = array(
 	'sphinxPspellError' => 'Невозможно вызвать расширение pspell.',
 );
 
-/** Serbian (Cyrillic script) (‪Српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
  * @author Rancher
  * @author Михајло Анђелковић
  */
@@ -381,7 +381,7 @@ $messages['sr-ec'] = array(
 	'sphinxPspellError' => 'Није пронађено pspell проширење.',
 );
 
-/** Serbian (Latin script) (‪Srpski (latinica)‬)
+/** Serbian (Latin script) (‪srpski (latinica)‬)
  * @author Rancher
  */
 $messages['sr-el'] = array(
@@ -391,7 +391,7 @@ $messages['sr-el'] = array(
 	'sphinxPspellError' => 'Nije pronađeno pspell proširenje.',
 );
 
-/** Swedish (Svenska)
+/** Swedish (svenska)
  * @author Dafer45
  */
 $messages['sv'] = array(
@@ -409,12 +409,12 @@ $messages['tl'] = array(
 	'sphinxPspellError' => 'Hindi masamo ang dugtong na pspell.',
 );
 
-/** Simplified Chinese (‪中文(简体)‬) */
+/** Simplified Chinese (‪中文（简体）‬) */
 $messages['zh-hans'] = array(
 	'sphinxSearchFailed' => '查询失败：$1',
 );
 
-/** Traditional Chinese (‪中文(繁體)‬)
+/** Traditional Chinese (‪中文（繁體）‬)
  * @author Mark85296341
  */
 $messages['zh-hant'] = array(
