@@ -45,7 +45,7 @@ $messages['aln'] = array(
 	'sphinxPspellError' => 'Nuk mund të kërkoj vazhdimin pspell.',
 );
 
-/** Belarusian (Taraškievica orthography) (‪Беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Zedlik
@@ -88,7 +88,7 @@ $messages['de'] = array(
 	'sphinxPspellError' => 'Die pspell-Softwareerweiterung konnte nicht aufgerufen werden.',
 );
 
-/** Lower Sorbian (Dolnoserbski)
+/** Lower Sorbian (dolnoserbski)
  * @author Michawiki
  */
 $messages['dsb'] = array(
@@ -152,7 +152,7 @@ $messages['frp'] = array(
 	'sphinxPspellError' => 'Empossiblo de lanciér l’èxtension pspell.',
 );
 
-/** Galician (Galego)
+/** Galician (galego)
  * @author Toliño
  */
 $messages['gl'] = array(
@@ -186,7 +186,7 @@ $messages['he'] = array(
 	'sphinxPspellError' => 'נכשלה הפעלת ההרחבה pspell.',
 );
 
-/** Upper Sorbian (Hornjoserbsce)
+/** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
 $messages['hsb'] = array(
