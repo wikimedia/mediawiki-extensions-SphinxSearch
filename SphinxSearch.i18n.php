@@ -288,7 +288,7 @@ $messages['mk'] = array(
 	'sphinxPspellError' => 'Не можев да повикам pspell додаток.',
 );
 
-/** Norwegian (bokmål)‬ (‪Norsk (bokmål)‬)
+/** Norwegian Bokmål (‪norsk (bokmål)‬)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
