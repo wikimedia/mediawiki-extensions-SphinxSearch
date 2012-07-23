@@ -85,7 +85,7 @@ $messages['de'] = array(
 	'sphinxPowered' => 'Nutzt $1',
 	'sphinxClientFailed' => 'Sphinx-Client konnte nicht initialisiert werden.',
 	'sphinxSearchFailed' => 'Abfrage fehlgeschlagen: $1',
-	'sphinxPspellError' => 'Die pspell-Softwareerweiterung konnte nicht aufgerufen werden.',
+	'sphinxPspellError' => 'Die pspell-Programmerweiterung konnte nicht aufgerufen werden.',
 );
 
 /** Lower Sorbian (dolnoserbski)
