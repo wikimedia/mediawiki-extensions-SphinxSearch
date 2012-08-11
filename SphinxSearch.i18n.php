@@ -398,6 +398,13 @@ $messages['sv'] = array(
 	'sphinxsearch-desc' => 'Ersätter MediaWiki-sökmotorn med [http://www.sphinxsearch.com/ Sphinx]',
 );
 
+/** Telugu (తెలుగు)
+ * @author Veeven
+ */
+$messages['te'] = array(
+	'sphinxPowered' => '$1 చే శక్తివంతం',
+);
+
 /** Tagalog (Tagalog)
  * @author AnakngAraw
  */
