@@ -99,8 +99,8 @@ $wgSphinxSearchAspellPath = 'aspell';
 # Path to (optional) personal aspell dictionary
 $wgSphinxSearchPersonalDictionary = '';
 
-# If true, use SphinxMWSearch for search suggestions displayed while typing
-# $wgEnableMWSuggest needs to be set to true as well
+# If true, use SphinxMWSearch for prefix search instead of the core default.
+# This influences results from ApiOpenSearch.
 $wgEnableSphinxPrefixSearch = false;
 
 function efSphinxSearchPrefixSetup() {
