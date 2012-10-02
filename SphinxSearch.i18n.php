@@ -45,7 +45,7 @@ $messages['aln'] = array(
 	'sphinxPspellError' => 'Nuk mund të kërkoj vazhdimin pspell.',
 );
 
-/** Belarusian (Taraškievica orthography) (‪беларуская (тарашкевіца)‬)
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
  * @author Zedlik
@@ -288,7 +288,7 @@ $messages['mk'] = array(
 	'sphinxPspellError' => 'Не можев да повикам pspell додаток.',
 );
 
-/** Norwegian Bokmål (‪norsk (bokmål)‬)
+/** Norwegian Bokmål (norsk (bokmål)‎)
  * @author Nghtwlkr
  */
 $messages['nb'] = array(
@@ -370,7 +370,7 @@ $messages['ru'] = array(
 	'sphinxPspellError' => 'Невозможно вызвать расширение pspell.',
 );
 
-/** Serbian (Cyrillic script) (‪српски (ћирилица)‬)
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Rancher
  * @author Михајло Анђелковић
  */
@@ -381,7 +381,7 @@ $messages['sr-ec'] = array(
 	'sphinxPspellError' => 'Није пронађено pspell проширење.',
 );
 
-/** Serbian (Latin script) (‪srpski (latinica)‬)
+/** Serbian (Latin script) (srpski (latinica)‎)
  * @author Rancher
  */
 $messages['sr-el'] = array(
@@ -416,12 +416,12 @@ $messages['tl'] = array(
 	'sphinxPspellError' => 'Hindi masamo ang dugtong na pspell.',
 );
 
-/** Simplified Chinese (‪中文（简体）‬) */
+/** Simplified Chinese (中文（简体）‎) */
 $messages['zh-hans'] = array(
 	'sphinxSearchFailed' => '查询失败：$1',
 );
 
-/** Traditional Chinese (‪中文（繁體）‬)
+/** Traditional Chinese (中文（繁體）‎)
  * @author Mark85296341
  */
 $messages['zh-hant'] = array(
