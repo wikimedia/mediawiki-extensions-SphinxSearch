@@ -2,7 +2,6 @@
 
 $messages = array();
 
-/* *** English *** */
 $messages['en'] = array(
 	'sphinxsearch-desc'        => 'Replaces MediaWiki search engine with [http://www.sphinxsearch.com/ Sphinx]',
 	'sphinxPowered'            => 'Powered by $1',
@@ -416,7 +415,8 @@ $messages['tl'] = array(
 	'sphinxPspellError' => 'Hindi masamo ang dugtong na pspell.',
 );
 
-/** Simplified Chinese (中文（简体）‎) */
+/** Simplified Chinese (中文（简体）‎)
+ */
 $messages['zh-hans'] = array(
 	'sphinxSearchFailed' => '查询失败：$1',
 );
@@ -427,4 +427,3 @@ $messages['zh-hans'] = array(
 $messages['zh-hant'] = array(
 	'sphinxSearchFailed' => '查詢失敗：$1',
 );
-
