@@ -416,9 +416,14 @@ $messages['tl'] = array(
 );
 
 /** Simplified Chinese (中文（简体）‎)
+ * @author Yfdyh000
  */
 $messages['zh-hans'] = array(
+	'sphinxsearch-desc' => '用[http://www.sphinxsearch.com/ Sphinx]替换MediaWiki搜索引擎',
+	'sphinxPowered' => '提供者 $1',
+	'sphinxClientFailed' => '无法实例化 Sphinx 客户端。',
 	'sphinxSearchFailed' => '查询失败：$1',
+	'sphinxPspellError' => '无法调用 pspell 扩展。',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
