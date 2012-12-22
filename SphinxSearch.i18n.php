@@ -306,7 +306,7 @@ $messages['nl'] = array(
 	'sphinxsearch-desc' => 'Vervangt de MediaWiki-zoekmachine door [http://www.sphinxsearch.com/ Sphinx]',
 	'sphinxPowered' => 'Powered by $1',
 	'sphinxClientFailed' => 'Het was niet mogelijk SphinxClient te initialiseren',
-	'sphinxSearchFailed' => 'Zoekopdracht mislukt $1',
+	'sphinxSearchFailed' => 'Zoekopdracht mislukt: $1',
 	'sphinxPspellError' => 'Het was niet mogelijk de uitbreiding "pspell" aan te spreken.',
 );
 
