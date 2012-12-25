@@ -422,6 +422,17 @@ $messages['tl'] = array(
 	'sphinxPspellError' => 'Hindi masamo ang dugtong na pspell.',
 );
 
+/** Ukrainian (українська)
+ * @author Ата
+ */
+$messages['uk'] = array(
+	'sphinxsearch-desc' => 'Замінює пошуковий двигун MediaWiki на [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxPowered' => 'Підтримується $1',
+	'sphinxClientFailed' => 'Не можливо створити клієнт Sphinx.',
+	'sphinxSearchFailed' => 'Не вдалося здійснити запит: $1',
+	'sphinxPspellError' => 'Не вдалося викликати розширення pspell.',
+);
+
 /** Simplified Chinese (中文（简体）‎)
  * @author Yfdyh000
  */
