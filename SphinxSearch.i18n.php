@@ -369,6 +369,14 @@ $messages['ru'] = array(
 	'sphinxPspellError' => 'Невозможно вызвать расширение pspell.',
 );
 
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'sphinxPowered' => '$1 මඟින් බලවත් වන',
+	'sphinxSearchFailed' => 'ප්‍රශ්නය අසාර්ථකයි: $1',
+);
+
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Rancher
  * @author Михајло Анђелковић
