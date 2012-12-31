@@ -357,6 +357,13 @@ $messages['pt-br'] = array(
 	'sphinxPspellError' => 'Não foi possível chamar a extensão pspell.',
 );
 
+/** Romanian (română)
+ * @author Stelistcristi
+ */
+$messages['ro'] = array(
+	'sphinxPowered' => 'Realizat de $1',
+);
+
 /** Russian (русский)
  * @author Reedy
  * @author Александр Сигачёв
@@ -374,7 +381,9 @@ $messages['ru'] = array(
  */
 $messages['si'] = array(
 	'sphinxPowered' => '$1 මඟින් බලවත් වන',
+	'sphinxClientFailed' => 'Sphinx සේවාදායකයා වහා කළ නොහැක.',
 	'sphinxSearchFailed' => 'ප්‍රශ්නය අසාර්ථකයි: $1',
+	'sphinxPspellError' => 'pspell විස්තීරණය යටහත්ව ඉල්ලා සිටිය නොහැක.',
 );
 
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
