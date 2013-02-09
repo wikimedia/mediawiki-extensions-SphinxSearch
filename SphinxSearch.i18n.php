@@ -364,6 +364,13 @@ $messages['ro'] = array(
 	'sphinxPowered' => 'Realizat de $1',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'sphinxPowered' => 'Fatte da $1',
+);
+
 /** Russian (русский)
  * @author Reedy
  * @author Александр Сигачёв
