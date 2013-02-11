@@ -44,6 +44,17 @@ $messages['aln'] = array(
 	'sphinxPspellError' => 'Nuk mund të kërkoj vazhdimin pspell.',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'sphinxsearch-desc' => 'Camudar el motor de gueta de MediaWiki por [http://www.sphinxsearch.com/ Sphinx].',
+	'sphinxPowered' => 'Col encontu de $1',
+	'sphinxClientFailed' => 'Nun se pudo llanzar el cliente Sphinx.',
+	'sphinxSearchFailed' => 'Falló la consulta: $1',
+	'sphinxPspellError' => 'Nun se pudo llamar a la estensión pspell.',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author EugeneZelenko
  * @author Jim-by
