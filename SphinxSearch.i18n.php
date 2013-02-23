@@ -265,6 +265,14 @@ $messages['ja'] = array(
 	'sphinxPspellError' => 'pspell 拡張機能を起動できませんでした。',
 );
 
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'sphinxPowered' => '$1에 의해 제공',
+	'sphinxSearchFailed' => '쿼리 실패: $1',
+);
+
 /** Colognian (Ripoarisch)
  * @author Purodha
  */
