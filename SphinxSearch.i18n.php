@@ -15,10 +15,11 @@ $messages['en'] = array(
  * @author Lloffiwr
  * @author Nike
  * @author Purodha
+ * @author Shirayuki
  * @author Umherirrender
  */
 $messages['qqq'] = array(
-	'sphinxsearch-desc' => '{{desc}}',
+	'sphinxsearch-desc' => '{{desc|name=Sphinx Search|url=http://www.mediawiki.org/wiki/Extension:SphinxSearch}}',
 	'sphinxPowered' => '$1 is replaced with a text "Sphinx" inside a link.',
 );
 
