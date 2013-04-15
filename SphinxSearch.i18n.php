@@ -396,7 +396,11 @@ $messages['ro'] = array(
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
+	'sphinxsearch-desc' => "Sostituisce 'u motore de ricerche MediaUicchi cu [http://www.sphinxsearch.com/ Sphinx]",
 	'sphinxPowered' => 'Fatte da $1',
+	'sphinxClientFailed' => "Non ge pozze istanzià 'u cliende Sphinx.",
+	'sphinxSearchFailed' => 'Inderrogazione fallite: $1',
+	'sphinxPspellError' => "Non ge pozze chiamà l'estenzione pspell.",
 );
 
 /** Russian (русский)
