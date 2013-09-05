@@ -20,7 +20,10 @@ $messages['en'] = array(
  */
 $messages['qqq'] = array(
 	'sphinxsearch-desc' => '{{desc|name=Sphinx Search|url=http://www.mediawiki.org/wiki/Extension:SphinxSearch}}',
-	'sphinxPowered' => '$1 is replaced with a text "Sphinx" inside a link.',
+	'sphinxPowered' => 'Used as information about how and from where the results were fetched.
+
+Parameters:
+* $1 - the URL http://www.sphinxsearch.com (hard-coded)',
 	'sphinxClientFailed' => 'Unused at this time.
 
 Error message.',
