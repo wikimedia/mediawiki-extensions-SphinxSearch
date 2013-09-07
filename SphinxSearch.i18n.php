@@ -341,6 +341,17 @@ $messages['nl'] = array(
 	'sphinxPspellError' => 'Het was niet mogelijk de uitbreiding "pspell" aan te spreken.',
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'sphinxsearch-desc' => 'Remplaçar lo motor de recèrca de MediaWiki per [http://www.sphinxsearch.com/ Sphinx].',
+	'sphinxPowered' => 'Propulsat per $1',
+	'sphinxClientFailed' => "Impossible d'instanciar SphinxClient.",
+	'sphinxSearchFailed' => 'Fracàs de la requèsta $1',
+	'sphinxPspellError' => "Impossible d'aviar l'extension pspell.",
+);
+
 /** Polish (polski)
  * @author Sp5uhe
  */
