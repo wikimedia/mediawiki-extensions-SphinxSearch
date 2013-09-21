@@ -179,18 +179,6 @@ class SphinxMWSearch extends SearchEngine {
 	}
 
 	/**
-	 * Find snippet highlight settings for a given user
-	 *
-	 * @param $user User
-	 * @return Array contextlines, contextchars
-	 */
-	public static function userHighlightPrefs( &$user ) {
-		$contextlines = $user->getOption( 'contextlines', 2 );
-		$contextchars = $user->getOption( 'contextchars', 75 );
-		return array( $contextlines, $contextchars );
-	}
-
-	/**
 	 * Prepare query for sphinx search daemon
 	 *
 	 * @param string $query
