@@ -298,12 +298,13 @@ $messages['ksh'] = array(
 
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
+ * @author Soued031
  */
 $messages['lb'] = array(
 	'sphinxsearch-desc' => "Ersetzt d'MediaWiki Sichmaschinn duerch [http://www.sphinxsearch.com/  Sphinx]",
 	'sphinxPowered' => 'Notzt $1',
 	'sphinxClientFailed' => 'De Sphinx Client konnt net initialiséiert ginn.',
-	'sphinxSearchFailed' => 'Ufro huet net fonctionnéiert: $1',
+	'sphinxSearchFailed' => 'Ufro huet net funktionéiert: $1',
 	'sphinxPspellError' => "D'pspell-Erweiderung konnt net opgeruff ginn.",
 );
 
