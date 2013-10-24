@@ -463,9 +463,13 @@ $messages['sr-el'] = array(
 
 /** Swedish (svenska)
  * @author Dafer45
+ * @author Jopparn
  */
 $messages['sv'] = array(
 	'sphinxsearch-desc' => 'Ersätter MediaWiki-sökmotorn med [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxPowered' => 'Drivs av $1',
+	'sphinxClientFailed' => 'Kunde inte initiera Sphinx-klient.',
+	'sphinxSearchFailed' => 'Frågan misslyckades: $1',
 );
 
 /** Tamil (தமிழ்)
