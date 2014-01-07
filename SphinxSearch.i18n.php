@@ -111,13 +111,14 @@ $messages['de'] = array(
 );
 
 /** Lower Sorbian (dolnoserbski)
+ * @author Derbeth
  * @author Michawiki
  */
 $messages['dsb'] = array(
 	'sphinxsearch-desc' => 'Wuměnja pytawu MediaWiki pśez [http://www.sphinxsearch.com/ Sphinx]',
 	'sphinxPowered' => 'Pódpěrany wót $1',
 	'sphinxClientFailed' => 'Njejo było móžno, instancu klienta Sphinx napóraś.',
-	'sphinxSearchFailed' => 'Napšašowanje jo se njeraźiło: $1',
+	'sphinxSearchFailed' => 'Napšašowanje njejo se raźiło: $1',
 	'sphinxPspellError' => 'Rozšyrjenje Pspell njejo se dało aktiwěrowaś.',
 );
 
