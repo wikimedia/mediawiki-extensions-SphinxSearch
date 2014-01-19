@@ -279,11 +279,14 @@ $messages['ja'] = array(
 );
 
 /** Korean (한국어)
+ * @author Priviet
  * @author 아라
  */
 $messages['ko'] = array(
 	'sphinxPowered' => '$1에 의해 제공',
+	'sphinxClientFailed' => 'Sphinx 클라이언트를 불러올 수 없습니다.',
 	'sphinxSearchFailed' => '쿼리 실패: $1',
+	'sphinxPspellError' => 'pspell 확장 기능을 사용할 수 없습니다.',
 );
 
 /** Colognian (Ripoarisch)
