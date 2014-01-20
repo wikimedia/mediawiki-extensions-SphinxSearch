@@ -283,6 +283,7 @@ $messages['ja'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
+	'sphinxsearch-desc' => '[http://www.sphinxsearch.com/ Sphinx]로 미디어위키 검색 엔진 변겨',
 	'sphinxPowered' => '$1에 의해 제공',
 	'sphinxClientFailed' => 'Sphinx 클라이언트를 불러올 수 없습니다.',
 	'sphinxSearchFailed' => '쿼리 실패: $1',
