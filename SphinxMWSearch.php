@@ -530,7 +530,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 * @return string
 	 */
 	function getInfo() {
-		return wfMsg( 'sphinxPowered', "http://www.sphinxsearch.com" );
+		return wfMessage( 'sphinxPowered', 'http://www.sphinxsearch.com' )->text();
 	}
 
 	/**
@@ -620,7 +620,7 @@ class SphinxMWSearchResult extends SearchResult {
 				$ret .= "<div style='margin: 0.2em 1em 0.2em 1em;'>$entry</div>\n";
 			}
 		} else {
-			$ret = wfMsg( 'internalerror_info', $this->sphinx_client->GetLastError() );
+			$ret = wfMessage( 'internalerror_info', $this->sphinx_client->GetLastError() );
 		}
 		return $ret;
 	}
