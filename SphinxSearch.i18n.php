@@ -144,6 +144,13 @@ $messages['es'] = array(
 	'sphinxPspellError' => 'No se pudo invocar la extensión pspell.',
 );
 
+/** Persian (فارسی)
+ * @author Armin1392
+ */
+$messages['fa'] = array(
+	'sphinxSearchFailed' => 'سوال انجام نشد: $1',
+);
+
 /** Finnish (suomi)
  * @author Crt
  */
