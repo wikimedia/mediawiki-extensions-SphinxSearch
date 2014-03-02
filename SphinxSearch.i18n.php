@@ -148,6 +148,8 @@ $messages['es'] = array(
  * @author Armin1392
  */
 $messages['fa'] = array(
+	'sphinxsearch-desc' => 'جایگزین موتور جستجوب مدیاویکی با [http://www.sphinxsearch.com/ Sphinx]',
+	'sphinxPowered' => 'طراحی‌شده توسط $1',
 	'sphinxSearchFailed' => 'سوال انجام نشد: $1',
 );
 
