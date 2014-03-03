@@ -150,7 +150,9 @@ $messages['es'] = array(
 $messages['fa'] = array(
 	'sphinxsearch-desc' => 'جایگزین موتور جستجوب مدیاویکی با [http://www.sphinxsearch.com/ Sphinx]',
 	'sphinxPowered' => 'طراحی‌شده توسط $1',
+	'sphinxClientFailed' => 'قادر به نمونه ابوالهول مشتری نیست.',
 	'sphinxSearchFailed' => 'سوال انجام نشد: $1',
+	'sphinxPspellError' => 'نتوانست فرمت پی‌اس‌پل را درخواست کند.',
 );
 
 /** Finnish (suomi)
