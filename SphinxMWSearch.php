@@ -525,15 +525,6 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	}
 
 	/**
-	 * Return information about how and from where the results were fetched.
-	 *
-	 * @return string
-	 */
-	function getInfo() {
-		return wfMessage( 'sphinxPowered', 'http://www.sphinxsearch.com' )->text();
-	}
-
-	/**
 	 * @return SphinxMWSearchResult: next result, false if none
 	 */
 	function next() {
