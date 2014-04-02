@@ -1,0 +1,14 @@
+{
+    "@metadata": {
+        "authors": [
+            "EugeneZelenko",
+            "Jim-by",
+            "Zedlik"
+        ]
+    },
+    "sphinxsearch-desc": "Замяняе пошукавы рухавік MediaWiki на [http://www.sphinxsearch.com/ Sphinx].",
+    "sphinxPowered": "Працуе на $1",
+    "sphinxClientFailed": "Немагчыма стварыць экзэмпляр SphinxClient.",
+    "sphinxSearchFailed": "Памылка запыту: $1",
+    "sphinxPspellError": "Немагчыма выклікаць пашырэньне pspell."
+}

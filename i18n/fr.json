@@ -1,0 +1,14 @@
+{
+    "@metadata": {
+        "authors": [
+            "IAlex",
+            "Peter17",
+            "Verdy p"
+        ]
+    },
+    "sphinxsearch-desc": "Remplacer le moteur de recherche de MediaWiki par [http://www.sphinxsearch.com/ Sphinx].",
+    "sphinxPowered": "Propulsé par $1",
+    "sphinxClientFailed": "Impossible d'instancier SphinxClient.",
+    "sphinxSearchFailed": "Échec de la requête $1",
+    "sphinxPspellError": "Impossible de lancer l'extension pspell."
+}

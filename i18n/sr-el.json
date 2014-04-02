@@ -1,0 +1,11 @@
+{
+    "@metadata": {
+        "authors": [
+            "Rancher"
+        ]
+    },
+    "sphinxPowered": "Pokreće $1",
+    "sphinxClientFailed": "Sphinx klijent nije mogao biti instaliran.",
+    "sphinxSearchFailed": "Upit nije prošao: $1",
+    "sphinxPspellError": "Nije pronađeno pspell proširenje."
+}

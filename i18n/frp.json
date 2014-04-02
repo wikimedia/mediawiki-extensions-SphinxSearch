@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "ChrisPtDe"
+        ]
+    },
+    "sphinxsearch-desc": "Remplace lo motor de rechèrche de MediaWiki per [http://www.sphinxsearch.com/ Sfinxe].",
+    "sphinxPowered": "Fonccione grâce a $1",
+    "sphinxClientFailed": "Empossiblo d’enstanciér lo cliant Sfinxe.",
+    "sphinxSearchFailed": "Falyita de la requéta : $1",
+    "sphinxPspellError": "Empossiblo de lanciér l’èxtension pspell."
+}

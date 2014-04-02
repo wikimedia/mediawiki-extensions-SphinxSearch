@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Amire80",
+            "YaronSh"
+        ]
+    },
+    "sphinxsearch-desc": "החלפת מנוע החיפוש של מדיה־ויקי במנוע [http://www.sphinxsearch.com/ ספינקס]",
+    "sphinxPowered": "מופעל על גבי $1",
+    "sphinxClientFailed": "נכשלה יצירת מופע של לקוח ספינקס.",
+    "sphinxSearchFailed": "שאילתה נכשלה: $1",
+    "sphinxPspellError": "נכשלה הפעלת ההרחבה pspell."
+}

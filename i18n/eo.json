@@ -1,0 +1,11 @@
+{
+    "@metadata": {
+        "authors": [
+            "Yekrats"
+        ]
+    },
+    "sphinxPowered": "Funkcias per $1",
+    "sphinxClientFailed": "Ne povas starti klienton Sphinx.",
+    "sphinxSearchFailed": "Mendo malsukcesis: $1",
+    "sphinxPspellError": "Ne povis envoki kromprogramon pspell."
+}

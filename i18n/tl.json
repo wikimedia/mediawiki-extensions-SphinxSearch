@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "AnakngAraw"
+        ]
+    },
+    "sphinxsearch-desc": "Pinapalitan ang makinang panghanap sa MediaWiki ng [http://www.sphinxsearch.com/ Sphinx]",
+    "sphinxPowered": "Pinapaandar ng $1",
+    "sphinxClientFailed": "Hindi masangdali ang kliyente ng Sphinx.",
+    "sphinxSearchFailed": "Nabigo ang tanong: $1",
+    "sphinxPspellError": "Hindi masamo ang dugtong na pspell."
+}

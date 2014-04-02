@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Mdupont"
+        ]
+    },
+    "sphinxsearch-desc": "Zëvendëson MediaWiki motor kërkimi me [http://www.sphinxsearch.com/ Sphinx]",
+    "sphinxPowered": "Mundësuar nga: $1",
+    "sphinxClientFailed": "Nuk mund të ilustroj me shembull konkret klientit sfinks.",
+    "sphinxSearchFailed": "Query dështoi: $1",
+    "sphinxPspellError": "Nuk mund të kërkoj vazhdimin pspell."
+}

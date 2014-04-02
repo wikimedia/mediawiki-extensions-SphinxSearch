@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Bjankuloski06"
+        ]
+    },
+    "sphinxsearch-desc": "Замена на МедијаВики пребарувачот со [http://www.sphinxsearch.com/ Sphinx].",
+    "sphinxPowered": "Овозможено од $1",
+    "sphinxClientFailed": "Не можев да повикам Sphinx клиент.",
+    "sphinxSearchFailed": "Барањето не успеа $1",
+    "sphinxPspellError": "Не можев да повикам pspell додаток."
+}

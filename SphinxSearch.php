@@ -11,7 +11,7 @@ EOT;
 
 $wgExtensionCredits['other'][] = array(
 	'path'           => __FILE__,
-	'version'        => '0.8.5',
+	'version'        => '0.9.0',
 	'name'           => 'SphinxSearch',
 	'author'         => array( 'Svemir Brkic', 'Paul Grinberg' ),
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:SphinxSearch',
@@ -21,6 +21,7 @@ $wgExtensionCredits['other'][] = array(
 $dir = dirname( __FILE__ ) . '/';
 
 $wgAutoloadClasses[ 'SphinxMWSearch' ] = $dir . 'SphinxMWSearch.php';
+$wgMessagesDirs['SphinxSearch'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['SphinxSearch'] = $dir . 'SphinxSearch.i18n.php';
 $wgExtensionFunctions[ ] = 'efSphinxSearchPrefixSetup';
 

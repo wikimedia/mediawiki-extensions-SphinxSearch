@@ -1,0 +1,13 @@
+{
+    "@metadata": {
+        "authors": [
+            "Borichèt",
+            "Dragonòt"
+        ]
+    },
+    "sphinxsearch-desc": "A rimpiassa ël motor d'arserca MediaWiki con [http://www.sphinxsearch.com/ Sphinx]",
+    "sphinxPowered": "Potensià da $1",
+    "sphinxClientFailed": "As peul pa istansié ël client Sphinx.",
+    "sphinxSearchFailed": "Arcesta falìa: $1",
+    "sphinxPspellError": "As peul pa ciamesse l'estension pspell."
+}

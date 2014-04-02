@@ -1,0 +1,12 @@
+{
+    "@metadata": {
+        "authors": [
+            "Kghbln"
+        ]
+    },
+    "sphinxsearch-desc": "Ersetzt die MediaWiki-eigene Volltextsuchmaschine durch [http://www.sphinxsearch.com/ Sphinx]",
+    "sphinxPowered": "Nutzt $1",
+    "sphinxClientFailed": "Sphinx-Client konnte nicht initialisiert werden.",
+    "sphinxSearchFailed": "Abfrage fehlgeschlagen: $1",
+    "sphinxPspellError": "Die pspell-Programmerweiterung konnte nicht aufgerufen werden."
+}
