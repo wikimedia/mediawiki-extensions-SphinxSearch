@@ -1,12 +1,13 @@
 {
     "@metadata": {
         "authors": [
-            "Yfdyh000"
+            "Yfdyh000",
+            "Hudafu"
         ]
     },
     "sphinxsearch-desc": "用[http://www.sphinxsearch.com/ Sphinx]替换MediaWiki搜索引擎",
     "sphinxPowered": "提供者 $1",
     "sphinxClientFailed": "无法实例化 Sphinx 客户端。",
     "sphinxSearchFailed": "查询失败：$1",
-    "sphinxPspellError": "无法调用 pspell 扩展。"
+    "sphinxPspellError": "无法引用pspell扩展程序。"
 }
