@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Rancher",
-            "Михајло Анђелковић"
-        ]
-    },
-    "sphinxPowered": "Покреће $1",
-    "sphinxClientFailed": "Sphinx клијент није могао бити инсталиран.",
-    "sphinxSearchFailed": "Упит није прошао: $1",
-    "sphinxPspellError": "Није пронађено pspell проширење."
+	"@metadata": {
+		"authors": [
+			"Rancher",
+			"Михајло Анђелковић"
+		]
+	},
+	"sphinxPowered": "Покреће $1",
+	"sphinxClientFailed": "Sphinx клијент није могао бити инсталиран.",
+	"sphinxSearchFailed": "Упит није прошао: $1",
+	"sphinxPspellError": "Није пронађено pspell проширење."
 }

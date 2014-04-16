@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Naudefj"
-        ]
-    },
-    "sphinxsearch-desc": "Vervang MediaWiki se soekenjin met [http://www.sphinxsearch.com/ Sphinx]",
-    "sphinxPowered": "Aangedryf deur $1",
-    "sphinxClientFailed": "Dit was nie moontlik om SphinxClient te instansieer nie",
-    "sphinxSearchFailed": "Soekopdrag het misluk: $1",
-    "sphinxPspellError": "Kom nie die \"pspell\"-uitbreiding laai nie."
+	"@metadata": {
+		"authors": [
+			"Naudefj"
+		]
+	},
+	"sphinxsearch-desc": "Vervang MediaWiki se soekenjin met [http://www.sphinxsearch.com/ Sphinx]",
+	"sphinxPowered": "Aangedryf deur $1",
+	"sphinxClientFailed": "Dit was nie moontlik om SphinxClient te instansieer nie",
+	"sphinxSearchFailed": "Soekopdrag het misluk: $1",
+	"sphinxPspellError": "Kom nie die \"pspell\"-uitbreiding laai nie."
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Crt"
-        ]
-    },
-    "sphinxPowered": "Palvelun mahdollistaa $1"
+	"@metadata": {
+		"authors": [
+			"Crt"
+		]
+	},
+	"sphinxPowered": "Palvelun mahdollistaa $1"
 }

@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Sp5uhe"
-        ]
-    },
-    "sphinxsearch-desc": "Zastępuje wyszukiwarką [http://www.sphinxsearch.com/ Sphinx] standardową MediaWiki",
-    "sphinxPowered": "Wykorzystano $1",
-    "sphinxClientFailed": "Nie można utworzyć instancji klienta Sfinksa.",
-    "sphinxSearchFailed": "Zapytanie nie powiodło się – $1",
-    "sphinxPspellError": "Nie można wywołać rozszerzenia pspell."
+	"@metadata": {
+		"authors": [
+			"Sp5uhe"
+		]
+	},
+	"sphinxsearch-desc": "Zastępuje wyszukiwarką [http://www.sphinxsearch.com/ Sphinx] standardową MediaWiki",
+	"sphinxPowered": "Wykorzystano $1",
+	"sphinxClientFailed": "Nie można utworzyć instancji klienta Sfinksa.",
+	"sphinxSearchFailed": "Zapytanie nie powiodło się – $1",
+	"sphinxPspellError": "Nie można wywołać rozszerzenia pspell."
 }

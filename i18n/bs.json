@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "CERminator"
-        ]
-    },
-    "sphinxSearchFailed": "Upit nije uspio: $1"
+	"@metadata": {
+		"authors": [
+			"CERminator"
+		]
+	},
+	"sphinxSearchFailed": "Upit nije uspio: $1"
 }

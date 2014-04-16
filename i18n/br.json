@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Fulup",
-            "Y-M D"
-        ]
-    },
-    "sphinxsearch-desc": "Erlec'hiañ lusker enklask MediaWiki gant [http://www.sphinxsearch.com/ Sphinx].",
-    "sphinxPowered": "Savet diwar $1",
-    "sphinxClientFailed": "Dibosupl instantiñ an arval Sphinx",
-    "sphinxSearchFailed": "C'hwitet en deus ar reked : $1",
-    "sphinxPspellError": "Dibosupl lañsañ astenn pspell."
+	"@metadata": {
+		"authors": [
+			"Fulup",
+			"Y-M D"
+		]
+	},
+	"sphinxsearch-desc": "Erlec'hiañ lusker enklask MediaWiki gant [http://www.sphinxsearch.com/ Sphinx].",
+	"sphinxPowered": "Savet diwar $1",
+	"sphinxClientFailed": "Dibosupl instantiñ an arval Sphinx",
+	"sphinxSearchFailed": "C'hwitet en deus ar reked : $1",
+	"sphinxPspellError": "Dibosupl lañsañ astenn pspell."
 }

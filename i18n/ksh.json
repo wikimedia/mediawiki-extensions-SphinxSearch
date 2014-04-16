@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Purodha"
-        ]
-    },
-    "sphinxsearch-desc": "Donn dem WediaWiki sing Projramm för et Söhke jääje [http://www.sphinxsearch.com/ Sphinx] ußtuusche.",
-    "sphinxPowered": "Op de Reih jebraat vun $1.",
-    "sphinxClientFailed": "Mer kunnte kein neu Ußjab för ene Klijänt vu däm Projramm <i lang=\"en\">Sphinx</i> opboue.",
-    "sphinxSearchFailed": "Di Frooch es donävve jejange: $1",
-    "sphinxPspellError": "Mer kunnte dat Zohsazprojramm <code lang=\"en\">pspell</code> nit oproofe."
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"sphinxsearch-desc": "Donn dem WediaWiki sing Projramm för et Söhke jääje [http://www.sphinxsearch.com/ Sphinx] ußtuusche.",
+	"sphinxPowered": "Op de Reih jebraat vun $1.",
+	"sphinxClientFailed": "Mer kunnte kein neu Ußjab för ene Klijänt vu däm Projramm <i lang=\"en\">Sphinx</i> opboue.",
+	"sphinxSearchFailed": "Di Frooch es donävve jejange: $1",
+	"sphinxPspellError": "Mer kunnte dat Zohsazprojramm <code lang=\"en\">pspell</code> nit oproofe."
 }

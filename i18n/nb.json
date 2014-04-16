@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Nghtwlkr"
-        ]
-    },
-    "sphinxsearch-desc": "Erstatt MediaWiki-søkemotoren med [http://www.sphinxsearch.com/ Sphinx].",
-    "sphinxPowered": "Drevet av $1",
-    "sphinxClientFailed": "Kunne ikke instansiere Sphinx-klienten.",
-    "sphinxSearchFailed": "Søk feilet: $1",
-    "sphinxPspellError": "Kunne ikke starte utvidelsen pspell."
+	"@metadata": {
+		"authors": [
+			"Nghtwlkr"
+		]
+	},
+	"sphinxsearch-desc": "Erstatt MediaWiki-søkemotoren med [http://www.sphinxsearch.com/ Sphinx].",
+	"sphinxPowered": "Drevet av $1",
+	"sphinxClientFailed": "Kunne ikke instansiere Sphinx-klienten.",
+	"sphinxSearchFailed": "Søk feilet: $1",
+	"sphinxPspellError": "Kunne ikke starte utvidelsen pspell."
 }

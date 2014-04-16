@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Crazymadlover",
-            "Pertile"
-        ]
-    },
-    "sphinxsearch-desc": "Reemplazar el motor de búsqueda de MediaWiki con [http://www.sphinxsearch.com/ Sphinx].",
-    "sphinxPowered": "Potenciado por $1",
-    "sphinxClientFailed": "No se pudo instanciar el cliente Sphinx.",
-    "sphinxSearchFailed": "Falló la búsqueda $1",
-    "sphinxPspellError": "No se pudo invocar la extensión pspell."
+	"@metadata": {
+		"authors": [
+			"Crazymadlover",
+			"Pertile"
+		]
+	},
+	"sphinxsearch-desc": "Reemplazar el motor de búsqueda de MediaWiki con [http://www.sphinxsearch.com/ Sphinx].",
+	"sphinxPowered": "Potenciado por $1",
+	"sphinxClientFailed": "No se pudo instanciar el cliente Sphinx.",
+	"sphinxSearchFailed": "Falló la búsqueda $1",
+	"sphinxPspellError": "No se pudo invocar la extensión pspell."
 }

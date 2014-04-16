@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "McDutchie"
-        ]
-    },
-    "sphinxsearch-desc": "Reimplaciar le motor de recerca de MediaWiki per [http://www.sphinxsearch.com/ Sphinx].",
-    "sphinxPowered": "Actionate per $1",
-    "sphinxClientFailed": "Non poteva instantiar SphinxClient.",
-    "sphinxSearchFailed": "Consulta fallite: $1",
-    "sphinxPspellError": "Non poteva invocar le extension pspell."
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"sphinxsearch-desc": "Reimplaciar le motor de recerca de MediaWiki per [http://www.sphinxsearch.com/ Sphinx].",
+	"sphinxPowered": "Actionate per $1",
+	"sphinxClientFailed": "Non poteva instantiar SphinxClient.",
+	"sphinxSearchFailed": "Consulta fallite: $1",
+	"sphinxPspellError": "Non poteva invocar le extension pspell."
 }

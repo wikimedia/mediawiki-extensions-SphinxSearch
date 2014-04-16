@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "පසිඳු කාවින්ද"
-        ]
-    },
-    "sphinxPowered": "$1 මඟින් බලවත් වන",
-    "sphinxClientFailed": "Sphinx සේවාදායකයා වහා කළ නොහැක.",
-    "sphinxSearchFailed": "ප්‍රශ්නය අසාර්ථකයි: $1",
-    "sphinxPspellError": "pspell විස්තීරණය යටහත්ව ඉල්ලා සිටිය නොහැක."
+	"@metadata": {
+		"authors": [
+			"පසිඳු කාවින්ද"
+		]
+	},
+	"sphinxPowered": "$1 මඟින් බලවත් වන",
+	"sphinxClientFailed": "Sphinx සේවාදායකයා වහා කළ නොහැක.",
+	"sphinxSearchFailed": "ප්‍රශ්නය අසාර්ථකයි: $1",
+	"sphinxPspellError": "pspell විස්තීරණය යටහත්ව ඉල්ලා සිටිය නොහැක."
 }

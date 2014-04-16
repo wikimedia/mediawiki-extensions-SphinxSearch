@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Als-Holder"
-        ]
-    },
-    "sphinxsearch-desc": "Ersetzt d MediaWiki-Suechmahscin dur [http://www.sphinxsearch.com/ Sphinx]",
-    "sphinxPowered": "Betribe mit $1",
-    "sphinxClientFailed": "Het dr SphinxClient nit chenne inizialisiere",
-    "sphinxSearchFailed": "Abfrog fähl gschlaa: $1",
-    "sphinxPspellError": "Het d pspell-Erwyterig nit chenne ufruefe"
+	"@metadata": {
+		"authors": [
+			"Als-Holder"
+		]
+	},
+	"sphinxsearch-desc": "Ersetzt d MediaWiki-Suechmahscin dur [http://www.sphinxsearch.com/ Sphinx]",
+	"sphinxPowered": "Betribe mit $1",
+	"sphinxClientFailed": "Het dr SphinxClient nit chenne inizialisiere",
+	"sphinxSearchFailed": "Abfrog fähl gschlaa: $1",
+	"sphinxPspellError": "Het d pspell-Erwyterig nit chenne ufruefe"
 }

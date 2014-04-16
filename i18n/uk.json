@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Ата"
-        ]
-    },
-    "sphinxsearch-desc": "Замінює пошуковий двигун MediaWiki на [http://www.sphinxsearch.com/ Sphinx]",
-    "sphinxPowered": "Підтримується $1",
-    "sphinxClientFailed": "Не можливо створити клієнт Sphinx.",
-    "sphinxSearchFailed": "Не вдалося здійснити запит: $1",
-    "sphinxPspellError": "Не вдалося викликати розширення pspell."
+	"@metadata": {
+		"authors": [
+			"Ата"
+		]
+	},
+	"sphinxsearch-desc": "Замінює пошуковий двигун MediaWiki на [http://www.sphinxsearch.com/ Sphinx]",
+	"sphinxPowered": "Підтримується $1",
+	"sphinxClientFailed": "Не можливо створити клієнт Sphinx.",
+	"sphinxSearchFailed": "Не вдалося здійснити запит: $1",
+	"sphinxPspellError": "Не вдалося викликати розширення pspell."
 }

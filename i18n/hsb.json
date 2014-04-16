@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Michawiki"
-        ]
-    },
-    "sphinxsearch-desc": "Naruna pytawu MediaWiki přez [http://www.sphinxsearch.com/ Sphinx]",
-    "sphinxPowered": "Spěchowany wot $1",
-    "sphinxClientFailed": "Njebě móžno, instancu klienta Sphinx wutworić.",
-    "sphinxSearchFailed": "Naprašowanje je so njeporadźiło: $1",
-    "sphinxPspellError": "Rozšěrjenje Pspell njeda so aktiwizować."
+	"@metadata": {
+		"authors": [
+			"Michawiki"
+		]
+	},
+	"sphinxsearch-desc": "Naruna pytawu MediaWiki přez [http://www.sphinxsearch.com/ Sphinx]",
+	"sphinxPowered": "Spěchowany wot $1",
+	"sphinxClientFailed": "Njebě móžno, instancu klienta Sphinx wutworić.",
+	"sphinxSearchFailed": "Naprašowanje je so njeporadźiło: $1",
+	"sphinxPspellError": "Rozšěrjenje Pspell njeda so aktiwizować."
 }

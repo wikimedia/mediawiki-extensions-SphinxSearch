@@ -1,15 +1,15 @@
 {
-    "@metadata": {
-        "authors": [
-            "Aotake",
-            "Fryed-peach",
-            "Shirayuki",
-            "青子守歌"
-        ]
-    },
-    "sphinxsearch-desc": "MediaWikiの検索エンジンを[http://www.sphinxsearch.com/ Sphinx]に置き換える",
-    "sphinxPowered": "$1の提供",
-    "sphinxClientFailed": "Sphinx クライアントを呼び出せませんでした。",
-    "sphinxSearchFailed": "検索失敗: $1",
-    "sphinxPspellError": "pspell 拡張機能を起動できませんでした。"
+	"@metadata": {
+		"authors": [
+			"Aotake",
+			"Fryed-peach",
+			"Shirayuki",
+			"青子守歌"
+		]
+	},
+	"sphinxsearch-desc": "MediaWikiの検索エンジンを[http://www.sphinxsearch.com/ Sphinx]に置き換える",
+	"sphinxPowered": "$1の提供",
+	"sphinxClientFailed": "Sphinx クライアントを呼び出せませんでした。",
+	"sphinxSearchFailed": "検索失敗: $1",
+	"sphinxPspellError": "pspell 拡張機能を起動できませんでした。"
 }

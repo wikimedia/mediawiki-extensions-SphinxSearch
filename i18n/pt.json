@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Hamilton Abreu",
-            "Waldir"
-        ]
-    },
-    "sphinxsearch-desc": "Substituir o motor de pesquisa do MediaWiki pelo [http://www.sphinxsearch.com/ Sphinx].",
-    "sphinxPowered": "Potenciado por $1",
-    "sphinxClientFailed": "Não foi possível instanciar o cliente Sphinx.",
-    "sphinxSearchFailed": "Pesquisa falhou $1",
-    "sphinxPspellError": "Não foi possível chamar a extensão pspell."
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu",
+			"Waldir"
+		]
+	},
+	"sphinxsearch-desc": "Substituir o motor de pesquisa do MediaWiki pelo [http://www.sphinxsearch.com/ Sphinx].",
+	"sphinxPowered": "Potenciado por $1",
+	"sphinxClientFailed": "Não foi possível instanciar o cliente Sphinx.",
+	"sphinxSearchFailed": "Pesquisa falhou $1",
+	"sphinxPspellError": "Não foi possível chamar a extensão pspell."
 }

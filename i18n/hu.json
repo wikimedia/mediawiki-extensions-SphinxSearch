@@ -1,11 +1,11 @@
 {
-    "@metadata": {
-        "authors": [
-            "Dani",
-            "Glanthor Reviol"
-        ]
-    },
-    "sphinxPowered": "A keresést a $1 működteti.",
-    "sphinxClientFailed": "Nem sikerült elindítani a Sphinx klienst.",
-    "sphinxSearchFailed": "Sikertelen lekérdezés: $1"
+	"@metadata": {
+		"authors": [
+			"Dani",
+			"Glanthor Reviol"
+		]
+	},
+	"sphinxPowered": "A keresést a $1 működteti.",
+	"sphinxClientFailed": "Nem sikerült elindítani a Sphinx klienst.",
+	"sphinxSearchFailed": "Sikertelen lekérdezés: $1"
 }

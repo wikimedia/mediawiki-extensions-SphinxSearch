@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Reedy",
-            "Александр Сигачёв"
-        ]
-    },
-    "sphinxsearch-desc": "Замена поискового движка MediaWiki на [http://www.sphinxsearch.com/ Sphinx].",
-    "sphinxPowered": "При поддержке $1",
-    "sphinxClientFailed": "Невозможно создать экземпляр SphinxClient.",
-    "sphinxSearchFailed": "Ошибка при выполнении запроса $1",
-    "sphinxPspellError": "Невозможно вызвать расширение pspell."
+	"@metadata": {
+		"authors": [
+			"Reedy",
+			"Александр Сигачёв"
+		]
+	},
+	"sphinxsearch-desc": "Замена поискового движка MediaWiki на [http://www.sphinxsearch.com/ Sphinx].",
+	"sphinxPowered": "При поддержке $1",
+	"sphinxClientFailed": "Невозможно создать экземпляр SphinxClient.",
+	"sphinxSearchFailed": "Ошибка при выполнении запроса $1",
+	"sphinxPspellError": "Невозможно вызвать расширение pspell."
 }

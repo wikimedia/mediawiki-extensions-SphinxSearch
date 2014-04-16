@@ -1,12 +1,12 @@
 {
-    "@metadata": {
-        "authors": [
-            "Cedric31"
-        ]
-    },
-    "sphinxsearch-desc": "Remplaçar lo motor de recèrca de MediaWiki per [http://www.sphinxsearch.com/ Sphinx].",
-    "sphinxPowered": "Propulsat per $1",
-    "sphinxClientFailed": "Impossible d'instanciar SphinxClient.",
-    "sphinxSearchFailed": "Fracàs de la requèsta $1",
-    "sphinxPspellError": "Impossible d'aviar l'extension pspell."
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"sphinxsearch-desc": "Remplaçar lo motor de recèrca de MediaWiki per [http://www.sphinxsearch.com/ Sphinx].",
+	"sphinxPowered": "Propulsat per $1",
+	"sphinxClientFailed": "Impossible d'instanciar SphinxClient.",
+	"sphinxSearchFailed": "Fracàs de la requèsta $1",
+	"sphinxPspellError": "Impossible d'aviar l'extension pspell."
 }

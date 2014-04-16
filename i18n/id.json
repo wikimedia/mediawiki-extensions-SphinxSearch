@@ -1,13 +1,13 @@
 {
-    "@metadata": {
-        "authors": [
-            "Farras",
-            "Kenrick95"
-        ]
-    },
-    "sphinxsearch-desc": "Menggantikan mesin pencari MediaWiki dengan [http://www.sphinxsearch.com/ Sphinx]",
-    "sphinxPowered": "Didukung oleh $1",
-    "sphinxClientFailed": "Tidak dapat menginstankan klien Sphinx.",
-    "sphinxSearchFailed": "Kueri gagal: $1",
-    "sphinxPspellError": "Tidak dapat memanggil ekstensi pspell."
+	"@metadata": {
+		"authors": [
+			"Farras",
+			"Kenrick95"
+		]
+	},
+	"sphinxsearch-desc": "Menggantikan mesin pencari MediaWiki dengan [http://www.sphinxsearch.com/ Sphinx]",
+	"sphinxPowered": "Didukung oleh $1",
+	"sphinxClientFailed": "Tidak dapat menginstankan klien Sphinx.",
+	"sphinxSearchFailed": "Kueri gagal: $1",
+	"sphinxPspellError": "Tidak dapat memanggil ekstensi pspell."
 }
