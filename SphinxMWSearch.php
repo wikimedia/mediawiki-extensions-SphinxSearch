@@ -554,7 +554,6 @@ class SphinxMWSearchResult extends SearchResult {
 
 	/**
 	 * Emulates SearchEngine getTextSnippet so that we can use our own userHighlightPrefs
-	 * (only needed until userHighlightPrefs in SearchEngine is fixed)
 	 *
 	 * @param $terms array of terms to highlight
 	 * @return string highlighted text snippet
@@ -564,7 +563,8 @@ class SphinxMWSearchResult extends SearchResult {
 		global $wgSphinxSearchMWHighlighter, $wgSphinxSearch_index;
 
 		$this->initText();
-		list( $contextlines, $contextchars ) = SphinxMWSearch::userHighlightPrefs( $wgUser );
+		$contextlines = 2;
+		$contextchars = 75;
 		if ( $wgSphinxSearchMWHighlighter ) {
 			$h = new SearchHighlighter();
 			if ( $wgAdvancedSearchHighlighting ) {
