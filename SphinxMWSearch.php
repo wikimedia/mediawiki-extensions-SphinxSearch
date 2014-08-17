@@ -14,11 +14,11 @@
 
 class SphinxMWSearch extends SearchEngine {
 
-	var $categories = array();
-	var $exc_categories = array();
-	var $db;
-	var $sphinx_client = null;
-	var $prefix_handlers = array(
+	public $categories = array();
+	public $exc_categories = array();
+	public $db;
+	public $sphinx_client = null;
+	public $prefix_handlers = array(
 		'intitle' => 'filterByTitle',
 		'incategory' => 'filterByCategory',
 		'prefix' => 'filterByPrefix',
@@ -315,11 +315,11 @@ class SphinxMWSearch extends SearchEngine {
 
 class SphinxMWSearchResultSet extends SearchResultSet {
 
-	var $mNdx = 0;
-	var $sphinx_client;
-	var $mSuggestion = '';
-	var $db;
-	var $total_hits = 0;
+	public $mNdx = 0;
+	public $sphinx_client;
+	public $mSuggestion = '';
+	public $db;
+	public $total_hits = 0;
 
 	function __construct( $resultSet, $terms, $sphinx_client, $dbr ) {
 		global $wgSearchHighlightBoundaries;
@@ -542,7 +542,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 
 class SphinxMWSearchResult extends SearchResult {
 
-	var $sphinx_client = null;
+	public $sphinx_client = null;
 
 	function __construct( $row, $sphinx_client ) {
 		$this->sphinx_client = $sphinx_client;
