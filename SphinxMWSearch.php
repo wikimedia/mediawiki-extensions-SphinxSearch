@@ -154,9 +154,6 @@ class SphinxMWSearch extends SearchEngine {
 		if ( $this->namespaces && count( $this->namespaces ) ) {
 			$cl->SetFilter( 'page_namespace', $this->namespaces );
 		}
-		if( !$this->showRedirects ) {
-			$cl->SetFilter( 'page_is_redirect', array( 0 ) );
-		}
 		if ( $this->categories && count( $this->categories ) ) {
 			$cl->SetFilter( 'category', $this->categories );
 			wfDebug( "SphinxSearch included categories: " . join( ', ', $this->categories ) . "\n" );
