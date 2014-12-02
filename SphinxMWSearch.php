@@ -41,10 +41,10 @@ class SphinxMWSearch extends SearchEngine {
 	/**
 	 *  PrefixSearchBackend override for OpenSearch results
 	 */
-	static function prefixSearch( $namespaces, $term, $limit, &$results ) {
+	static function prefixSearch( $namespaces, $term, $limit, &$results, $offset = 0 ) {
 		$search_engine = new SphinxMWSearch( wfGetDB( DB_SLAVE ) );
 		$search_engine->namespaces = $namespaces;
-		$search_engine->setLimitOffset( $limit, 0 );
+		$search_engine->setLimitOffset( $limit, $offset );
 		$result_set = $search_engine->searchText( '@page_title: ^' . $term . '*' );
 		$results = array();
 		if ( $result_set ) {
