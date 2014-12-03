@@ -546,7 +546,7 @@ class SphinxMWSearchResult extends SearchResult {
 
 	function __construct( $row, $sphinx_client ) {
 		$this->sphinx_client = $sphinx_client;
-		parent::__construct( $row );
+		$this->initFromTitle( Title::makeTitle( $row->page_namespace, $row->page_title ) );
 	}
 
 	/**
