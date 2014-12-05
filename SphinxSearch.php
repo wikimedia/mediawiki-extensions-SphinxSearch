@@ -104,6 +104,10 @@ $wgSphinxSearchPersonalDictionary = '';
 # This influences results from ApiOpenSearch.
 $wgEnableSphinxPrefixSearch = false;
 
+# Number of context lines and characters to return
+$wgSphinxSearchContextLines = 2;
+$wgSphinxSearchContextChars = 75;
+
 function efSphinxSearchPrefixSetup() {
 	global $wgHooks, $wgEnableSphinxPrefixSearch;
 

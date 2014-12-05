@@ -558,16 +558,15 @@ class SphinxMWSearchResult extends SearchResult {
 	function getTextSnippet( $terms ) {
 		global $wgUser, $wgAdvancedSearchHighlighting;
 		global $wgSphinxSearchMWHighlighter, $wgSphinxSearch_index;
+		global $wgSphinxSearchContextLines, $wgSphinxSearchContextChars;
 
 		$this->initText();
-		$contextlines = 2;
-		$contextchars = 75;
 		if ( $wgSphinxSearchMWHighlighter ) {
 			$h = new SearchHighlighter();
 			if ( $wgAdvancedSearchHighlighting ) {
-				return $h->highlightText( $this->mText, $terms, $contextlines, $contextchars );
+				return $h->highlightText( $this->mText, $terms, $wgSphinxSearchContextLines, $wgSphinxSearchContextChars );
 			} else {
-				return $h->highlightSimple( $this->mText, $terms, $contextlines, $contextchars );
+				return $h->highlightSimple( $this->mText, $terms, $wgSphinxSearchContextLines, $wgSphinxSearchContextChars );
 			}
 		}
 
@@ -575,8 +574,8 @@ class SphinxMWSearchResult extends SearchResult {
 			"before_match" => "(searchmatch)",
 			"after_match" => "(/searchmatch)",
 			"chunk_separator" => " ... ",
-			"limit" => $contextlines * $contextchars,
-			"around" => $contextchars,
+			"limit" => $wgSphinxSearchContextLines * $wgSphinxSearchContextChars,
+			"around" => $wgSphinxSearchContextChars,
 		);
 
 		$excerpts = $this->sphinx_client->BuildExcerpts(
