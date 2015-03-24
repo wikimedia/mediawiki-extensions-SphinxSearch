@@ -9,7 +9,7 @@
 			"Umherirrender"
 		]
 	},
-	"sphinxsearch-desc": "{{desc|name=Sphinx Search|url=http://www.mediawiki.org/wiki/Extension:SphinxSearch}}",
+	"sphinxsearch-desc": "{{desc|name=Sphinx Search|url=https://www.mediawiki.org/wiki/Extension:SphinxSearch}}",
 	"sphinxPowered": "Used as information about how and from where the results were fetched.\n\nParameters:\n* $1 - the URL http://www.sphinxsearch.com (hard-coded)",
 	"sphinxClientFailed": "Unused at this time.\n\nError message.",
 	"sphinxSearchFailed": "Unused at this time. Parameters:\n* $1 - ...",
