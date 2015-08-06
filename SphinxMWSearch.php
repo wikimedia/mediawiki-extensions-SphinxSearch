@@ -131,7 +131,7 @@ class SphinxMWSearch extends SearchEngine {
 			return false;
 		}
 
-		wfRunHooks( 'SphinxSearchBeforeResults', array(
+		Hooks::run( 'SphinxSearchBeforeResults', array(
 			&$term,
 			&$this->offset,
 			&$this->namespaces,
@@ -170,7 +170,7 @@ class SphinxMWSearch extends SearchEngine {
 			$wgSphinxSearch_cutoff
 		);
 
-		wfRunHooks( 'SphinxSearchBeforeQuery', array( &$term, &$cl ) );
+		Hooks::run( 'SphinxSearchBeforeQuery', array( &$term, &$cl ) );
 
 		return $cl;
 	}
