@@ -343,7 +343,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 			}
 		}
 		$this->mNdx = 0;
-		$this->mTerms = preg_split( "/$wgSearchHighlightBoundaries+/ui", $terms );
+		$this->mTerms = preg_split( "/$wgSearchHighlightBoundaries+/ui", $terms, NULL, PREG_SPLIT_NO_EMPTY );
 	}
 
 	/**
