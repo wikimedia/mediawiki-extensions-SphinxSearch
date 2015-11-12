@@ -13,20 +13,18 @@
 source src_wiki_main
 {
 	# data source
-	type		= mysql
+	type		= pgsql
 	sql_host	= localhost
+	sql_port	= 5432
 	sql_db		= #replace with your db name
 	sql_user	= #replace with your db username
 	sql_pass	= #replace with your db password
-	# these two are optional
-	#sql_port	= 3306
-	#sql_sock	= /var/lib/mysql/mysql.sock
 
 	# pre-query, executed before the main fetch query
-	sql_query_pre	= SET NAMES utf8
+	sql_query_pre	= SET search_path TO mediawiki
 
 	# main document fetch query - change the table names if you are using a prefix
-	sql_query	= SELECT page_id, page_title, page_namespace, page_is_redirect, old_id, old_text FROM page, revision, text WHERE rev_id=page_latest AND old_id=rev_text_id
+	sql_query	= SELECT page_id, page_title, page_namespace,v page_is_redirect, old_id, old_text FROM page, revision, pagecontent WHERE rev_id=page_latest AND old_id=rev_text_id
 
 	# attribute columns
 	sql_attr_uint	= page_namespace
@@ -34,7 +32,7 @@ source src_wiki_main
 	sql_attr_uint	= old_id
 
 	# collect all category ids for category filtering
-	sql_attr_multi  = uint category from query; SELECT cl_from, page_id AS category FROM categorylinks, page WHERE page_title=cl_to AND page_namespace=14
+	sql_attr_multi  = uint category from query; SELECT cl_from, page_id AS category FROM mediawiki.categorylinks, mediawiki.page WHERE page_title=cl_to AND page_namespace=14
 }
 
 # data source definition for the incremental index
@@ -42,7 +40,7 @@ source src_wiki_incremental : src_wiki_main
 {
 	# adjust this query based on the time you run the full index
 	# in this case, full index runs at 7 AM UTC
-	sql_query	= SELECT page_id, page_title, page_namespace, page_is_redirect, old_id, old_text FROM page, revision, text WHERE rev_id=page_latest AND old_id=rev_text_id AND page_touched>=DATE_FORMAT(CURDATE(), '%Y%m%d070000')
+	sql_query	= SELECT page_id, page_title, page_namespace, page_is_redirect, old_id, old_text FROM page, revision, pagecontent WHERE rev_id=page_latest AND old_id=rev_text_id AND page_touched >= current_date + '7 hours'::interval
 
 	# all other parameters are copied from the parent source
 }
