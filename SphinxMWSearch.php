@@ -226,7 +226,7 @@ class SphinxMWSearch extends SearchEngine {
 		global $wgContLang, $wgCanonicalNamespaceNames, $wgNamespaceAliases;
 
 		// "search everything" keyword
-		$allkeyword = wfMsgForContent( 'searchall' );
+		$allkeyword = wfMessage( 'searchall' )->inContentLanguage()->text();
 		$this->prefix_handlers[ $allkeyword ] = 'searchAllNamespaces';
 
 		$all_prefixes = array_merge(
