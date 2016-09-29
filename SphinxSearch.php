@@ -9,6 +9,12 @@ EOT;
 	exit( 1 );
 }
 
+if ( !class_exists( 'SphinxClient' ) ) {
+	if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
+		require_once __DIR__ . '/vendor/autoload.php';
+	}
+}
+
 $wgExtensionCredits['other'][] = array(
 	'path'           => __FILE__,
 	'version'        => '0.9.0',
@@ -39,13 +45,6 @@ if ( $wgSearchType == 'SphinxSearch' ) {
 
 if ( $wgSearchType == 'SphinxMWSearch' ) {
 	$wgDisableSearchUpdate = true;
-}
-
-# This assumes you have copied sphinxapi.php from your Sphinx
-# installation folder to your SphinxSearch extension folder
-# not needed if you install http://pecl.php.net/package/sphinx
-if ( !class_exists( 'SphinxClient' ) ) {
-	require_once ( $dir . "sphinxapi.php" );
 }
 
 # Host and port on which searchd deamon is running
