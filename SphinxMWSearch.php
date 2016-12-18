@@ -12,7 +12,7 @@
  * @author Svemir Brkic <svemir@deveblog.com>
  */
 
-class SphinxMWSearch extends SearchEngine {
+class SphinxMWSearch extends SearchDatabase {
 
 	public $categories = array();
 	public $exc_categories = array();
