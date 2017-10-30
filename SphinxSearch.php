@@ -30,7 +30,6 @@ $wgAutoloadClasses[ 'SphinxMWSearch' ] = $dir . 'SphinxMWSearch.php';
 $wgAutoloadClasses[ 'SphinxMWSearchResult' ] = $dir . 'SphinxMWSearch.php';
 $wgAutoloadClasses[ 'SphinxMWSearchResultSet' ] = $dir . 'SphinxMWSearch.php';
 $wgMessagesDirs['SphinxSearch'] = __DIR__ . '/i18n';
-$wgExtensionMessagesFiles['SphinxSearch'] = $dir . 'SphinxSearch.i18n.php';
 $wgExtensionFunctions[ ] = 'efSphinxSearchPrefixSetup';
 
 # To completely disable the default search and replace it with SphinxSearch,
