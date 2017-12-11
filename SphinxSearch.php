@@ -46,6 +46,13 @@ if ( $wgSearchType == 'SphinxMWSearch' ) {
 	$wgDisableSearchUpdate = true;
 }
 
+# This assumes you have copied sphinxapi.php from your Sphinx
+# installation folder to your SphinxSearch extension folder
+# not needed if you install http://pecl.php.net/package/sphinx
+if ( !class_exists( 'SphinxClient' ) ) {
+	require_once ( __DIR__. 'sphinxapi.php' );
+}
+
 # Host and port on which searchd deamon is running
 $wgSphinxSearch_host = '127.0.0.1';
 $wgSphinxSearch_port = 9312;
