@@ -50,7 +50,7 @@ if ( $wgSearchType == 'SphinxMWSearch' ) {
 # installation folder to your SphinxSearch extension folder
 # not needed if you install http://pecl.php.net/package/sphinx
 if ( !class_exists( 'SphinxClient' ) ) {
-	require_once ( __DIR__. 'sphinxapi.php' );
+	require_once ( __DIR__ . '/sphinxapi.php' );
 }
 
 # Host and port on which searchd deamon is running
