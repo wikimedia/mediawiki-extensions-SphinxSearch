@@ -1,8 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mark85296341"
+			"Mark85296341",
+			"Kly"
 		]
 	},
-	"sphinxSearchFailed": "查詢失敗：$1"
+	"sphinxsearch-desc": "以 [http://www.sphinxsearch.com/ Sphinx] 來取代 MediaWiki 搜尋引擎",
+	"sphinxPowered": "技術提供由 $1",
+	"sphinxClientFailed": "無法實體化 Sphinx 客戶端。",
+	"sphinxSearchFailed": "查詢失敗：$1",
+	"sphinxPspellError": "無法採用 pspell 擴充功能。"
 }
