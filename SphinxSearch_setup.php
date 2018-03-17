@@ -57,4 +57,4 @@ $maintClass = "SphinxSearch_setup";
 // Avoid E_ALL notice caused by ob_end_flush() in Maintenance::setup()
 ob_start();
 
-require_once( DO_MAINTENANCE );
+require_once RUN_MAINTENANCE_IF_MAIN;
