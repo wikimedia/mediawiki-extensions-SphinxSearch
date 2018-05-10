@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"sphinxsearch-desc": "يستبدل محرك بحث ميدياويكي بـ[http://www.sphinxsearch.com/ Sphinx]",
+	"sphinxPowered": "يشغله $1",
+	"sphinxClientFailed": "لا يمكن استنساخ عميل سفنكس.",
+	"sphinxSearchFailed": "فشل الاستعلام: $1",
+	"sphinxPspellError": "لا يمكن استدعاء ملحق pspell."
+}
