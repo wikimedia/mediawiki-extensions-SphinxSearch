@@ -3,7 +3,7 @@
  * Sets up myspell dictionary for search suggestions
  *
  * Run without any arguments to see instructions.
- * 
+ *
  * @author Svemir Brkic
  * @file
  * @ingroup extensions
@@ -21,8 +21,8 @@ class SphinxSearch_setup extends Maintenance {
 		$this->mDescription .= "Uses Sphinx indexer to create a list ";
 		$this->mDescription .= "of all indexed words, sorted by frequency.";
 	}
-	
-	/* Override parameters setup becuase we do not need some of the default ones */
+
+	/* Override parameters setup because we do not need some of the default ones */
 	protected function addDefaultParams() {
 		$this->addOption( 'sphinxconf', 'Location of Sphinx configuration file', true, true );
 		$this->addOption( 'indexer', 'Full path to Sphinx indexer if not in the path', false, true );
