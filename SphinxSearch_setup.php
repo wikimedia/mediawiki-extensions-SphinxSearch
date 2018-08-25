@@ -29,7 +29,7 @@ class SphinxSearch_setup extends Maintenance {
 		$this->addOption( 'useindex', 'Sphinx index to use (defaults to wiki_main)', false, true );
 		$this->addOption( 'maxwords', 'Maximum number of words to extract (defaults to 10000)', false, true );
 		$this->addOption( 'help', "Display this help message" );
-		$this->addOption( 'quiet', "Whether to supress non-error output" );
+		$this->addOption( 'quiet', "Whether to suppress non-error output" );
 	}
 
 	public function execute() {
