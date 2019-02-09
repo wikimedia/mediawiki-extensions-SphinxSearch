@@ -25,20 +25,6 @@ class SphinxMWSearch extends SearchDatabase {
 	);
 
 	/**
-	 * Do not go to a near match if query prefixed with ~
-	 *
-	 * @param $searchterm String
-	 * @return Title
-	 */
-	public static function getNearMatch( $searchterm ) {
-		if ( $searchterm[ 0 ] === '~' ) {
-			return null;
-		} else {
-			return parent::getNearMatch( $searchterm );
-		}
-	}
-
-	/**
 	 *  PrefixSearchBackend override for OpenSearch results
 	 */
 	static function prefixSearch( $namespaces, $term, $limit, &$results, $offset = 0 ) {

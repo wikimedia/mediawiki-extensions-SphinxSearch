@@ -39,7 +39,7 @@ $wgExtensionFunctions[ ] = 'efSphinxSearchPrefixSetup';
 
 # Prior to version 0.8.0 there was a SphinxSearch search type
 if ( $wgSearchType == 'SphinxSearch' ) {
-	$wgSearchType == 'SphinxMWSearch';
+	$wgSearchType = 'SphinxMWSearch';
 }
 
 if ( $wgSearchType == 'SphinxMWSearch' ) {
