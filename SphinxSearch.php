@@ -96,7 +96,7 @@ $wgSphinxSearch_weights = array(
 $wgSphinxSearchMWHighlighter = false;
 
 # Should the suggestion (Did you mean?) mode be enabled? Possible values:
-# enchant - see http://www.mediawiki.org/wiki/Extension:SphinxSearch/Search_suggestions
+# enchant - see https://www.mediawiki.org/wiki/Extension:SphinxSearch/Search_suggestions
 # soundex - uses MySQL soundex() function to recommend existing titles
 # aspell - uses aspell command-line utility to look for similar spellings
 $wgSphinxSuggestMode = '';

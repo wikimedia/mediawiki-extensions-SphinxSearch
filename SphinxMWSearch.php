@@ -3,7 +3,7 @@
 /**
  * Class file for the SphinxMWSearch extension
  *
- * http://www.mediawiki.org/wiki/Extension:SphinxSearch
+ * https://www.mediawiki.org/wiki/Extension:SphinxSearch
  *
  * Released under GNU General Public License (see http://www.fsf.org/licenses/gpl.html)
  *
