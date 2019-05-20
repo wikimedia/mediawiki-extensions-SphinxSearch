@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yekrats"
+			"Yekrats",
+			"Mirin"
 		]
 	},
+	"sphinxsearch-desc": "Anstataŭigas MediaVikian serĉilon per [http://www.sphinxsearch.com/ Sphinx]",
 	"sphinxPowered": "Funkcias per $1",
 	"sphinxClientFailed": "Ne povas starti klienton Sphinx.",
 	"sphinxSearchFailed": "Mendo malsukcesis: $1",
