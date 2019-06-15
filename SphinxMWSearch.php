@@ -28,7 +28,7 @@ class SphinxMWSearch extends SearchDatabase {
 	 *  PrefixSearchBackend override for OpenSearch results
 	 */
 	static function prefixSearch( $namespaces, $term, $limit, &$results, $offset = 0 ) {
-		$search_engine = new SphinxMWSearch( wfGetDB( DB_SLAVE ) );
+		$search_engine = new SphinxMWSearch( wfGetDB( DB_REPLICA ) );
 		$search_engine->namespaces = $namespaces;
 		$search_engine->setLimitOffset( $limit, $offset );
 		$result_set = $search_engine->searchText( '@page_title: ^' . $term . '*' );
@@ -312,7 +312,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 
 		$this->sphinx_client = $sphinx_client;
 		$this->mResultSet = array();
-		$this->db = $dbr ? $dbr : wfGetDB( DB_SLAVE );
+		$this->db = $dbr ? $dbr : wfGetDB( DB_REPLICA );
 		if ( is_array( $resultSet ) && isset( $resultSet['matches'] ) ) {
 			$this->total_hits = $resultSet[ 'total_found' ];
 			foreach ( $resultSet['matches'] as $id => $docinfo ) {
