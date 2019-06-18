@@ -414,7 +414,8 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		);
 		$suggestion = $this->db->fetchObject( $res );
 		if ( is_object( $suggestion ) ) {
-			$this->mSuggestion = trim( $suggestion->page_title );
+			$title = Title::newFromDBkey($suggestion->page_title);
+			$this->mSuggestion = $title->getText();
 		}
 	}
 
