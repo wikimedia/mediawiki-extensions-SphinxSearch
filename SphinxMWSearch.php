@@ -422,13 +422,14 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 			),
 			__METHOD__,
 			array(
-				'ORDER BY' => 'page_counter desc',
+				'ORDER BY' => 'page_len desc',
 				'LIMIT' => 1
 			)
 		);
 		$suggestion = $this->db->fetchObject( $res );
 		if ( is_object( $suggestion ) ) {
-			$this->mSuggestion = trim( $suggestion->page_title );
+			$title = Title::newFromDBkey($suggestion->page_title);
+			$this->mSuggestion = $title->getText();
 		}
 	}
 
