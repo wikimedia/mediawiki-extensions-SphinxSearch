@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hamilton Abreu",
-			"Waldir"
+			"Waldir",
+			"Waldyrious"
 		]
 	},
 	"sphinxsearch-desc": "Substituir o motor de pesquisa do MediaWiki pelo [http://www.sphinxsearch.com/ Sphinx].",
