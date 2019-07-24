@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño"
+			"Toliño",
+			"Maria zaos"
 		]
 	},
-	"sphinxsearch-desc": "Substituír o motor de buscas de MediaWiki co [http://www.sphinxsearch.com/ Sphinx].",
+	"sphinxsearch-desc": "Substitúe o motor de procuras de MediaWiki co [http://www.sphinxsearch.com/ Sphinx].",
 	"sphinxPowered": "Desenvolvido por $1",
 	"sphinxClientFailed": "Non se puido conectar co cliente Sphinx.",
 	"sphinxSearchFailed": "Fallou a pescuda: $1",
