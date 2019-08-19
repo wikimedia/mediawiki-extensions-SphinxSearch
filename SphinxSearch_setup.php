@@ -16,10 +16,9 @@ class SphinxSearch_setup extends Maintenance {
 	public function __construct() {
 		parent::__construct();
 
-		$this->mDescription = "Sets up myspell dictionary (sphinx.dic and sphinx.aff) ";
-		$this->mDescription .= "for search suggestions (suggestWithEnchant method.)\n";
-		$this->mDescription .= "Uses Sphinx indexer to create a list ";
-		$this->mDescription .= "of all indexed words, sorted by frequency.";
+		$this->addDescription( "Sets up myspell dictionary (sphinx.dic and sphinx.aff) " .
+			"for search suggestions (suggestWithEnchant method.)\n" .
+			"Uses Sphinx indexer to create a list of all indexed words, sorted by frequency." );
 	}
 
 	/* Override parameters setup because we do not need some of the default ones */
