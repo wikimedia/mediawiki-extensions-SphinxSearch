@@ -1,0 +1,45 @@
+{
+	"name": "SphinxSearch",
+	"author": "Svemir Brkic, Paul Grinberg",
+	"url": "https://www.mediawiki.org/wiki/Extension:SphinxSearch",
+	"descriptionmsg": "sphinxsearch-desc",
+	"license-name": "GPL-2.0",
+	"type": "other",
+	"version": "1.0.0",
+	"AutoloadClasses": {
+		"SphinxMWSearch": "SphinxMWSearch.php",
+		"SphinxMWSearchResult": "SphinxMWSearchResult.php",
+		"SphinxMWSearchResultSet": "SphinxMWSearchResultSet.php"
+	},
+	"ExtensionFunctions": [
+		"SphinxMWSearch::initialize"
+	],
+	"MessagesDirs": {
+		"SphinxSearch": [
+			"i18n"
+		]
+	},
+	"config": {
+		"SphinxSearch_host": "127.0.0.1",
+		"SphinxSearch_port": 9312,
+		"SphinxSearch_index": "wiki_main",
+		"SphinxSearch_index_list": "*",
+		"SphinxSearch_index_weights": "null",
+		"SphinxSearch_mode": 4,
+		"SphinxSearch_sortmode": 0,
+		"SphinxSearch_sortby": "",
+		"SphinxSearch_maxmatches": 1000,
+		"SphinxSearch_cutoff": 0,
+		"SphinxSearch_weights": {
+			"old_text": 1,
+			"page_title": 100
+		},
+		"SphinxSearchMWHighlighter": false,
+		"SphinxSuggestMode": "",
+		"SphinxSearchAspellPath": "aspell",
+		"SphinxSearchPersonalDictionary": "",
+		"EnableSphinxPrefixSearch": false
+	},
+	"manifest_version": 1
+}
+
