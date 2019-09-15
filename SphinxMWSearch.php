@@ -408,7 +408,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 			),
 			__METHOD__,
 			array(
-				'ORDER BY' => 'page_counter desc',
+				'ORDER BY' => 'page_len desc',
 				'LIMIT' => 1
 			)
 		);
