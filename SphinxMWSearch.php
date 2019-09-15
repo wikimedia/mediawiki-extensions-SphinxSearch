@@ -24,6 +24,14 @@ class SphinxMWSearch extends SearchDatabase {
 		'prefix' => 'filterByPrefix',
 	);
 
+	protected function doSearchTextInDB( $term ) {
+		return $this->searchText( $term );
+	}
+
+	protected function doSearchTitleInDB( $term ) {
+		return $this->searchText( '@page_title: ^' . $term . '*' );
+	}
+
 	/**
 	 *  PrefixSearchBackend override for OpenSearch results
 	 */
