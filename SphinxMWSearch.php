@@ -25,7 +25,8 @@ class SphinxMWSearch extends SearchDatabase {
 	];
 
 	public static function initialize() {
-		global $wgHooks, $wgEnableSphinxPrefixSearch, $wgSearchType, $wgDisableSearchUpdate;
+		global $wgHooks, $wgSearchType, $wgDisableSearchUpdate,
+			$wgEnableSphinxPrefixSearch, $wgEnableSphinxInfixSearch;
 
 		if ( !class_exists( 'SphinxClient' ) ) {
 			if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
@@ -43,6 +44,8 @@ class SphinxMWSearch extends SearchDatabase {
 		wfDebug( 'SphinxSearchInit::initialize: running.' );
 		if ( $wgEnableSphinxPrefixSearch ) {
 			$wgHooks[ 'PrefixSearchBackend' ][ ] = 'SphinxMWSearch::prefixSearch';
+		} elseif ( $wgEnableSphinxInfixSearch ) {
+			$wgHooks[ 'PrefixSearchBackend' ][ ] = 'SphinxMWSearch::infixSearch';
 		}
 	}
 
@@ -65,10 +68,15 @@ class SphinxMWSearch extends SearchDatabase {
 	 * @return bool
 	 */
 	public static function prefixSearch( $namespaces, $term, $limit, &$results, $offset = 0 ) {
+		$term = '^' . $term;
+		return self::infixSearch( $namespaces, $term, $limit, $results, $offset );
+	}
+
+	public static function infixSearch( $namespaces, $term, $limit, &$results, $offset = 0 ) {
 		$search_engine = new SphinxMWSearch( wfGetDB( DB_REPLICA ) );
 		$search_engine->namespaces = $namespaces;
 		$search_engine->setLimitOffset( $limit, $offset );
-		$result_set = $search_engine->searchText( '@page_title: ^' . $term . '*' );
+		$result_set = $search_engine->searchText( '@page_title: ' . $term . '*' );
 		$results = [];
 		if ( $result_set ) {
 			$res = $result_set->next();

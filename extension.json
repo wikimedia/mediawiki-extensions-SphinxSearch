@@ -38,6 +38,7 @@
 		"SphinxSuggestMode": "",
 		"SphinxSearchAspellPath": "aspell",
 		"SphinxSearchPersonalDictionary": "",
+		"EnableSphinxInfixSearch": false,
 		"EnableSphinxPrefixSearch": false
 	},
 	"manifest_version": 1
