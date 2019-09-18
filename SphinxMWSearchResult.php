@@ -15,7 +15,7 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 
 	public $sphinx_client = null;
 
-	function __construct( $row, $sphinx_client ) {
+	public function __construct( $row, $sphinx_client ) {
 		$this->sphinx_client = $sphinx_client;
 		$this->initFromTitle( Title::makeTitle( $row->page_namespace, $row->page_title ) );
 	}
@@ -23,12 +23,10 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 	/**
 	 * Emulates SearchEngine getTextSnippet so that we can use our own userHighlightPrefs
 	 *
-	 * @param $terms array of terms to highlight
 	 * @return string highlighted text snippet
 	 */
-	function getTextSnippet( $terms ) {
-		global $wgUser, $wgAdvancedSearchHighlighting;
-		global $wgSphinxSearchMWHighlighter, $wgSphinxSearch_index;
+	public function getTextSnippet( $terms ) {
+		global $wgAdvancedSearchHighlighting, $wgSphinxSearchMWHighlighter, $wgSphinxSearch_index;
 
 		$this->initText();
 		$contextlines = 2;
@@ -42,18 +40,18 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 			}
 		}
 
-		$excerpts_opt = array(
+		$excerpts_opt = [
 			"before_match" => "(searchmatch)",
 			"after_match" => "(/searchmatch)",
 			"chunk_separator" => " ... ",
 			"limit" => $contextlines * $contextchars,
 			"around" => $contextchars,
-		);
+		];
 
 		$excerpts = $this->sphinx_client->BuildExcerpts(
-			array( $this->mText ),
+			[ $this->mText ],
 			$wgSphinxSearch_index,
-			join( ' ', $terms ),
+			implode( ' ', $terms ),
 			$excerpts_opt
 		);
 
@@ -67,13 +65,13 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 					$entry
 				);
 				$entry = str_replace(
-					array("<", ">"),
-					array("&lt;", "&gt;"),
+					[ "<", ">" ],
+					[ "&lt;", "&gt;" ],
 					$entry
 				);
 				$entry = str_replace(
-					array( "(searchmatch)", "(/searchmatch)" ),
-					array( "<span class='searchmatch'>", "</span>" ),
+					[ "(searchmatch)", "(/searchmatch)" ],
+					[ "<span class='searchmatch'>", "</span>" ],
 					$entry
 				);
 				$ret .= "<div style='margin: 0.2em 1em 0.2em 1em;'>$entry</div>\n";

@@ -14,15 +14,15 @@
 
 class SphinxMWSearch extends SearchDatabase {
 
-	public $categories = array();
-	public $exc_categories = array();
+	public $categories = [];
+	public $exc_categories = [];
 	public $db;
 	public $sphinx_client = null;
-	public $prefix_handlers = array(
+	public $prefix_handlers = [
 		'intitle' => 'filterByTitle',
 		'incategory' => 'filterByCategory',
 		'prefix' => 'filterByPrefix',
-	);
+	];
 
 	public static function initialize() {
 		global $wgHooks, $wgEnableSphinxPrefixSearch, $wgSearchType, $wgDisableSearchUpdate;
@@ -46,26 +46,35 @@ class SphinxMWSearch extends SearchDatabase {
 		}
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function doSearchTextInDB( $term ) {
 		return $this->searchText( $term );
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function doSearchTitleInDB( $term ) {
 		return $this->searchText( '@page_title: ^' . $term . '*' );
 	}
 
 	/**
 	 * PrefixSearchBackend override for OpenSearch results
+	 * @return bool
 	 */
-	static function prefixSearch( $namespaces, $term, $limit, &$results, $offset = 0 ) {
+	public static function prefixSearch( $namespaces, $term, $limit, &$results, $offset = 0 ) {
 		$search_engine = new SphinxMWSearch( wfGetDB( DB_REPLICA ) );
 		$search_engine->namespaces = $namespaces;
 		$search_engine->setLimitOffset( $limit, $offset );
 		$result_set = $search_engine->searchText( '@page_title: ^' . $term . '*' );
-		$results = array();
+		$results = [];
 		if ( $result_set ) {
-			while ( $res = $result_set->next() ) {
+			$res = $result_set->next();
+			while ( $res ) {
 				$results[ ] = $res->getTitle()->getPrefixedText();
+				$res = $result_set->next();
 			}
 		}
 		return false;
@@ -76,9 +85,8 @@ class SphinxMWSearch extends SearchDatabase {
 	 *
 	 * @param string $term - Raw search term
 	 * @return SphinxMWSearchResultSet
-	 * @access public
 	 */
-	function searchText( $term ) {
+	public function searchText( $term ) {
 		global $wgSphinxSearch_index_list, $wgSphinxSuggestMode;
 
 		if ( !$this->sphinx_client ) {
@@ -88,34 +96,34 @@ class SphinxMWSearch extends SearchDatabase {
 		if ( $this->sphinx_client ) {
 			$this->searchTerms = $term;
 			$escape = '/';
-			$delims = array(
+			$delims = [
 				'(' => ')',
 				'[' => ']',
 				'"' => '',
-			);
+			];
 			// temporarily replace already escaped characters
-			$placeholders = array(
+			$placeholders = [
 				'\\(' => '_PLC_O_PAR_',
 				'\\)' => '_PLC_C_PAR_',
 				'\\[' => '_PLC_O_BRA_',
 				'\\]' => '_PLC_C_BRA_',
 				'\\"' => '_PLC_QUOTE_',
-			);
-			$term = str_replace(array_keys($placeholders), $placeholders, $term);
-			foreach ($delims as $open => $close) {
+			];
+			$term = str_replace( array_keys( $placeholders ), $placeholders, $term );
+			foreach ( $delims as $open => $close ) {
 				$open_cnt = substr_count( $term, $open );
-				if ($close) {
+				if ( $close ) {
 					// if counts do not match, escape them all
 					$close_cnt = substr_count( $term, $close );
-					if ($open_cnt != $close_cnt) {
+					if ( $open_cnt != $close_cnt ) {
 						$escape .= $open . $close;
 					}
-				} elseif ($open_cnt % 2 == 1) {
+				} elseif ( $open_cnt % 2 == 1 ) {
 					// if there is no closing symbol, count should be even
 					$escape .= $open;
 				}
 			}
-			$term = str_replace($placeholders, array_keys($placeholders), $term);
+			$term = str_replace( $placeholders, array_keys( $placeholders ), $term );
 			$term = addcslashes( $term, $escape );
 			wfDebug( "SphinxSearch query: $term\n" );
 			$resultSet = $this->sphinx_client->Query(
@@ -134,9 +142,9 @@ class SphinxMWSearch extends SearchDatabase {
 	}
 
 	/**
-	 * @return SphinxClient: ready to run or false if term is empty
+	 * @return SphinxClient ready to run or false if term is empty
 	 */
-	function prepareSphinxClient( &$term ) {
+	private function prepareSphinxClient( &$term ) {
 		global $wgSphinxSearch_sortmode, $wgSphinxSearch_sortby, $wgSphinxSearch_host,
 			$wgSphinxSearch_port, $wgSphinxSearch_index_weights,
 			$wgSphinxSearch_mode, $wgSphinxSearch_maxmatches,
@@ -147,13 +155,13 @@ class SphinxMWSearch extends SearchDatabase {
 			return false;
 		}
 
-		Hooks::run( 'SphinxSearchBeforeResults', array(
+		Hooks::run( 'SphinxSearchBeforeResults', [
 			&$term,
 			&$this->offset,
 			&$this->namespaces,
 			&$this->categories,
 			&$this->exc_categories
-		) );
+		] );
 
 		$cl = new SphinxClient();
 
@@ -172,11 +180,11 @@ class SphinxMWSearch extends SearchDatabase {
 		}
 		if ( $this->categories && count( $this->categories ) ) {
 			$cl->SetFilter( 'category', $this->categories );
-			wfDebug( "SphinxSearch included categories: " . join( ', ', $this->categories ) . "\n" );
+			wfDebug( "SphinxSearch included categories: " . implode( ', ', $this->categories ) . "\n" );
 		}
 		if ( $this->exc_categories && count( $this->exc_categories ) ) {
 			$cl->SetFilter( 'category', $this->exc_categories, true );
-			wfDebug( "SphinxSearch excluded categories: " . join( ', ', $this->exc_categories ) . "\n" );
+			wfDebug( "SphinxSearch excluded categories: " . implode( ', ', $this->exc_categories ) . "\n" );
 		}
 		$cl->SetSortMode( $wgSphinxSearch_sortmode, $wgSphinxSearch_sortby );
 		$cl->SetLimits(
@@ -186,7 +194,7 @@ class SphinxMWSearch extends SearchDatabase {
 			$wgSphinxSearch_cutoff
 		);
 
-		Hooks::run( 'SphinxSearchBeforeQuery', array( &$term, &$cl ) );
+		Hooks::run( 'SphinxSearchBeforeQuery', [ &$term, &$cl ] );
 
 		return $cl;
 	}
@@ -197,7 +205,7 @@ class SphinxMWSearch extends SearchDatabase {
 	 * @param string $query
 	 * @return string rewritten query
 	 */
-	function replacePrefixes( $query ) {
+	public function replacePrefixes( $query ) {
 		if ( trim( $query ) === '' ) {
 			return $query;
 		}
@@ -211,7 +219,8 @@ class SphinxMWSearch extends SearchDatabase {
 		$inquotes = false;
 		$rewritten = '';
 		foreach ( $parts as $key => $part ) {
-			if ( $part == '"' ) { // stuff in quotes doesn't get rewritten
+			if ( $part == '"' ) {
+				// stuff in quotes doesn't get rewritten
 				$rewritten .= $part;
 				$inquotes = !$inquotes;
 			} elseif ( $inquotes ) {
@@ -221,13 +230,13 @@ class SphinxMWSearch extends SearchDatabase {
 					$regexp = $this->preparePrefixRegexp();
 					$part = preg_replace_callback(
 						'/(^|[| :]|-)(' . $regexp . '):([^ ]+)/i',
-						array( $this, 'replaceQueryPrefix' ),
+						[ $this, 'replaceQueryPrefix' ],
 						$part
 					);
 				}
 				$rewritten .= str_replace(
-					array( ' OR ', ' AND ' ),
-					array( ' | ', ' & ' ),
+					[ ' OR ', ' AND ' ],
+					[ ' | ', ' & ' ],
 					$part
 				);
 			}
@@ -238,21 +247,21 @@ class SphinxMWSearch extends SearchDatabase {
 	/**
 	 * @return string Regexp to match namespaces and other prefixes
 	 */
-	function preparePrefixRegexp() {
-		global $wgContLang, $wgCanonicalNamespaceNames, $wgNamespaceAliases;
+	private function preparePrefixRegexp() {
+		global $wgLang, $wgCanonicalNamespaceNames, $wgNamespaceAliases;
 
 		// "search everything" keyword
 		$allkeyword = wfMessage( 'searchall' )->inContentLanguage()->text();
 		$this->prefix_handlers[ $allkeyword ] = 'searchAllNamespaces';
 
 		$all_prefixes = array_merge(
-			$wgContLang->getNamespaces(),
+			$wgLang->getNamespaces(),
 			$wgCanonicalNamespaceNames,
-			array_keys( array_merge( $wgNamespaceAliases, $wgContLang->getNamespaceAliases() ) ),
+			array_keys( array_merge( $wgNamespaceAliases, $wgLang->getNamespaceAliases() ) ),
 			array_keys( $this->prefix_handlers )
 		);
 
-		$regexp_prefixes = array();
+		$regexp_prefixes = [];
 		foreach ( $all_prefixes as $prefix ) {
 			if ( $prefix != '' ) {
 				$regexp_prefixes[] = preg_quote( str_replace( ' ', '_', $prefix ), '/' );
@@ -268,7 +277,7 @@ class SphinxMWSearch extends SearchDatabase {
 	 * @param array $matches
 	 * @return string
 	 */
-	function replaceQueryPrefix( $matches ) {
+	public function replaceQueryPrefix( $matches ) {
 		if ( isset( $this->prefix_handlers[ $matches[ 2 ] ] ) ) {
 			$callback = $this->prefix_handlers[ $matches[ 2 ] ];
 			return $this->$callback( $matches );
@@ -277,9 +286,9 @@ class SphinxMWSearch extends SearchDatabase {
 		}
 	}
 
-	function filterByNamespace( $matches ) {
-		global $wgContLang;
-		$inx = $wgContLang->getNsIndex( str_replace( ' ', '_', $matches[ 2 ] ) );
+	public function filterByNamespace( $matches ) {
+		global $wgLang;
+		$inx = $wgLang->getNsIndex( str_replace( ' ', '_', $matches[ 2 ] ) );
 		if ( $inx === false ) {
 			return $matches[ 0 ];
 		} else {
@@ -288,34 +297,34 @@ class SphinxMWSearch extends SearchDatabase {
 		}
 	}
 
-	function searchAllNamespaces( $matches ) {
+	public function searchAllNamespaces( $matches ) {
 		$this->namespaces = null;
 		return $matches[ 3 ];
 	}
 
-	function filterByTitle( $matches ) {
+	public function filterByTitle( $matches ) {
 		return '@page_title ' . $matches[ 3 ];
 	}
 
-	function filterByPrefix( $matches ) {
+	public function filterByPrefix( $matches ) {
 		$prefix = $matches[ 3 ];
 		if ( strpos( $matches[ 3 ], ':' ) !== false ) {
-			global $wgContLang;
+			global $wgLang;
 			list( $ns, $prefix ) = explode( ':', $matches[ 3 ] );
-			$inx = $wgContLang->getNsIndex( str_replace( ' ', '_', $ns ) );
+			$inx = $wgLang->getNsIndex( str_replace( ' ', '_', $ns ) );
 			if ( $inx !== false ) {
-				$this->namespaces = array( $inx );
+				$this->namespaces = [ $inx ];
 			}
 		}
 		return '@page_title ^' . $prefix . '*';
 	}
 
-	function filterByCategory( $matches ) {
+	public function filterByCategory( $matches ) {
 		$page_id = $this->db->selectField( 'page', 'page_id',
-			array(
+			[
 				'page_title' => $matches[ 3 ],
 				'page_namespace' => NS_CATEGORY
-			),
+			],
 			__METHOD__
 		);
 		$category = intval( $page_id );
@@ -326,6 +335,4 @@ class SphinxMWSearch extends SearchDatabase {
 		}
 		return '';
 	}
-
 }
-
