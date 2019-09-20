@@ -5,7 +5,7 @@
 	"descriptionmsg": "sphinxsearch-desc",
 	"license-name": "GPL-2.0",
 	"type": "other",
-	"version": "1.0.0",
+	"version": "0.9.3",
 	"AutoloadClasses": {
 		"SphinxMWSearch": "SphinxMWSearch.php",
 		"SphinxMWSearchResult": "SphinxMWSearchResult.php",
