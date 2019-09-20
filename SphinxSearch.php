@@ -17,7 +17,7 @@ if ( !class_exists( 'SphinxClient' ) ) {
 
 $wgExtensionCredits['other'][] = array(
 	'path'           => __FILE__,
-	'version'        => '0.9.0',
+	'version'        => '0.9.1',
 	'name'           => 'SphinxSearch',
 	'author'         => array( 'Svemir Brkic', 'Paul Grinberg' ),
 	'url'            => 'https://www.mediawiki.org/wiki/Extension:SphinxSearch',
