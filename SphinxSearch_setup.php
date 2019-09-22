@@ -8,8 +8,11 @@
  * @file
  * @ingroup extensions
  */
+$maintenancePath = getenv( 'MW_INSTALL_PATH' ) !== false
+                ? getenv( 'MW_INSTALL_PATH' ) . '/maintenance/Maintenance.php'
+                : __DIR__ . '/../../maintenance/Maintenance.php';
 
-require_once( '../../maintenance/Maintenance.php' );
+require_once $maintenancePath;
 
 class SphinxSearch_setup extends Maintenance {
 
@@ -19,10 +22,7 @@ class SphinxSearch_setup extends Maintenance {
 		$this->addDescription( "Sets up myspell dictionary (sphinx.dic and sphinx.aff) " .
 			"for search suggestions (suggestWithEnchant method.)\n" .
 			"Uses Sphinx indexer to create a list of all indexed words, sorted by frequency." );
-	}
 
-	/* Override parameters setup because we do not need some of the default ones */
-	protected function addDefaultParams() {
 		$this->addOption( 'sphinxconf', 'Location of Sphinx configuration file', true, true );
 		$this->addOption( 'indexer', 'Full path to Sphinx indexer if not in the path', false, true );
 		$this->addOption( 'useindex', 'Sphinx index to use (defaults to wiki_main)', false, true );
