@@ -1,6 +1,9 @@
 {
 	"name": "SphinxSearch",
-	"author": "Svemir Brkic, Paul Grinberg",
+	"author": [
+		"Svemir Brkic",
+		"Paul Grinberg"
+	],
 	"url": "https://www.mediawiki.org/wiki/Extension:SphinxSearch",
 	"descriptionmsg": "sphinxsearch-desc",
 	"license-name": "GPL-2.0",
@@ -43,4 +46,3 @@
 	},
 	"manifest_version": 1
 }
-
