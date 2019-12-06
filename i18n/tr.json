@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"sphinxsearch-desc": "MediaWiki arama motorunu [http://www.sphinxsearch.com/ Sphinx] ile değiştirir",
+	"sphinxPowered": "$1 tarafından oluşturulmuştur",
+	"sphinxClientFailed": "Sphinx müşterisi başlatılamadı.",
+	"sphinxSearchFailed": "Sorgu başarısız oldu: $1",
+	"sphinxPspellError": "Pspell uzantısı başlatılamadı."
+}
