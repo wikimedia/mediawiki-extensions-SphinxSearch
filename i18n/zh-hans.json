@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yfdyh000",
-			"Hudafu"
+			"Hudafu",
+			"Yfdyh000"
 		]
 	},
 	"sphinxsearch-desc": "用[http://www.sphinxsearch.com/ Sphinx]替换MediaWiki搜索引擎",

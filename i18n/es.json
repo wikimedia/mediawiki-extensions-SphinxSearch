@@ -2,8 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Crazymadlover",
-			"Pertile",
-			"Fitoschido"
+			"Fitoschido",
+			"Pertile"
 		]
 	},
 	"sphinxsearch-desc": "Sustituye el buscador de MediaWiki por [http://www.sphinxsearch.com/ Sphinx].",

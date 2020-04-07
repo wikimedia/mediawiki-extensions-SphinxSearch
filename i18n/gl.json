@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño",
-			"Maria zaos"
+			"Maria zaos",
+			"Toliño"
 		]
 	},
 	"sphinxsearch-desc": "Substitúe o motor de procuras de MediaWiki co [http://www.sphinxsearch.com/ Sphinx].",

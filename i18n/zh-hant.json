@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mark85296341",
-			"Kly"
+			"Kly",
+			"Mark85296341"
 		]
 	},
 	"sphinxsearch-desc": "以 [http://www.sphinxsearch.com/ Sphinx] 來取代 MediaWiki 搜尋引擎",
