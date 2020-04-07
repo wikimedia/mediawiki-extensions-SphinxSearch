@@ -233,7 +233,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		if ( isset( $this->mResultSet[$this->mNdx] ) ) {
 			$row = $this->mResultSet[$this->mNdx];
 			++$this->mNdx;
-			return new SphinxMWSearchResult( $row, $this->sphinx_client );
+			return new SphinxMWSearchResult( $row, $this->sphinx_client, $this->mTerms );
 		} else {
 			return false;
 		}
