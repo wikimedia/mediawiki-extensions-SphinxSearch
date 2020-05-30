@@ -54,7 +54,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 * Some search modes return a suggested alternate term if there are
 	 * no exact hits. Returns true if there is one on this set.
 	 *
-	 * @return Boolean
+	 * @return bool
 	 */
 	public function hasSuggestion() {
 		global $wgSphinxSuggestMode;
@@ -206,7 +206,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	}
 
 	/**
-	 * @return Integer number of results
+	 * @return int number of results
 	 */
 	public function numRows() {
 		return count( $this->mResultSet );
@@ -220,7 +220,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 *
 	 * Return null if no total hits number is supported.
 	 *
-	 * @return Integer
+	 * @return int
 	 */
 	public function getTotalHits() {
 		return $this->total_hits;
