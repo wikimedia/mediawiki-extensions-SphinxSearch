@@ -185,21 +185,21 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	}
 
 	/**
-	 * @return String suggested query, null if none
+	 * @return string suggested query, null if none
 	 */
 	public function getSuggestionQuery() {
 		return $this->mSuggestion;
 	}
 
 	/**
-	 * @return String HTML highlighted suggested query, '' if none
+	 * @return string HTML highlighted suggested query, '' if none
 	 */
 	public function getSuggestionSnippet() {
 		return $this->mSuggestion;
 	}
 
 	/**
-	 * @return Array search terms
+	 * @return array search terms
 	 */
 	public function termMatches() {
 		return $this->mTerms;
