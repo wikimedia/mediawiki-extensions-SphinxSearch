@@ -13,8 +13,13 @@
 
 class SphinxMWSearchResult extends RevisionSearchResult {
 
+	/** @var SphinxClient|null */
 	public $sphinx_client = null;
 
+	/**
+	 * @param stdClass $row
+	 * @param SphinxClient|null $sphinx_client
+	 */
 	public function __construct( $row, $sphinx_client ) {
 		$this->sphinx_client = $sphinx_client;
 		$this->initFromTitle( Title::makeTitle( $row->page_namespace, $row->page_title ) );
@@ -23,6 +28,7 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 	/**
 	 * Emulates SearchEngine getTextSnippet so that we can use our own userHighlightPrefs
 	 *
+	 * @param array $terms
 	 * @return string highlighted text snippet
 	 */
 	public function getTextSnippet( $terms ) {

@@ -12,14 +12,27 @@
  * @author Svemir Brkic <svemir@deveblog.com>
  */
 
+use Wikimedia\Rdbms\IDatabase;
+
 class SphinxMWSearchResultSet extends SearchResultSet {
 
+	/** @var int */
 	public $mNdx = 0;
+	/** @var SphinxClient */
 	public $sphinx_client;
+	/** @var string */
 	public $mSuggestion = '';
+	/** @var IDatabase */
 	public $db;
+	/** @var int */
 	public $total_hits = 0;
 
+	/**
+	 * @param array $resultSet
+	 * @param array $terms
+	 * @param SphinxClient $sphinx_client
+	 * @param IDatabase|null $dbr
+	 */
 	public function __construct( $resultSet, $terms, $sphinx_client, $dbr ) {
 		global $wgSearchHighlightBoundaries;
 

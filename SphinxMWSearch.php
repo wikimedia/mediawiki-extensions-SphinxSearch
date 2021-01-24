@@ -12,12 +12,19 @@
  * @author Svemir Brkic <svemir@deveblog.com>
  */
 
+use Wikimedia\Rdbms\IDatabase;
+
 class SphinxMWSearch extends SearchDatabase {
 
+	/** @var array */
 	public $categories = [];
+	/** @var array */
 	public $exc_categories = [];
+	/** @var IDatabase|null */
 	public $db;
+	/** @var SphinxClient|null */
 	public $sphinx_client = null;
+	/** @var string[] */
 	public $prefix_handlers = [
 		'intitle' => 'filterByTitle',
 		'incategory' => 'filterByCategory',
@@ -65,6 +72,11 @@ class SphinxMWSearch extends SearchDatabase {
 
 	/**
 	 * PrefixSearchBackend override for OpenSearch results
+	 * @param array $namespaces
+	 * @param string $term
+	 * @param int $limit
+	 * @param array &$results
+	 * @param int $offset
 	 * @return bool
 	 */
 	public static function prefixSearch( $namespaces, $term, $limit, &$results, $offset = 0 ) {
@@ -72,6 +84,15 @@ class SphinxMWSearch extends SearchDatabase {
 		return self::infixSearch( $namespaces, $term, $limit, $results, $offset );
 	}
 
+	/**
+	 * PrefixSearchBackend override for OpenSearch results
+	 * @param array $namespaces
+	 * @param string $term
+	 * @param int $limit
+	 * @param array &$results
+	 * @param int $offset
+	 * @return bool
+	 */
 	public static function infixSearch( $namespaces, $term, $limit, &$results, $offset = 0 ) {
 		$search_engine = new SphinxMWSearch( wfGetDB( DB_REPLICA ) );
 		$search_engine->namespaces = $namespaces;
@@ -150,6 +171,7 @@ class SphinxMWSearch extends SearchDatabase {
 	}
 
 	/**
+	 * @param string &$term
 	 * @return SphinxClient ready to run or false if term is empty
 	 */
 	private function prepareSphinxClient( &$term ) {
@@ -294,6 +316,10 @@ class SphinxMWSearch extends SearchDatabase {
 		}
 	}
 
+	/**
+	 * @param string[] $matches
+	 * @return string
+	 */
 	public function filterByNamespace( $matches ) {
 		global $wgLang;
 		$inx = $wgLang->getNsIndex( str_replace( ' ', '_', $matches[ 2 ] ) );
@@ -305,15 +331,27 @@ class SphinxMWSearch extends SearchDatabase {
 		}
 	}
 
+	/**
+	 * @param string[] $matches
+	 * @return string
+	 */
 	public function searchAllNamespaces( $matches ) {
 		$this->namespaces = null;
 		return $matches[ 3 ];
 	}
 
+	/**
+	 * @param string[] $matches
+	 * @return string
+	 */
 	public function filterByTitle( $matches ) {
 		return '@page_title ' . $matches[ 3 ];
 	}
 
+	/**
+	 * @param string[] $matches
+	 * @return string
+	 */
 	public function filterByPrefix( $matches ) {
 		$prefix = $matches[ 3 ];
 		if ( strpos( $matches[ 3 ], ':' ) !== false ) {
@@ -327,6 +365,10 @@ class SphinxMWSearch extends SearchDatabase {
 		return '@page_title ^' . $prefix . '*';
 	}
 
+	/**
+	 * @param string[] $matches
+	 * @return string
+	 */
 	public function filterByCategory( $matches ) {
 		$page_id = $this->db->selectField( 'page', 'page_id',
 			[
