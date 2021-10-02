@@ -31,7 +31,7 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 	 * @param array $terms
 	 * @return string highlighted text snippet
 	 */
-	public function getTextSnippet( $terms ) {
+	public function getTextSnippet( $terms = [] ) {
 		global $wgAdvancedSearchHighlighting, $wgSphinxSearchMWHighlighter, $wgSphinxSearch_index;
 
 		$this->initText();
