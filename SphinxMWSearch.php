@@ -112,7 +112,7 @@ class SphinxMWSearch extends SearchDatabase {
 	/**
 	 * Perform a full text search query and return a result set.
 	 *
-	 * @param string $term - Raw search term
+	 * @param string $term Raw search term
 	 * @return SphinxMWSearchResultSet
 	 */
 	public function searchText( $term ) {
