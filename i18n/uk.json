@@ -1,10 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ата"
+			"Ата",
+			"DDPAT"
 		]
 	},
-	"sphinxsearch-desc": "Замінює пошуковий двигун MediaWiki на [http://www.sphinxsearch.com/ Sphinx]",
+	"sphinxsearch-desc": "Замінює пошуковий рушій MediaWiki на [http://www.sphinxsearch.com/ Sphinx]",
 	"sphinxPowered": "Підтримується $1",
 	"sphinxClientFailed": "Не можливо створити клієнт Sphinx.",
 	"sphinxSearchFailed": "Не вдалося здійснити запит: $1",
