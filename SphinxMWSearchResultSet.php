@@ -42,15 +42,15 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		if ( is_array( $resultSet ) && isset( $resultSet['matches'] ) ) {
 			$this->total_hits = $resultSet[ 'total_found' ];
 			foreach ( $resultSet['matches'] as $id => $docinfo ) {
-				$res = $this->db->select(
+				$row = $this->db->selectRow(
 					'page',
 					[ 'page_id', 'page_title', 'page_namespace' ],
 					[ 'page_id' => $id ],
 					__METHOD__,
 					[]
 				);
-				if ( $this->db->numRows( $res ) > 0 ) {
-					$this->mResultSet[] = $this->db->fetchObject( $res );
+				if ( $row ) {
+					$this->mResultSet[] = $row;
 				}
 			}
 		}
@@ -129,9 +129,9 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 */
 	private function suggestWithSoundex() {
 		$joined_terms = $this->db->addQuotes( implode( ' ', $this->mTerms ) );
-		$res = $this->db->select(
+		$suggestionTitle = $this->db->selectField(
 			[ 'page' ],
-			[ 'page_title' ],
+			'page_title',
 			[
 				"page_title SOUNDS LIKE " . $joined_terms,
 				// avoid (re)recommending the search string
@@ -143,9 +143,8 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 				'LIMIT' => 1
 			]
 		);
-		$suggestion = $this->db->fetchObject( $res );
-		if ( is_object( $suggestion ) ) {
-			$title = Title::newFromDBkey( $suggestion->page_title );
+		if ( $suggestionTitle !== false ) {
+			$title = Title::newFromDBkey( $suggestionTitle );
 			$this->mSuggestion = $title->getText();
 		}
 	}
