@@ -35,11 +35,11 @@ class SphinxMWSearch extends SearchDatabase {
 		global $wgHooks, $wgSearchType, $wgDisableSearchUpdate,
 			$wgEnableSphinxPrefixSearch, $wgEnableSphinxInfixSearch;
 
-		if ( !class_exists( 'SphinxClient' ) ) {
+		if ( !class_exists( SphinxClient::class ) ) {
 			if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 				require_once __DIR__ . '/vendor/autoload.php';
 			}
-			if ( !class_exists( 'SphinxClient' ) ) {
+			if ( !class_exists( SphinxClient::class ) ) {
 				require_once __DIR__ . '/sphinxapi.php';
 			}
 		}

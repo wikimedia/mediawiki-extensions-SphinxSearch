@@ -51,7 +51,7 @@ class GenerateEnchantDictionary extends Maintenance {
 
 }
 
-$maintClass = "SphinxSearch_setup";
+$maintClass = GenerateEnchantDictionary::class;
 
 // Avoid E_ALL notice caused by ob_end_flush() in Maintenance::setup()
 ob_start();
