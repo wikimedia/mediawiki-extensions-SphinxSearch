@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"TayfunEt."
+		]
+	},
+	"sphinxsearch-desc": "MediaWiki gözleg motoryny [http://www.sphinxsearch.com/ Sphinx] bilen çalyşýar",
+	"sphinxPowered": "$1 bilen işleýär",
+	"sphinxClientFailed": "Sphinx müşderisini derrew alyp bilmedi.",
+	"sphinxSearchFailed": "Talap şowsuz: $1",
+	"sphinxPspellError": "Pspell giňeltmesini ulanyp bolmaýar."
+}
