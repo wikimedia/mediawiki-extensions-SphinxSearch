@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Vlad5250"
+		]
+	},
+	"sphinxPowered": "Omogućeno $1",
+	"sphinxClientFailed": "Sphinx klijent nije mogao biti stvoren.",
+	"sphinxSearchFailed": "Upit nije uspio: $1",
+	"sphinxPspellError": "Nije pronađeno pspell proširenje."
+}
