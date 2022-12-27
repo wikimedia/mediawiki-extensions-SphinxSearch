@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"sphinxsearch-desc": "Zamenja iskalnik MediaWiki s [http://www.sphinxsearch.com/ Sphinx]",
+	"sphinxPowered": "Omogoča $1",
+	"sphinxClientFailed": "Odjemalca Sphinx ni bilo mogoče inicializirati.",
+	"sphinxSearchFailed": "Poizvedba ni uspela: $1",
+	"sphinxPspellError": "Razširitve pspell ni bilo mogoče priklicati."
+}
