@@ -20,9 +20,10 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 	 * @param stdClass $row
 	 * @param SphinxClient|null $sphinx_client
 	 */
-	public function __construct( $row, $sphinx_client ) {
+	public function __construct( $row, $sphinx_client, $terms ) {
 		$this->sphinx_client = $sphinx_client;
 		$this->initFromTitle( Title::makeTitle( $row->page_namespace, $row->page_title ) );
+                $this->terms = $terms;
 	}
 
 	/**
@@ -40,9 +41,9 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 		if ( $wgSphinxSearchMWHighlighter ) {
 			$h = new SearchHighlighter();
 			if ( $wgAdvancedSearchHighlighting ) {
-				return $h->highlightText( $this->mText, $terms, $contextlines, $contextchars );
+				return $h->highlightText( $this->mText, $this->terms, $contextlines, $contextchars );
 			} else {
-				return $h->highlightSimple( $this->mText, $terms, $contextlines, $contextchars );
+				return $h->highlightSimple( $this->mText, $this->terms, $contextlines, $contextchars );
 			}
 		}
 
@@ -57,7 +58,7 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 		$excerpts = $this->sphinx_client->BuildExcerpts(
 			[ $this->mText ],
 			$wgSphinxSearch_index,
-			implode( ' ', $terms ),
+			implode( ' ', $this->terms ),
 			$excerpts_opt
 		);
 
