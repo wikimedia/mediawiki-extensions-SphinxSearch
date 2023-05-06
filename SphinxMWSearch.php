@@ -185,7 +185,8 @@ class SphinxMWSearch extends SearchDatabase {
 			return false;
 		}
 
-		Hooks::run( 'SphinxSearchBeforeResults', [
+		$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->run( 'SphinxSearchBeforeResults', [
 			&$term,
 			&$this->offset,
 			&$this->namespaces,
@@ -224,7 +225,7 @@ class SphinxMWSearch extends SearchDatabase {
 			$wgSphinxSearch_cutoff
 		);
 
-		Hooks::run( 'SphinxSearchBeforeQuery', [ &$term, &$cl ] );
+		$hookContainer->run( 'SphinxSearchBeforeQuery', [ &$term, &$cl ] );
 
 		return $cl;
 	}

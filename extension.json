@@ -10,7 +10,7 @@
 	"type": "other",
 	"version": "1.0.0",
 	"requires": {
-		"MediaWiki": ">= 1.31.0"
+		"MediaWiki": ">= 1.35.0"
 	},
 	"AutoloadClasses": {
 		"SphinxMWSearch": "SphinxMWSearch.php",
