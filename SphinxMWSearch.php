@@ -12,7 +12,7 @@
  * @author Svemir Brkic <svemir@deveblog.com>
  */
 
-use Wikimedia\Rdbms\IDatabase;
+use MediaWiki\MediaWikiServices;
 
 class SphinxMWSearch extends SearchDatabase {
 
@@ -20,8 +20,6 @@ class SphinxMWSearch extends SearchDatabase {
 	public $categories = [];
 	/** @var array */
 	public $exc_categories = [];
-	/** @var IDatabase|null */
-	public $db;
 	/** @var SphinxClient|null */
 	public $sphinx_client = null;
 	/** @var string[] */
@@ -94,7 +92,7 @@ class SphinxMWSearch extends SearchDatabase {
 	 * @return bool
 	 */
 	public static function infixSearch( $namespaces, $term, $limit, &$results, $offset = 0 ) {
-		$search_engine = new SphinxMWSearch( wfGetDB( DB_REPLICA ) );
+		$search_engine = new SphinxMWSearch( MediaWikiServices::getInstance()->getDBLoadBalancerFactory() );
 		$search_engine->namespaces = $namespaces;
 		$search_engine->setLimitOffset( $limit, $offset );
 		$result_set = $search_engine->searchText( '@page_title: ' . $term . '*' );
@@ -166,7 +164,12 @@ class SphinxMWSearch extends SearchDatabase {
 		if ( $resultSet === false && !$wgSphinxSuggestMode ) {
 			return null;
 		} else {
-			return new SphinxMWSearchResultSet( $resultSet, $term, $this->sphinx_client, $this->db );
+			return new SphinxMWSearchResultSet(
+				$resultSet,
+				$term,
+				$this->sphinx_client,
+				$this->dbProvider->getReplicaDatabase()
+			);
 		}
 	}
 
@@ -357,7 +360,7 @@ class SphinxMWSearch extends SearchDatabase {
 		$prefix = $matches[ 3 ];
 		if ( strpos( $matches[ 3 ], ':' ) !== false ) {
 			global $wgLang;
-			list( $ns, $prefix ) = explode( ':', $matches[ 3 ] );
+			[ $ns, $prefix ] = explode( ':', $matches[ 3 ] );
 			$inx = $wgLang->getNsIndex( str_replace( ' ', '_', $ns ) );
 			if ( $inx !== false ) {
 				$this->namespaces = [ $inx ];
@@ -371,7 +374,7 @@ class SphinxMWSearch extends SearchDatabase {
 	 * @return string
 	 */
 	public function filterByCategory( $matches ) {
-		$page_id = $this->db->selectField( 'page', 'page_id',
+		$page_id = $this->dbProvider->getReplicaDatabase()->selectField( 'page', 'page_id',
 			[
 				'page_title' => $matches[ 3 ],
 				'page_namespace' => NS_CATEGORY
