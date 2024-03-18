@@ -43,7 +43,7 @@ class GenerateEnchantDictionary extends Maintenance {
 			$words = file( 'sphinx.dic' );
 			$cnt = count( $words );
 			if ( $cnt ) {
-				file_put_contents( 'sphinx.dic',  $cnt . "\n" . implode( '', $words ) );
+				file_put_contents( 'sphinx.dic', $cnt . "\n" . implode( '', $words ) );
 				file_put_contents( 'sphinx.aff', "SET UTF-8\n" );
 			}
 		}
