@@ -31,14 +31,14 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 * @param array $resultSet
 	 * @param array $terms
 	 * @param SphinxClient $sphinx_client
-	 * @param IDatabase|null $dbr
+	 * @param IDatabase $dbr
 	 */
 	public function __construct( $resultSet, $terms, $sphinx_client, $dbr ) {
 		global $wgSearchHighlightBoundaries;
 
 		$this->sphinx_client = $sphinx_client;
 		$this->mResultSet = [];
-		$this->db = $dbr ? $dbr : wfGetDB( DB_REPLICA );
+		$this->db = $dbr;
 		if ( is_array( $resultSet ) && isset( $resultSet['matches'] ) ) {
 			$this->total_hits = $resultSet[ 'total_found' ];
 			foreach ( $resultSet['matches'] as $id => $docinfo ) {
