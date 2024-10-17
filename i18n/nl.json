@@ -7,7 +7,7 @@
 		]
 	},
 	"sphinxsearch-desc": "Vervangt de MediaWiki-zoekmachine door [http://www.sphinxsearch.com/ Sphinx]",
-	"sphinxPowered": "Powered by $1",
+	"sphinxPowered": "Mogelijk gemaakt door $1",
 	"sphinxClientFailed": "Het was niet mogelijk SphinxClient te initialiseren",
 	"sphinxSearchFailed": "Zoekopdracht mislukt: $1",
 	"sphinxPspellError": "Het was niet mogelijk de \"pspell\" extensie aan te spreken."
