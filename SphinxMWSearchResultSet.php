@@ -17,30 +17,42 @@ use Wikimedia\Rdbms\IDatabase;
 class SphinxMWSearchResultSet extends SearchResultSet {
 
 	/** @var int */
-	public $mNdx = 0;
+	public $resultSetIndex = 0;
+
 	/** @var SphinxClient */
-	public $sphinx_client;
+	public $sphinxClient;
+
 	/** @var string */
-	public $mSuggestion = '';
+	public $suggestion = '';
+
 	/** @var IDatabase */
 	public $db;
+
 	/** @var int */
-	public $total_hits = 0;
+	public $totalHits = 0;
+
+	/** @var array */
+	public $resultSet = null;
+
+	/** @var array */
+	public $terms = null;
 
 	/**
 	 * @param array $resultSet
 	 * @param array $terms
-	 * @param SphinxClient $sphinx_client
+	 * @param SphinxClient $sphinxClient
 	 * @param IDatabase $dbr
 	 */
-	public function __construct( $resultSet, $terms, $sphinx_client, $dbr ) {
+	public function __construct( $resultSet, $terms, $sphinxClient, $dbr ) {
 		global $wgSearchHighlightBoundaries;
 
-		$this->sphinx_client = $sphinx_client;
-		$this->mResultSet = [];
+		$this->sphinxClient = $sphinxClient;
+		$this->resultSet = [];
 		$this->db = $dbr;
+
 		if ( is_array( $resultSet ) && isset( $resultSet['matches'] ) ) {
-			$this->total_hits = $resultSet[ 'total_found' ];
+			$this->totalHits = $resultSet[ 'total_found' ];
+
 			foreach ( $resultSet['matches'] as $id => $docinfo ) {
 				$row = $this->db->selectRow(
 					'page',
@@ -49,16 +61,19 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 					__METHOD__,
 					[]
 				);
+
 				if ( $row ) {
-					$this->mResultSet[] = $row;
+					$this->resultSet[] = $row;
 				}
 			}
 		}
-		$this->mNdx = 0;
-		$this->mTerms = preg_split(
+
+		$this->resultSetIndex = 0;
+
+		$this->terms = preg_split(
 			"/$wgSearchHighlightBoundaries+/ui",
 			$terms,
-			null,
+			-1,
 			PREG_SPLIT_NO_EMPTY
 		);
 	}
@@ -73,7 +88,9 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		global $wgSphinxSuggestMode;
 
 		if ( $wgSphinxSuggestMode ) {
-			$this->mSuggestion = '';
+
+			$this->suggestion = '';
+
 			if ( $wgSphinxSuggestMode === 'enchant' ) {
 				$this->suggestWithEnchant();
 			} elseif ( $wgSphinxSuggestMode === 'soundex' ) {
@@ -81,10 +98,12 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 			} elseif ( $wgSphinxSuggestMode === 'aspell' ) {
 				$this->suggestWithAspell();
 			}
-			if ( $this->mSuggestion ) {
+
+			if ( $this->suggestion ) {
 				return true;
 			}
 		}
+
 		return false;
 	}
 
@@ -96,17 +115,23 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		if ( !function_exists( 'enchant_broker_init' ) ) {
 			return;
 		}
+
 		$broker = enchant_broker_init();
+
 		enchant_broker_set_dict_path( $broker, ENCHANT_MYSPELL, __DIR__ );
+
 		if ( enchant_broker_dict_exists( $broker, 'sphinx' ) ) {
 			$dict = enchant_broker_request_dict( $broker, 'sphinx' );
 			$suggestion_found = false;
 			$full_suggestion = '';
-			foreach ( $this->mTerms as $word ) {
+
+			foreach ( $this->terms as $word ) {
 				if ( !enchant_dict_check( $dict, $word ) ) {
 					$suggestions = enchant_dict_suggest( $dict, $word );
+
 					while ( count( $suggestions ) ) {
 						$candidate = array_shift( $suggestions );
+
 						if ( strtolower( $candidate ) != strtolower( $word ) ) {
 							$word = $candidate;
 							$suggestion_found = true;
@@ -116,11 +141,14 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 				}
 				$full_suggestion .= $word . ' ';
 			}
+
 			enchant_broker_free_dict( $dict );
+
 			if ( $suggestion_found ) {
-				$this->mSuggestion = trim( $full_suggestion );
+				$this->suggestion = trim( $full_suggestion );
 			}
 		}
+
 		enchant_broker_free( $broker );
 	}
 
@@ -128,7 +156,8 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 * Default (weak) suggestions implementation relies on MySQL soundex
 	 */
 	private function suggestWithSoundex() {
-		$joined_terms = $this->db->addQuotes( implode( ' ', $this->mTerms ) );
+		$joined_terms = $this->db->addQuotes( implode( ' ', $this->terms ) );
+
 		$suggestionTitle = $this->db->selectField(
 			[ 'page' ],
 			'page_title',
@@ -143,9 +172,10 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 				'LIMIT' => 1
 			]
 		);
+
 		if ( $suggestionTitle !== false ) {
 			$title = Title::newFromDBkey( $suggestionTitle );
-			$this->mSuggestion = $title->getText();
+			$this->suggestion = $title->getText();
 		}
 	}
 
@@ -153,7 +183,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		global $wgLanguageCode, $wgSphinxSearchPersonalDictionary, $wgSphinxSearchAspellPath;
 
 		// aspell will only return mis-spelled words, so remember all here
-		$words = $this->mTerms;
+		$words = $this->terms;
 		$word_suggestions = [];
 		foreach ( $words as $word ) {
 			$word_suggestions[ $word ] = $word;
@@ -163,6 +193,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		$aspellcommand = 'echo ' . escapeshellarg( implode( ' ', $words ) ) .
 			' | ' . escapeshellarg( $wgSphinxSearchAspellPath ) .
 			' -a --ignore-accents --ignore-case --lang=' . $wgLanguageCode;
+
 		if ( $wgSphinxSearchPersonalDictionary ) {
 			$aspellcommand .= ' --home-dir=' . dirname( $wgSphinxSearchPersonalDictionary );
 			$aspellcommand .= ' -p ' . basename( $wgSphinxSearchPersonalDictionary );
@@ -174,6 +205,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		// parse return line by line
 		$returnarray = explode( "\n", $shell_return );
 		$suggestion_needed = false;
+
 		foreach ( $returnarray as $key => $value ) {
 			// lines with suggestions start with &
 			if ( $value[0] === '&' ) {
@@ -181,8 +213,10 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 				$word = $correction[ 1 ];
 				$suggestions = substr( $value, strpos( $value, ':' ) + 2 );
 				$suggestions = explode( ', ', $suggestions );
+
 				if ( count( $suggestions ) ) {
 					$guess = array_shift( $suggestions );
+
 					if ( strtolower( $word ) != strtolower( $guess ) ) {
 						$word_suggestions[ $word ] = $guess;
 						$suggestion_needed = true;
@@ -192,7 +226,7 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 		}
 
 		if ( $suggestion_needed ) {
-			$this->mSuggestion = implode( ' ', $word_suggestions );
+			$this->suggestion = implode( ' ', $word_suggestions );
 		}
 	}
 
@@ -200,28 +234,28 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 * @return string suggested query, null if none
 	 */
 	public function getSuggestionQuery() {
-		return $this->mSuggestion;
+		return $this->suggestion;
 	}
 
 	/**
 	 * @return string HTML highlighted suggested query, '' if none
 	 */
 	public function getSuggestionSnippet() {
-		return $this->mSuggestion;
+		return $this->suggestion;
 	}
 
 	/**
 	 * @return array search terms
 	 */
 	public function termMatches() {
-		return $this->mTerms;
+		return $this->terms;
 	}
 
 	/**
 	 * @return int number of results
 	 */
 	public function numRows() {
-		return count( $this->mResultSet );
+		return count( $this->resultSet );
 	}
 
 	/**
@@ -235,17 +269,18 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 * @return int
 	 */
 	public function getTotalHits() {
-		return $this->total_hits;
+		return $this->totalHits;
 	}
 
 	/**
 	 * @return SphinxMWSearchResult next result, false if none
 	 */
 	public function next() {
-		if ( isset( $this->mResultSet[$this->mNdx] ) ) {
-			$row = $this->mResultSet[$this->mNdx];
-			++$this->mNdx;
-			return new SphinxMWSearchResult( $row, $this->sphinx_client );
+		if ( isset( $this->resultSet[$this->resultSetIndex] ) ) {
+			$row = $this->resultSet[$this->resultSetIndex];
+			++$this->resultSetIndex;
+
+			return new SphinxMWSearchResult( $row, $this->sphinxClient, $this->terms );
 		} else {
 			return false;
 		}
@@ -255,7 +290,31 @@ class SphinxMWSearchResultSet extends SearchResultSet {
 	 * Clear the result set from memory
 	 */
 	public function free() {
-		unset( $this->mResultSet );
+		unset( $this->resultSet );
 	}
 
+	public function extractResults() {
+		if ( $this->results === null ) {
+			$this->results = [];
+
+			if ( $this->numRows() == 0 ) {
+				// Don't bother if we've got empty res
+				return $this->results;
+			}
+
+			// Add existing results first
+			foreach ( $this as $result ) {
+				$this->results[] = $result;
+			}
+
+			// Add from Sphinx result set
+			$run = $this->next();
+			while ( $run ) {
+				$this->results[] = $run;
+				$run = $this->next();
+			}
+		}
+
+		return $this->results;
+	}
 }

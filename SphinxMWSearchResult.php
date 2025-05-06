@@ -14,35 +14,43 @@
 class SphinxMWSearchResult extends RevisionSearchResult {
 
 	/** @var SphinxClient|null */
-	public $sphinx_client = null;
+	public $sphinxClient = null;
+
+	/** @var array */
+	public $terms = null;
 
 	/**
 	 * @param stdClass $row
-	 * @param SphinxClient|null $sphinx_client
+	 * @param SphinxClient|null $sphinxClient
+	 * @param array $terms
 	 */
-	public function __construct( $row, $sphinx_client ) {
-		$this->sphinx_client = $sphinx_client;
+	public function __construct( $row, $sphinxClient, $terms ) {
+		$this->sphinxClient = $sphinxClient;
 		$this->initFromTitle( Title::makeTitle( $row->page_namespace, $row->page_title ) );
+		$this->terms = $terms;
 	}
 
 	/**
 	 * Emulates SearchEngine getTextSnippet so that we can use our own userHighlightPrefs
 	 *
-	 * @param array $terms
+	 * @param array $terms (Unused)
 	 * @return string highlighted text snippet
 	 */
 	public function getTextSnippet( $terms = [] ) {
-		global $wgAdvancedSearchHighlighting, $wgSphinxSearchMWHighlighter, $wgSphinxSearch_index;
+		global $wgAdvancedSearchHighlighting, $wgSphinxSearchMWHighlighter, $wgSphinxSearch_index,
+			$wgSphinxSearchContextLines, $wgSphinxSearchContextChars;
 
 		$this->initText();
-		$contextlines = 2;
-		$contextchars = 75;
+		$contextlines = $wgSphinxSearchContextLines ? $wgSphinxSearchContextLines : 2;
+		$contextchars = $wgSphinxSearchContextChars ? $wgSphinxSearchContextChars : 75;
+
 		if ( $wgSphinxSearchMWHighlighter ) {
 			$h = new SearchHighlighter();
+
 			if ( $wgAdvancedSearchHighlighting ) {
-				return $h->highlightText( $this->mText, $terms, $contextlines, $contextchars );
+				return $h->highlightText( $this->mText, $this->terms, $contextlines, $contextchars );
 			} else {
-				return $h->highlightSimple( $this->mText, $terms, $contextlines, $contextchars );
+				return $h->highlightSimple( $this->mText, $this->terms, $contextlines, $contextchars );
 			}
 		}
 
@@ -54,10 +62,10 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 			"around" => $contextchars,
 		];
 
-		$excerpts = $this->sphinx_client->BuildExcerpts(
+		$excerpts = $this->sphinxClient->BuildExcerpts(
 			[ $this->mText ],
 			$wgSphinxSearch_index,
-			implode( ' ', $terms ),
+			implode( ' ', $this->terms ),
 			$excerpts_opt
 		);
 
@@ -70,22 +78,25 @@ class SphinxMWSearchResult extends RevisionSearchResult {
 					' ',
 					$entry
 				);
+
 				$entry = str_replace(
 					[ "<", ">" ],
 					[ "&lt;", "&gt;" ],
 					$entry
 				);
+
 				$entry = str_replace(
 					[ "(searchmatch)", "(/searchmatch)" ],
 					[ "<span class='searchmatch'>", "</span>" ],
 					$entry
 				);
+
 				$ret .= "<div style='margin: 0.2em 1em 0.2em 1em;'>$entry</div>\n";
 			}
 		} else {
-			$ret = wfMessage( 'internalerror_info', $this->sphinx_client->GetLastError() );
+			$ret = wfMessage( 'internalerror_info', $this->sphinxClient->GetLastError() );
 		}
+
 		return $ret;
 	}
-
 }
