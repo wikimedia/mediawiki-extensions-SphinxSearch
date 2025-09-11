@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <ruleset>
 	<rule ref="./vendor/mediawiki/mediawiki-codesniffer/MediaWiki">
+		<exclude name="MediaWiki.Commenting.ClassAnnotations.UnrecognizedAnnotation" />
 		<exclude name="MediaWiki.Usage.DeprecatedGlobalVariables.Deprecated$wgHooks" />
 		<exclude name="MediaWiki.Usage.ForbiddenFunctions.escapeshellarg" />
 		<exclude name="MediaWiki.Usage.ForbiddenFunctions.shell_exec" />
