@@ -12,6 +12,7 @@
  * @author Svemir Brkic <svemir@deveblog.com>
  */
 
+use MediaWiki\Title\Title;
 use Wikimedia\Rdbms\IDatabase;
 
 class SphinxMWSearchResultSet extends SearchResultSet {

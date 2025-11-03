@@ -11,6 +11,8 @@
  * @author Svemir Brkic <svemir@deveblog.com>
  */
 
+use MediaWiki\Title\Title;
+
 class SphinxMWSearchResult extends RevisionSearchResult {
 
 	/** @var SphinxClient|null */
