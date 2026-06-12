@@ -10,5 +10,5 @@
 	"sphinxPowered": "Mogelijk gemaakt door $1",
 	"sphinxClientFailed": "Het was niet mogelijk SphinxClient te initialiseren",
 	"sphinxSearchFailed": "Zoekopdracht mislukt: $1",
-	"sphinxPspellError": "Het was niet mogelijk de \"pspell\" extensie aan te spreken."
+	"sphinxPspellError": "Het was niet mogelijk de uitbreiding \"pspell\" aan te spreken."
 }
