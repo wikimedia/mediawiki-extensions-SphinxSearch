@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"sphinxsearch-desc": "Nahrádza vyhľadávací nástroj MediaWiky nástrojom [http://www.sphinxsearch.com/ Sphinx]",
+	"sphinxPowered": "Používa $1",
+	"sphinxClientFailed": "Nepodarilo sa vytvoriť inštanciu klienta Sphinx.",
+	"sphinxSearchFailed": "Dopyt zlyhal: $1",
+	"sphinxPspellError": "Nepodarilo sa spustiť rozšírenie pspell."
+}
